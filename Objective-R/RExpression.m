@@ -8,6 +8,20 @@
 
 #import "RExpression.h"
 
+
+
+
+
 @implementation RExpression
 
+
+
+- (id)evaluateInScope:(RScope *)scope {
+    return nil;
+}
+
+
+
 @end
+
+

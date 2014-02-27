@@ -8,6 +8,31 @@
 
 #import "RConstant.h"
 
+
+
+
+
 @implementation RConstant
 
+
+
+
+
++ (instancetype)constant:(id)value {
+    RConstant *constant = [[self alloc] init];
+    constant.value = value;
+    return constant;
+}
+
+
+- (id)evaluateInScope:(RScope *)scope {
+    return self.value;
+}
+
+
+
+
+
 @end
+
+

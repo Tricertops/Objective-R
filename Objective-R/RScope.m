@@ -8,6 +8,39 @@
 
 #import "RScope.h"
 
+
+
+
+
 @implementation RScope
 
+
+
+
+
++ (instancetype)scope:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION {
+    RScope *scope = [[self alloc] init];
+    scope.expressions = RVariadicArray(expression);
+    return scope;
+}
+
+
+- (id)evaluateInScope:(RScope *)scope {
+    id result = nil;
+    
+    //TODO: Accessible result and parentScope
+    
+    for (RExpression *exp in self.expressions) {
+        result = [exp evaluateInScope:self];
+    }
+    
+    return result;
+}
+
+
+
+
+
 @end
+
+

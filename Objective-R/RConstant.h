@@ -8,6 +8,23 @@
 
 #import "RExpression.h"
 
+
+
+
+
 @interface RConstant : RExpression
 
+
+
++ (instancetype)constant:(id)value;
+#define RConst(VALUE)   [RConstant value:VALUE]
+
+@property (atomic, readwrite, copy) id value;
+
+- (id)evaluateInScope:(RScope *)scope;
+
+
+
 @end
+
+

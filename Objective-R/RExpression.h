@@ -7,7 +7,18 @@
 //
 
 #import "RThing.h"
+@class RScope;
+
+
+
+
 
 @interface RExpression : RThing
 
+
+- (id)evaluateInScope:(RScope *)scope;
+
+
 @end
+
+
