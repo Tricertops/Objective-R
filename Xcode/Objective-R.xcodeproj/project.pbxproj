@@ -52,7 +52,8 @@
 				5B1C9EAC18BF91F700F0D092 /* RThing.h */,
 				5B1C9EAD18BF91F700F0D092 /* RThing.m */,
 			);
-			path = "Objective-R";
+			name = "Objective-R";
+			path = "../Objective-R";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
