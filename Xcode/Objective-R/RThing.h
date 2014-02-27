@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Triceratops Software, s.r.o. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation.NSObject;
 
 @interface RThing : NSObject
 

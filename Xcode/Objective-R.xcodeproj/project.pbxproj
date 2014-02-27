@@ -7,17 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B1C9E8718BF917500F0D092 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1C9E8618BF917500F0D092 /* Cocoa.framework */; };
 		5B1C9EAE18BF91F700F0D092 /* RThing.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9EAC18BF91F700F0D092 /* RThing.h */; };
 		5B1C9EAF18BF91F700F0D092 /* RThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9EAD18BF91F700F0D092 /* RThing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5B1C9E8318BF917500F0D092 /* libObjR-OSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libObjR-OSX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B1C9E8618BF917500F0D092 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		5B1C9E8918BF917500F0D092 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		5B1C9E8A18BF917500F0D092 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		5B1C9E8B18BF917500F0D092 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5B1C9EAC18BF91F700F0D092 /* RThing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RThing.h; sourceTree = "<group>"; };
 		5B1C9EAD18BF91F700F0D092 /* RThing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RThing.m; sourceTree = "<group>"; };
 		5B1C9EB018BF920F00F0D092 /* Objective-R.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objective-R.h"; sourceTree = "<group>"; };
@@ -28,7 +23,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B1C9E8718BF917500F0D092 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,7 +33,6 @@
 			isa = PBXGroup;
 			children = (
 				5B1C9EAB18BF91DB00F0D092 /* Objective-R */,
-				5B1C9E8518BF917500F0D092 /* Frameworks */,
 				5B1C9E8418BF917500F0D092 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,25 +43,6 @@
 				5B1C9E8318BF917500F0D092 /* libObjR-OSX.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		5B1C9E8518BF917500F0D092 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5B1C9E8618BF917500F0D092 /* Cocoa.framework */,
-				5B1C9E8818BF917500F0D092 /* Other Frameworks */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5B1C9E8818BF917500F0D092 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5B1C9E8918BF917500F0D092 /* Foundation.framework */,
-				5B1C9E8A18BF917500F0D092 /* CoreData.framework */,
-				5B1C9E8B18BF917500F0D092 /* AppKit.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		5B1C9EAB18BF91DB00F0D092 /* Objective-R */ = {
