@@ -22,18 +22,17 @@
 
 
 #define RVariadicArray(FIRST)\
-(NSMutableArray *)({\
-    va_list list;\
-    va_start(list, FIRST);\
-    NSMutableArray *array = [[NSMutableArray alloc] init];\
-    id object = FIRST;\
-    while (object) {\
-        [array addObject:object];\
-        object = va_arg(list, id);\
-    }\
-    va_end(list);\
-    array;\
+(NSMutableArray *)({ \
+    va_list list; \
+    va_start(list, FIRST); \
+    NSMutableArray *array = [[NSMutableArray alloc] init]; \
+    id object = FIRST; \
+    while (object) { \
+        [array addObject:object]; \
+        object = va_arg(list, id); \
+    } \
+    va_end(list); \
+    array; \
 })
-
 
 

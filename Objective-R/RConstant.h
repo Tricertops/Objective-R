@@ -16,8 +16,9 @@
 
 
 
+#define RConst(VALUE)   [RConstant constant:VALUE]
 + (instancetype)constant:(id)value;
-#define RConst(VALUE)   [RConstant value:VALUE]
++ (NSMutableArray *)replaceConstantsInArray:(NSMutableArray *)array;
 
 @property (atomic, readwrite, copy) id value;
 

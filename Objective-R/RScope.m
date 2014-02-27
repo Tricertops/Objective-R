@@ -7,6 +7,7 @@
 //
 
 #import "RScope.h"
+#import "RConstant.h"
 
 
 
@@ -20,7 +21,7 @@
 
 + (instancetype)scope:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION {
     RScope *scope = [[self alloc] init];
-    scope.expressions = RVariadicArray(expression);
+    scope.expressions = [RConstant replaceConstantsInArray:RVariadicArray(expression)];
     return scope;
 }
 

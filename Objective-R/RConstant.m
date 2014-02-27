@@ -25,6 +25,19 @@
 }
 
 
++ (NSMutableArray *)replaceConstantsInArray:(NSMutableArray *)array {
+    NSUInteger count = array.count;
+    for (NSUInteger index = 0; index < count; index++) {
+        id object = [array objectAtIndex:index];
+        BOOL isExpression = [object isKindOfClass:[RExpression class]];
+        if ( ! isExpression) {
+            [array replaceObjectAtIndex:index withObject:RConst(object)];
+        }
+    }
+    return array;
+}
+
+
 - (id)evaluateInScope:(RScope *)scope {
     return self.value;
 }
