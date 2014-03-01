@@ -33,6 +33,7 @@
 
 - (void)test_RVoid {
     RConstant *constant = RVoid;
+    XCTAssertNotNil(constant);
     XCTAssertNil(constant.value);
 }
 

@@ -31,6 +31,9 @@
 		5B1C9F3F18C1D8CB00F0D092 /* NSObject+ROperators.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F3D18C1D8CB00F0D092 /* NSObject+ROperators.m */; };
 		5B1C9F4418C1DBC600F0D092 /* RBinaryOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9F4218C1DBC600F0D092 /* RBinaryOperation.h */; };
 		5B1C9F4518C1DBC600F0D092 /* RBinaryOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F4318C1DBC600F0D092 /* RBinaryOperation.m */; };
+		5B1C9F4718C21B6100F0D092 /* ROperators+NSNumber_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F4618C21B6100F0D092 /* ROperators+NSNumber_Test.m */; };
+		5B1C9F4A18C21B9A00F0D092 /* NSNumber+ROperators.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9F4818C21B9A00F0D092 /* NSNumber+ROperators.h */; };
+		5B1C9F4B18C21B9A00F0D092 /* NSNumber+ROperators.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F4918C21B9A00F0D092 /* NSNumber+ROperators.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		5B1C9F3D18C1D8CB00F0D092 /* NSObject+ROperators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ROperators.m"; sourceTree = "<group>"; };
 		5B1C9F4218C1DBC600F0D092 /* RBinaryOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBinaryOperation.h; sourceTree = "<group>"; };
 		5B1C9F4318C1DBC600F0D092 /* RBinaryOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBinaryOperation.m; sourceTree = "<group>"; };
+		5B1C9F4618C21B6100F0D092 /* ROperators+NSNumber_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ROperators+NSNumber_Test.m"; sourceTree = "<group>"; };
+		5B1C9F4818C21B9A00F0D092 /* NSNumber+ROperators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+ROperators.h"; sourceTree = "<group>"; };
+		5B1C9F4918C21B9A00F0D092 /* NSNumber+ROperators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+ROperators.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 				5B1C9EEC18BFB03600F0D092 /* Info.plist */,
 				5B1C9EEE18BFB03600F0D092 /* Prefix.pch */,
 				5B1C9EF118BFB05600F0D092 /* RConstant_Test.m */,
+				5B1C9F4618C21B6100F0D092 /* ROperators+NSNumber_Test.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -165,6 +172,8 @@
 				5B1C9F1E18C1C9CA00F0D092 /* ROperation.m */,
 				5B1C9F3C18C1D8CB00F0D092 /* NSObject+ROperators.h */,
 				5B1C9F3D18C1D8CB00F0D092 /* NSObject+ROperators.m */,
+				5B1C9F4818C21B9A00F0D092 /* NSNumber+ROperators.h */,
+				5B1C9F4918C21B9A00F0D092 /* NSNumber+ROperators.m */,
 				5B1C9F3818C1CA8300F0D092 /* RUnaryOperation.h */,
 				5B1C9F3918C1CA8300F0D092 /* RUnaryOperation.m */,
 				5B1C9F4218C1DBC600F0D092 /* RBinaryOperation.h */,
@@ -208,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B1C9F4418C1DBC600F0D092 /* RBinaryOperation.h in Headers */,
+				5B1C9F4A18C21B9A00F0D092 /* NSNumber+ROperators.h in Headers */,
 				5B1C9F3218C1C9CA00F0D092 /* RScope.h in Headers */,
 				5B1C9F3018C1C9CA00F0D092 /* ROperation.h in Headers */,
 				5B1C9F2C18C1C9CA00F0D092 /* RBranch.h in Headers */,
@@ -317,6 +327,7 @@
 				5B1C9F2918C1C9CA00F0D092 /* RExpression.m in Sources */,
 				5B1C9F2F18C1C9CA00F0D092 /* RLoop.m in Sources */,
 				5B1C9F3B18C1CA8300F0D092 /* RUnaryOperation.m in Sources */,
+				5B1C9F4B18C21B9A00F0D092 /* NSNumber+ROperators.m in Sources */,
 				5B1C9F2B18C1C9CA00F0D092 /* RThing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B1C9F4718C21B6100F0D092 /* ROperators+NSNumber_Test.m in Sources */,
 				5B1C9EF218BFB05600F0D092 /* RConstant_Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
