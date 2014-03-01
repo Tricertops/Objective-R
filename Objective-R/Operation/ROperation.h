@@ -25,7 +25,7 @@ typedef enum RBinaryOperator : ROperator RBinaryOperator;
 + (instancetype)left:(RExpression *)operand binary:(RBinaryOperator)operator right:(RExpression *)operand;
 
 @property (atomic, readwrite, assign) ROperator operator;
-@property (atomic, readwrite, copy) NSArray *operands;
+- (NSArray *)operands;
 
 
 @end

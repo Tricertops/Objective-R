@@ -17,6 +17,7 @@
 
 
 #define RConst(VALUE)   [RConstant constant:VALUE]
+#define RVoid           [RConstant constant:nil]
 + (instancetype)constant:(id)value;
 + (NSMutableArray *)replaceConstantsInArray:(NSMutableArray *)array;
 

@@ -7,6 +7,7 @@
 //
 
 #import "RUnaryOperation.h"
+#import "RConstant.h"
 #import "NSObject+ROperators.h"
 
 
@@ -22,6 +23,11 @@
 
 
 
+
+
+- (NSArray *)operands {
+    return @[ self.operand ?: RVoid ];
+}
 
 
 - (id)evaluateInScope:(RScope *)scope {

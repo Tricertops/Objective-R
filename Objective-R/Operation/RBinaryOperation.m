@@ -7,6 +7,7 @@
 //
 
 #import "RBinaryOperation.h"
+#import "RConstant.h"
 #import "NSObject+ROperators.h"
 @import Foundation.NSComparisonPredicate;
 @import Foundation.NSExpression;
@@ -24,6 +25,14 @@
 
 
 
+
+
+- (NSArray *)operands {
+    return @[
+             self.leftOperand ?: RVoid,
+             self.rightOperand ?: RVoid,
+             ];
+}
 
 
 - (id)evaluateInScope:(RScope *)scope {
