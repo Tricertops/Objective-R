@@ -17,7 +17,7 @@
 
 
 
-+ (instancetype)unary:(ROperator)operator of:(RExpression *)operand {
++ (instancetype)unary:(RUnaryOperator)operator of:(RExpression *)operand {
     ROperation *operation = [[ROperation alloc] init];
     operation.operator = operator;
     operation.operands = @[ operand ];
@@ -25,7 +25,7 @@
 }
 
 
-+ (instancetype)left:(RExpression *)left binary:(ROperator)operator right:(RExpression *)right {
++ (instancetype)left:(RExpression *)left binary:(RBinaryOperator)operator right:(RExpression *)right {
     ROperation *operation = [[ROperation alloc] init];
     operation.operator = operator;
     operation.operands = @[ left, right ];
@@ -42,7 +42,9 @@
 
 
 + (NSArray *)stringsForOperator:(ROperator)operator {
-    switch (operator) {
+    switch ((RBinaryOperator)operator) {
+        case ROperatorNone: return @[ @"", @"none" ];
+            
         case ROperatorPlus:     return @[ @"+", @"plus", @"add", @"positive" ];
         case ROperatorMinus:    return @[ @"−", @"-", @"minus", @"subtract", @"subtraction", @"negative" ];
         case ROperatorMultiply: return @[ @"×", @"*", @"multiply by", @"multiplication" ];
@@ -52,14 +54,21 @@
         case ROperatorEqualTo:  return @[ @"=", @"≟", @"==", @"===", @"eq", @"equal to", @"equality" ];
         case ROperatorUnequal:  return @[ @"≠", @"!=", @"ne", @"not equal to", @"inequality" ];
         case ROperatorLessThan: return @[ @"<", @"lt", @"less than" ];
-        case ROperatorGreater:  return @[ @">", @"gt", @"greater than" ];
-        case ROperatorLessThanOrEqual:      return @[ @"≤", @"<=", @"le", @"less than or equal to" ];
-        case ROperatorGreaterThanOrEqual:   return @[ @"≥", @">=", @"ge", @"greater than or equal to" ];
+        case ROperatorGreaterThan:  return @[ @">", @"gt", @"greater than" ];
+        case ROperatorLessThanOrEqualTo:      return @[ @"≤", @"<=", @"le", @"less than or equal to" ];
+        case ROperatorGreaterThanOrEqualTo:   return @[ @"≥", @">=", @"ge", @"greater than or equal to" ];
             
-        case ROperatorNot:  return @[ @"¬", @"!", @"not", @"negate", @"negation" ];
         case ROperatorAnd:  return @[ @"∧", @"&", @"·", @"and", @"conjunction" ];
         case ROperatorOr:   return @[ @"∨", @"|", @"or", @"disjunction" ];
     }
+    
+    switch ((RUnaryOperator)operator) {
+        case ROperatorUnaryPlus:     return @[ @"+", @"plus", @"positive" ];
+        case ROperatorUnaryMinus:    return @[ @"−", @"-", @"minus", @"negation" ];
+        case ROperatorNot:          return @[ @"¬", @"!", @"not", @"negate", @"negation" ];
+    }
+    
+    return @[ @"?", @"undefined" ];
 }
 
 

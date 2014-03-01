@@ -10,7 +10,9 @@
 
 
 
-typedef enum ROperator : NSUInteger ROperator;
+typedef NSInteger ROperator;
+typedef enum RUnaryOperator : ROperator RUnaryOperator;
+typedef enum RBinaryOperator : ROperator RBinaryOperator;
 
 
 
@@ -19,9 +21,8 @@ typedef enum ROperator : NSUInteger ROperator;
 @interface ROperation : RExpression
 
 
-+ (instancetype)unary:(ROperator)operator of:(RExpression *)operand;
-+ (instancetype)left:(RExpression *)operand binary:(ROperator)operator right:(RExpression *)operand;
-+ (instancetype)multiary:(ROperator)operator operands:(RExpression *)operand, ... NS_REQUIRES_NIL_TERMINATION;
++ (instancetype)unary:(RUnaryOperator)operator of:(RExpression *)operand;
++ (instancetype)left:(RExpression *)operand binary:(RBinaryOperator)operator right:(RExpression *)operand;
 
 @property (atomic, readwrite, assign) ROperator operator;
 @property (atomic, readwrite, copy) NSArray *operands;
@@ -33,24 +34,31 @@ typedef enum ROperator : NSUInteger ROperator;
 
 
 
-enum ROperator : NSUInteger {
+enum RUnaryOperator : ROperator {
+    ROperatorUnaryPlus = 0,
     
-    ROperatorPlus,      // 0+x, x+y, (x+y)+z
-    ROperatorMinus,     // 0-x, x-y, (x-y)-z
-    ROperatorMultiply,  // x*1, x*y, (x*y)*z
-    ROperatorDivide,    // x/1, x/y, (x/y)/z
-    ROperatorModulo,    // x%2, x%y, (x%y)%z
+    ROperatorUnaryMinus = '-',
+    ROperatorNot = '!',
+};
+
+enum RBinaryOperator : ROperator {
+    ROperatorNone = 0,
     
-    ROperatorEqualTo,   // x=x, x=y, (x=y)&(y=z)
-    ROperatorUnequal,   // x!x, x!y, (x!y)|(y!z)
-    ROperatorLessThan,  // x<x, x<y, (x<y)&(y<z)
-    ROperatorGreater,   // x>x, x>y, (x>y)&(y>z)
-    ROperatorLessThanOrEqual,// <=
-    ROperatorGreaterThanOrEqual,// >=
+    ROperatorPlus = '+',
+    ROperatorMinus = '-',
+    ROperatorMultiply = '*',
+    ROperatorDivide = '/',
+    ROperatorModulo = '%',
     
-    ROperatorNot,       // !x, x!y, (x!y)|(y!z)
-    ROperatorAnd,       // x&x, x&y, (x&y)&z
-    ROperatorOr,        // x|x, x|y, (x|y)|z
+    ROperatorEqualTo = '=',
+    ROperatorNotEqualTo = '^',
+    ROperatorLessThan = '<',
+    ROperatorGreaterThan = '>',
+    ROperatorLessThanOrEqualTo = ROperatorLessThan + ROperatorEqualTo,
+    ROperatorGreaterThanOrEqualTo = ROperatorGreaterThan + ROperatorEqualTo,
+    
+    ROperatorAnd = '&',
+    ROperatorOr = '|',
 };
 
 
