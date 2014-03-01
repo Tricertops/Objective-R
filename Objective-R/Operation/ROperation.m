@@ -32,7 +32,7 @@
 }
 
 
-+ (instancetype)left:(RExpression *)left binary:(RBinaryOperator)operator right:(RExpression *)right {
++ (instancetype)binary:(RBinaryOperator)operator left:(RExpression *)left right:(RExpression *)right {
     RBinaryOperation *operation = [[RBinaryOperation alloc] init];
     operation.operator = operator;
     operation.leftOperand = left;

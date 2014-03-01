@@ -35,6 +35,7 @@
 		5B1C9F4A18C21B9A00F0D092 /* ROperators+NSNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9F4818C21B9A00F0D092 /* ROperators+NSNumber.h */; };
 		5B1C9F4B18C21B9A00F0D092 /* ROperators+NSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F4918C21B9A00F0D092 /* ROperators+NSNumber.m */; };
 		5B1C9F4D18C2242100F0D092 /* RUnaryOperation_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F4C18C2242100F0D092 /* RUnaryOperation_Test.m */; };
+		5B1C9F4F18C22F6700F0D092 /* RBinaryOperation_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F4E18C22F6700F0D092 /* RBinaryOperation_Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		5B1C9F4818C21B9A00F0D092 /* ROperators+NSNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ROperators+NSNumber.h"; sourceTree = "<group>"; };
 		5B1C9F4918C21B9A00F0D092 /* ROperators+NSNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ROperators+NSNumber.m"; sourceTree = "<group>"; };
 		5B1C9F4C18C2242100F0D092 /* RUnaryOperation_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUnaryOperation_Test.m; sourceTree = "<group>"; };
+		5B1C9F4E18C22F6700F0D092 /* RBinaryOperation_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBinaryOperation_Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				5B1C9EF118BFB05600F0D092 /* RConstant_Test.m */,
 				5B1C9F4618C21B6100F0D092 /* ROperators+NSNumber_Test.m */,
 				5B1C9F4C18C2242100F0D092 /* RUnaryOperation_Test.m */,
+				5B1C9F4E18C22F6700F0D092 /* RBinaryOperation_Test.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B1C9F4718C21B6100F0D092 /* ROperators+NSNumber_Test.m in Sources */,
+				5B1C9F4F18C22F6700F0D092 /* RBinaryOperation_Test.m in Sources */,
 				5B1C9F4D18C2242100F0D092 /* RUnaryOperation_Test.m in Sources */,
 				5B1C9EF218BFB05600F0D092 /* RConstant_Test.m in Sources */,
 			);

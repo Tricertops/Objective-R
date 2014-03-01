@@ -26,7 +26,7 @@ typedef enum RBinaryOperator : ROperator RBinaryOperator;
 
 
 + (RUnaryOperation *)unary:(RUnaryOperator)operator of:(RExpression *)operand;
-+ (RBinaryOperation *)left:(RExpression *)operand binary:(RBinaryOperator)operator right:(RExpression *)operand;
++ (RBinaryOperation *)binary:(RBinaryOperator)operator left:(RExpression *)operand right:(RExpression *)operand;
 
 @property (atomic, readwrite, assign) ROperator operator;
 - (NSArray *)operands;
@@ -55,7 +55,7 @@ enum RBinaryOperator : ROperator {
     ROperatorModulo = '%',
     
     ROperatorEqualTo = '=',
-    ROperatorNotEqualTo = '^',
+    ROperatorNotEqualTo = '!',
     ROperatorLessThan = '<',
     ROperatorGreaterThan = '>',
     ROperatorLessThanOrEqualTo = ROperatorLessThan + ROperatorEqualTo,
