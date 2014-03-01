@@ -16,7 +16,6 @@
 
 
 
-#define RConst(VALUE)   [RConstant constant:VALUE]
 #define R(VALUE)        [RConstant constant:VALUE]
 #define RVoid           [RConstant constant:nil]
 #define RNull           [RConstant constant:[NSNull null]]

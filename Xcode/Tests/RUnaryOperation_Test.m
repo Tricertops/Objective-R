@@ -33,7 +33,7 @@
 
 
 - (void)test_creation {
-    RConstant *c = RConst(@5);
+    RConstant *c = R(@5);
     RUnaryOperation *op = [ROperation unary:ROperatorUnaryPlus of:c];
     XCTAssertEqual(op.operator, ROperatorUnaryPlus);
     XCTAssertEqual(op.operand, c);
@@ -41,15 +41,18 @@
 }
 
 
+
+
+
 - (void)test_unaryPlus {
     RUnaryOperation *op = [[RUnaryOperation alloc] init];
     op.operator = ROperatorUnaryPlus;
     {
-        op.operand = RConst(@5);
+        op.operand = R(@5);
         id result = [op evaluateInScope:nil];
         XCTAssertEqualObjects(result, @5);
     }{
-        op.operand = RConst(@-5);
+        op.operand = R(@-5);
         id result = [op evaluateInScope:nil];
         XCTAssertEqualObjects(result, @-5);
     }
@@ -60,11 +63,11 @@
     RUnaryOperation *op = [[RUnaryOperation alloc] init];
     op.operator = ROperatorUnaryMinus;
     {
-        op.operand = RConst(@5);
+        op.operand = R(@5);
         id result = [op evaluateInScope:nil];
         XCTAssertEqualObjects(result, @-5);
     }{
-        op.operand = RConst(@-5);
+        op.operand = R(@-5);
         id result = [op evaluateInScope:nil];
         XCTAssertEqualObjects(result, @5);
     }
@@ -75,23 +78,26 @@
     RUnaryOperation *op = [[RUnaryOperation alloc] init];
     op.operator = ROperatorNot;
     {
-        op.operand = RConst(@YES);
+        op.operand = R(@YES);
         id result = [op evaluateInScope:nil];
         XCTAssertEqualObjects(result, @NO);
     }{
-        op.operand = RConst(@NO);
+        op.operand = R(@NO);
         id result = [op evaluateInScope:nil];
         XCTAssertEqualObjects(result, @YES);
     }{
-        op.operand = RConst(@"ABC");
+        op.operand = R(@"ABC");
         id result = [op evaluateInScope:nil];
         XCTAssertEqualObjects(result, @NO, @"Objects are negated to NO.");
     }{
-        op.operand = RConst(NSNull.null);
+        op.operand = R(NSNull.null);
         id result = [op evaluateInScope:nil];
         XCTAssertEqualObjects(result, @YES, @"NSNull represents NO, so is negated to YES.");
     }
 }
+
+
+
 
 
 - (void)test_nil {

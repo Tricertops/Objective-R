@@ -31,7 +31,7 @@
         id object = [array objectAtIndex:index];
         BOOL isExpression = [object isKindOfClass:[RExpression class]];
         if ( ! isExpression) {
-            [array replaceObjectAtIndex:index withObject:RConst(object)];
+            [array replaceObjectAtIndex:index withObject:[RConstant constant:object]];
         }
     }
     return array;

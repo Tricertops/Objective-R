@@ -25,8 +25,8 @@
 
 
 
-- (void)test_RConst {
-    RConstant *constant = RConst(@5);
+- (void)test_R {
+    RConstant *constant = R(@5);
     XCTAssertEqualObjects(constant.value, @5);
 }
 
@@ -45,13 +45,13 @@
 
 
 - (void)test_evaluateInScope {
-    id result = [RConst(@5) evaluateInScope:nil];
+    id result = [R(@5) evaluateInScope:nil];
     XCTAssertEqualObjects(result, @5);
 }
 
 
 - (void)test_replaceConstantsInArray {
-    NSArray *array = @[ @1, @2, RConst(@3), @4, RConst(@5) ];
+    NSArray *array = @[ @1, @2, R(@3), @4, R(@5) ];
     NSArray *result = [RConstant replaceConstantsInArray:[array mutableCopy]];
     for (id object in result) {
         XCTAssertEqualObjects([object class], [RConstant class]);
