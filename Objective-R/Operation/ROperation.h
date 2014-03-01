@@ -9,8 +9,6 @@
 #import "RExpression.h"
 #import "RConstant.h"
 #import "ROperators+NSObject.h"
-@class RUnaryOperation;
-@class RBinaryOperation;
 
 
 
@@ -25,8 +23,8 @@ typedef enum RBinaryOperator : ROperator RBinaryOperator;
 @interface ROperation : RExpression
 
 
-+ (RUnaryOperation *)unary:(RUnaryOperator)operator of:(RExpression *)operand;
-+ (RBinaryOperation *)binary:(RBinaryOperator)operator left:(RExpression *)operand right:(RExpression *)operand;
++ (ROperation *)unary:(RUnaryOperator)operator of:(RExpression *)operand;
++ (ROperation *)binary:(RBinaryOperator)operator left:(RExpression *)operand right:(RExpression *)operand;
 
 @property (atomic, readwrite, assign) ROperator operator;
 - (NSArray *)operands;

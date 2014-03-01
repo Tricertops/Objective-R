@@ -34,7 +34,8 @@
 
 - (void)test_creation {
     RConstant *c = R(@5);
-    RUnaryOperation *op = [ROperation unary:ROperatorUnaryPlus of:c];
+    RUnaryOperation *op = (RUnaryOperation *)[ROperation unary:ROperatorUnaryPlus of:c];
+    XCTAssertEqualObjects(op.class, [RUnaryOperation class]);
     XCTAssertEqual(op.operator, ROperatorUnaryPlus);
     XCTAssertEqual(op.operand, c);
     XCTAssertEqualObjects(op.operands, @[c]);

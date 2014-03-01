@@ -38,6 +38,7 @@
 		5B1C9F4F18C22F6700F0D092 /* RBinaryOperation_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F4E18C22F6700F0D092 /* RBinaryOperation_Test.m */; };
 		5B57079D18C2501600CAEA5E /* RResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B57079B18C2501600CAEA5E /* RResult.h */; };
 		5B57079E18C2501600CAEA5E /* RResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B57079C18C2501600CAEA5E /* RResult.m */; };
+		5B5707A018C2512F00CAEA5E /* RScope_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B57079F18C2512F00CAEA5E /* RScope_Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		5B1C9F4E18C22F6700F0D092 /* RBinaryOperation_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBinaryOperation_Test.m; sourceTree = "<group>"; };
 		5B57079B18C2501600CAEA5E /* RResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RResult.h; sourceTree = "<group>"; };
 		5B57079C18C2501600CAEA5E /* RResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RResult.m; sourceTree = "<group>"; };
+		5B57079F18C2512F00CAEA5E /* RScope_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RScope_Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				5B1C9F4618C21B6100F0D092 /* ROperators+NSNumber_Test.m */,
 				5B1C9F4C18C2242100F0D092 /* RUnaryOperation_Test.m */,
 				5B1C9F4E18C22F6700F0D092 /* RBinaryOperation_Test.m */,
+				5B57079F18C2512F00CAEA5E /* RScope_Test.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B1C9F4718C21B6100F0D092 /* ROperators+NSNumber_Test.m in Sources */,
+				5B5707A018C2512F00CAEA5E /* RScope_Test.m in Sources */,
 				5B1C9F4F18C22F6700F0D092 /* RBinaryOperation_Test.m in Sources */,
 				5B1C9F4D18C2242100F0D092 /* RUnaryOperation_Test.m in Sources */,
 				5B1C9EF218BFB05600F0D092 /* RConstant_Test.m in Sources */,

@@ -35,7 +35,8 @@
 - (void)test_creation {
     RConstant *left = R(@3);
     RConstant *right = R(@5);
-    RBinaryOperation *op = [ROperation binary:ROperatorPlus left:left right:right];
+    RBinaryOperation *op = (RBinaryOperation *)[ROperation binary:ROperatorPlus left:left right:right];
+    XCTAssertEqualObjects(op.class, [RBinaryOperation class]);
     XCTAssertEqual(op.operator, ROperatorPlus);
     XCTAssertEqual(op.leftOperand, left);
     XCTAssertEqual(op.rightOperand, right);
