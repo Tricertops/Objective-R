@@ -7,28 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B1C9EAE18BF91F700F0D092 /* RThing.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9EAC18BF91F700F0D092 /* RThing.h */; };
-		5B1C9EAF18BF91F700F0D092 /* RThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9EAD18BF91F700F0D092 /* RThing.m */; };
-		5B1C9EB318BF938800F0D092 /* RExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9EB118BF938800F0D092 /* RExpression.h */; };
-		5B1C9EB418BF938800F0D092 /* RExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9EB218BF938800F0D092 /* RExpression.m */; };
-		5B1C9EB718BF93B300F0D092 /* RScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9EB518BF93B300F0D092 /* RScope.h */; };
-		5B1C9EB818BF93B300F0D092 /* RScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9EB618BF93B300F0D092 /* RScope.m */; };
-		5B1C9EBB18BF93C800F0D092 /* RBranch.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9EB918BF93C800F0D092 /* RBranch.h */; };
-		5B1C9EBC18BF93C800F0D092 /* RBranch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9EBA18BF93C800F0D092 /* RBranch.m */; };
-		5B1C9EBF18BF93D900F0D092 /* RLoop.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9EBD18BF93D900F0D092 /* RLoop.h */; };
-		5B1C9EC018BF93D900F0D092 /* RLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9EBE18BF93D900F0D092 /* RLoop.m */; };
-		5B1C9EC318BF93F100F0D092 /* RVariable.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9EC118BF93F100F0D092 /* RVariable.h */; };
-		5B1C9EC418BF93F100F0D092 /* RVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9EC218BF93F100F0D092 /* RVariable.m */; };
-		5B1C9EC718BF940000F0D092 /* RConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9EC518BF940000F0D092 /* RConstant.h */; };
-		5B1C9EC818BF940000F0D092 /* RConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9EC618BF940000F0D092 /* RConstant.m */; };
-		5B1C9ECB18BF941500F0D092 /* RNull.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9EC918BF941500F0D092 /* RNull.h */; };
-		5B1C9ECC18BF941500F0D092 /* RNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9ECA18BF941500F0D092 /* RNull.m */; };
-		5B1C9ECF18BF941E00F0D092 /* RVoid.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9ECD18BF941E00F0D092 /* RVoid.h */; };
-		5B1C9ED018BF941E00F0D092 /* RVoid.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9ECE18BF941E00F0D092 /* RVoid.m */; };
-		5B1C9ED318BF944300F0D092 /* ROperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9ED118BF944300F0D092 /* ROperation.h */; };
-		5B1C9ED418BF944300F0D092 /* ROperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9ED218BF944300F0D092 /* ROperation.m */; };
-		5B1C9EEF18BFB03600F0D092 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B1C9EEC18BFB03600F0D092 /* Info.plist */; };
 		5B1C9EF218BFB05600F0D092 /* RConstant_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9EF118BFB05600F0D092 /* RConstant_Test.m */; };
+		5B1C9EF318BFB17E00F0D092 /* libObjR-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1C9E8318BF917500F0D092 /* libObjR-OSX.a */; };
+		5B1C9F2818C1C9CA00F0D092 /* RExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9F1318C1C9CA00F0D092 /* RExpression.h */; };
+		5B1C9F2918C1C9CA00F0D092 /* RExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F1418C1C9CA00F0D092 /* RExpression.m */; };
+		5B1C9F2A18C1C9CA00F0D092 /* RThing.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9F1518C1C9CA00F0D092 /* RThing.h */; };
+		5B1C9F2B18C1C9CA00F0D092 /* RThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F1618C1C9CA00F0D092 /* RThing.m */; };
+		5B1C9F2C18C1C9CA00F0D092 /* RBranch.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9F1818C1C9CA00F0D092 /* RBranch.h */; };
+		5B1C9F2D18C1C9CA00F0D092 /* RBranch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F1918C1C9CA00F0D092 /* RBranch.m */; };
+		5B1C9F2E18C1C9CA00F0D092 /* RLoop.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9F1A18C1C9CA00F0D092 /* RLoop.h */; };
+		5B1C9F2F18C1C9CA00F0D092 /* RLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F1B18C1C9CA00F0D092 /* RLoop.m */; };
+		5B1C9F3018C1C9CA00F0D092 /* ROperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9F1D18C1C9CA00F0D092 /* ROperation.h */; };
+		5B1C9F3118C1C9CA00F0D092 /* ROperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F1E18C1C9CA00F0D092 /* ROperation.m */; };
+		5B1C9F3218C1C9CA00F0D092 /* RScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9F2018C1C9CA00F0D092 /* RScope.h */; };
+		5B1C9F3318C1C9CA00F0D092 /* RScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F2118C1C9CA00F0D092 /* RScope.m */; };
+		5B1C9F3418C1C9CA00F0D092 /* RVariable.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9F2318C1C9CA00F0D092 /* RVariable.h */; };
+		5B1C9F3518C1C9CA00F0D092 /* RVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F2418C1C9CA00F0D092 /* RVariable.m */; };
+		5B1C9F3618C1C9CA00F0D092 /* RConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9F2618C1C9CA00F0D092 /* RConstant.h */; };
+		5B1C9F3718C1C9CA00F0D092 /* RConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F2718C1C9CA00F0D092 /* RConstant.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,31 +39,27 @@
 
 /* Begin PBXFileReference section */
 		5B1C9E8318BF917500F0D092 /* libObjR-OSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libObjR-OSX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B1C9EAC18BF91F700F0D092 /* RThing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RThing.h; sourceTree = "<group>"; };
-		5B1C9EAD18BF91F700F0D092 /* RThing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RThing.m; sourceTree = "<group>"; };
 		5B1C9EB018BF920F00F0D092 /* Objective-R.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objective-R.h"; sourceTree = "<group>"; };
-		5B1C9EB118BF938800F0D092 /* RExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RExpression.h; sourceTree = "<group>"; };
-		5B1C9EB218BF938800F0D092 /* RExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RExpression.m; sourceTree = "<group>"; };
-		5B1C9EB518BF93B300F0D092 /* RScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RScope.h; sourceTree = "<group>"; };
-		5B1C9EB618BF93B300F0D092 /* RScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RScope.m; sourceTree = "<group>"; };
-		5B1C9EB918BF93C800F0D092 /* RBranch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBranch.h; sourceTree = "<group>"; };
-		5B1C9EBA18BF93C800F0D092 /* RBranch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBranch.m; sourceTree = "<group>"; };
-		5B1C9EBD18BF93D900F0D092 /* RLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLoop.h; sourceTree = "<group>"; };
-		5B1C9EBE18BF93D900F0D092 /* RLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLoop.m; sourceTree = "<group>"; };
-		5B1C9EC118BF93F100F0D092 /* RVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVariable.h; sourceTree = "<group>"; };
-		5B1C9EC218BF93F100F0D092 /* RVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVariable.m; sourceTree = "<group>"; };
-		5B1C9EC518BF940000F0D092 /* RConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RConstant.h; sourceTree = "<group>"; };
-		5B1C9EC618BF940000F0D092 /* RConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RConstant.m; sourceTree = "<group>"; };
-		5B1C9EC918BF941500F0D092 /* RNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNull.h; sourceTree = "<group>"; };
-		5B1C9ECA18BF941500F0D092 /* RNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNull.m; sourceTree = "<group>"; };
-		5B1C9ECD18BF941E00F0D092 /* RVoid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVoid.h; sourceTree = "<group>"; };
-		5B1C9ECE18BF941E00F0D092 /* RVoid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVoid.m; sourceTree = "<group>"; };
-		5B1C9ED118BF944300F0D092 /* ROperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROperation.h; sourceTree = "<group>"; };
-		5B1C9ED218BF944300F0D092 /* ROperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROperation.m; sourceTree = "<group>"; };
 		5B1C9ED918BFAFEE00F0D092 /* Objective-R Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Objective-R Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1C9EEC18BFB03600F0D092 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B1C9EEE18BFB03600F0D092 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		5B1C9EF118BFB05600F0D092 /* RConstant_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RConstant_Test.m; sourceTree = "<group>"; };
+		5B1C9F1318C1C9CA00F0D092 /* RExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RExpression.h; sourceTree = "<group>"; };
+		5B1C9F1418C1C9CA00F0D092 /* RExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RExpression.m; sourceTree = "<group>"; };
+		5B1C9F1518C1C9CA00F0D092 /* RThing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RThing.h; sourceTree = "<group>"; };
+		5B1C9F1618C1C9CA00F0D092 /* RThing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RThing.m; sourceTree = "<group>"; };
+		5B1C9F1818C1C9CA00F0D092 /* RBranch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBranch.h; sourceTree = "<group>"; };
+		5B1C9F1918C1C9CA00F0D092 /* RBranch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBranch.m; sourceTree = "<group>"; };
+		5B1C9F1A18C1C9CA00F0D092 /* RLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLoop.h; sourceTree = "<group>"; };
+		5B1C9F1B18C1C9CA00F0D092 /* RLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLoop.m; sourceTree = "<group>"; };
+		5B1C9F1D18C1C9CA00F0D092 /* ROperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROperation.h; sourceTree = "<group>"; };
+		5B1C9F1E18C1C9CA00F0D092 /* ROperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROperation.m; sourceTree = "<group>"; };
+		5B1C9F2018C1C9CA00F0D092 /* RScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RScope.h; sourceTree = "<group>"; };
+		5B1C9F2118C1C9CA00F0D092 /* RScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RScope.m; sourceTree = "<group>"; };
+		5B1C9F2318C1C9CA00F0D092 /* RVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVariable.h; sourceTree = "<group>"; };
+		5B1C9F2418C1C9CA00F0D092 /* RVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVariable.m; sourceTree = "<group>"; };
+		5B1C9F2618C1C9CA00F0D092 /* RConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RConstant.h; sourceTree = "<group>"; };
+		5B1C9F2718C1C9CA00F0D092 /* RConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RConstant.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B1C9EF318BFB17E00F0D092 /* libObjR-OSX.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,26 +103,12 @@
 			isa = PBXGroup;
 			children = (
 				5B1C9EB018BF920F00F0D092 /* Objective-R.h */,
-				5B1C9EAC18BF91F700F0D092 /* RThing.h */,
-				5B1C9EAD18BF91F700F0D092 /* RThing.m */,
-				5B1C9EB118BF938800F0D092 /* RExpression.h */,
-				5B1C9EB218BF938800F0D092 /* RExpression.m */,
-				5B1C9EB518BF93B300F0D092 /* RScope.h */,
-				5B1C9EB618BF93B300F0D092 /* RScope.m */,
-				5B1C9EB918BF93C800F0D092 /* RBranch.h */,
-				5B1C9EBA18BF93C800F0D092 /* RBranch.m */,
-				5B1C9EBD18BF93D900F0D092 /* RLoop.h */,
-				5B1C9EBE18BF93D900F0D092 /* RLoop.m */,
-				5B1C9EC118BF93F100F0D092 /* RVariable.h */,
-				5B1C9EC218BF93F100F0D092 /* RVariable.m */,
-				5B1C9EC518BF940000F0D092 /* RConstant.h */,
-				5B1C9EC618BF940000F0D092 /* RConstant.m */,
-				5B1C9ED118BF944300F0D092 /* ROperation.h */,
-				5B1C9ED218BF944300F0D092 /* ROperation.m */,
-				5B1C9EC918BF941500F0D092 /* RNull.h */,
-				5B1C9ECA18BF941500F0D092 /* RNull.m */,
-				5B1C9ECD18BF941E00F0D092 /* RVoid.h */,
-				5B1C9ECE18BF941E00F0D092 /* RVoid.m */,
+				5B1C9F1218C1C9CA00F0D092 /* Abstract */,
+				5B1C9F1F18C1C9CA00F0D092 /* Scope */,
+				5B1C9F2518C1C9CA00F0D092 /* Value */,
+				5B1C9F1C18C1C9CA00F0D092 /* Operation */,
+				5B1C9F1718C1C9CA00F0D092 /* Control */,
+				5B1C9F2218C1C9CA00F0D092 /* Storage */,
 			);
 			name = "Objective-R";
 			path = "../Objective-R";
@@ -145,6 +124,64 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		5B1C9F1218C1C9CA00F0D092 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				5B1C9F1518C1C9CA00F0D092 /* RThing.h */,
+				5B1C9F1618C1C9CA00F0D092 /* RThing.m */,
+				5B1C9F1318C1C9CA00F0D092 /* RExpression.h */,
+				5B1C9F1418C1C9CA00F0D092 /* RExpression.m */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		5B1C9F1718C1C9CA00F0D092 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				5B1C9F1818C1C9CA00F0D092 /* RBranch.h */,
+				5B1C9F1918C1C9CA00F0D092 /* RBranch.m */,
+				5B1C9F1A18C1C9CA00F0D092 /* RLoop.h */,
+				5B1C9F1B18C1C9CA00F0D092 /* RLoop.m */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		5B1C9F1C18C1C9CA00F0D092 /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				5B1C9F1D18C1C9CA00F0D092 /* ROperation.h */,
+				5B1C9F1E18C1C9CA00F0D092 /* ROperation.m */,
+			);
+			path = Operation;
+			sourceTree = "<group>";
+		};
+		5B1C9F1F18C1C9CA00F0D092 /* Scope */ = {
+			isa = PBXGroup;
+			children = (
+				5B1C9F2018C1C9CA00F0D092 /* RScope.h */,
+				5B1C9F2118C1C9CA00F0D092 /* RScope.m */,
+			);
+			path = Scope;
+			sourceTree = "<group>";
+		};
+		5B1C9F2218C1C9CA00F0D092 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				5B1C9F2318C1C9CA00F0D092 /* RVariable.h */,
+				5B1C9F2418C1C9CA00F0D092 /* RVariable.m */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		5B1C9F2518C1C9CA00F0D092 /* Value */ = {
+			isa = PBXGroup;
+			children = (
+				5B1C9F2618C1C9CA00F0D092 /* RConstant.h */,
+				5B1C9F2718C1C9CA00F0D092 /* RConstant.m */,
+			);
+			path = Value;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -152,16 +189,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B1C9EB718BF93B300F0D092 /* RScope.h in Headers */,
-				5B1C9EAE18BF91F700F0D092 /* RThing.h in Headers */,
-				5B1C9ECB18BF941500F0D092 /* RNull.h in Headers */,
-				5B1C9ECF18BF941E00F0D092 /* RVoid.h in Headers */,
-				5B1C9EBF18BF93D900F0D092 /* RLoop.h in Headers */,
-				5B1C9ED318BF944300F0D092 /* ROperation.h in Headers */,
-				5B1C9EB318BF938800F0D092 /* RExpression.h in Headers */,
-				5B1C9EC718BF940000F0D092 /* RConstant.h in Headers */,
-				5B1C9EBB18BF93C800F0D092 /* RBranch.h in Headers */,
-				5B1C9EC318BF93F100F0D092 /* RVariable.h in Headers */,
+				5B1C9F3218C1C9CA00F0D092 /* RScope.h in Headers */,
+				5B1C9F3018C1C9CA00F0D092 /* ROperation.h in Headers */,
+				5B1C9F2C18C1C9CA00F0D092 /* RBranch.h in Headers */,
+				5B1C9F2E18C1C9CA00F0D092 /* RLoop.h in Headers */,
+				5B1C9F2A18C1C9CA00F0D092 /* RThing.h in Headers */,
+				5B1C9F3618C1C9CA00F0D092 /* RConstant.h in Headers */,
+				5B1C9F3418C1C9CA00F0D092 /* RVariable.h in Headers */,
+				5B1C9F2818C1C9CA00F0D092 /* RExpression.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +247,11 @@
 				CLASSPREFIX = R;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Triceratops Software, s.r.o.";
+				TargetAttributes = {
+					5B1C9ED818BFAFEE00F0D092 = {
+						TestTargetID = 5B1C9E8218BF917500F0D092;
+					};
+				};
 			};
 			buildConfigurationList = 5B1C9E7C18BF90F900F0D092 /* Build configuration list for PBXProject "Objective-R" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -236,7 +276,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B1C9EEF18BFB03600F0D092 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,16 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B1C9ED418BF944300F0D092 /* ROperation.m in Sources */,
-				5B1C9ED018BF941E00F0D092 /* RVoid.m in Sources */,
-				5B1C9EBC18BF93C800F0D092 /* RBranch.m in Sources */,
-				5B1C9EC818BF940000F0D092 /* RConstant.m in Sources */,
-				5B1C9EB418BF938800F0D092 /* RExpression.m in Sources */,
-				5B1C9EC418BF93F100F0D092 /* RVariable.m in Sources */,
-				5B1C9EC018BF93D900F0D092 /* RLoop.m in Sources */,
-				5B1C9EB818BF93B300F0D092 /* RScope.m in Sources */,
-				5B1C9EAF18BF91F700F0D092 /* RThing.m in Sources */,
-				5B1C9ECC18BF941500F0D092 /* RNull.m in Sources */,
+				5B1C9F3118C1C9CA00F0D092 /* ROperation.m in Sources */,
+				5B1C9F3318C1C9CA00F0D092 /* RScope.m in Sources */,
+				5B1C9F3718C1C9CA00F0D092 /* RConstant.m in Sources */,
+				5B1C9F3518C1C9CA00F0D092 /* RVariable.m in Sources */,
+				5B1C9F2D18C1C9CA00F0D092 /* RBranch.m in Sources */,
+				5B1C9F2918C1C9CA00F0D092 /* RExpression.m in Sources */,
+				5B1C9F2F18C1C9CA00F0D092 /* RLoop.m in Sources */,
+				5B1C9F2B18C1C9CA00F0D092 /* RThing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +507,7 @@
 				5B1C9EA718BF917600F0D092 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B1C9EE818BFAFEE00F0D092 /* Build configuration list for PBXNativeTarget "Objective-R Tests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +516,7 @@
 				5B1C9EEA18BFAFEE00F0D092 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
