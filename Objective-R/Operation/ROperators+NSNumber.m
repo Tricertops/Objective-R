@@ -52,8 +52,10 @@
 - (id)R_modulo:(id)other {
     double x = [self doubleValue];
     double y = [other doubleValue];
-    long long i = floor(x / y);
-    return @( x - i * y );
+    double d = x / y;
+    long long i = (d < 0? ceil(d) : floor(d)); // Closer to zero.
+    double m = x - i * y;
+    return @(m);
 }
 
 

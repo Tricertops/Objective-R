@@ -477,6 +477,10 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = xctest;
@@ -518,6 +522,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = xctest;

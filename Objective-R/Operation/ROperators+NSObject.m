@@ -39,12 +39,12 @@
     id result = nil;
     
     // 5 + 3
-    result = [self R_resultOfPlusWithObject:otherObject];
+    result = [self R_plus:otherObject];
     if (result) return result;
     
     // 3 + 5
     // If objects are of different classes and only one of them overrides the operator.
-    result = [otherObject R_resultOfPlusWithObject:self];
+    result = [otherObject R_plus:self];
     if (result) return result;
     
     return nil;
@@ -107,7 +107,7 @@
     NSUInteger integer = [number unsignedIntegerValue];
     id result = self;
     for (NSUInteger i = 0; i < integer; i++) {
-        result = [self R_plus:result];
+        result = [self R_resultOfPlusWithObject:result];
         if ( ! result) break;
     }
     return result;
