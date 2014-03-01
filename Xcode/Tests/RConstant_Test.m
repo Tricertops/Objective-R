@@ -31,6 +31,18 @@
 }
 
 
+- (void)test_RVoid {
+    RConstant *constant = RVoid;
+    XCTAssertNil(constant.value);
+}
+
+
+- (void)test_RNull {
+    RConstant *constant = RNull;
+    XCTAssertEqualObjects(constant.value, NSNull.null);
+}
+
+
 - (void)test_evaluateInScope {
     id result = [RConst(@5) evaluateInScope:nil];
     XCTAssertEqualObjects(result, @5);
