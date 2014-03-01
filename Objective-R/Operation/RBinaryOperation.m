@@ -6,11 +6,9 @@
 //  Copyright (c) 2014 Triceratops Software, s.r.o. All rights reserved.
 //
 
-#import "RBinaryOperation.h"
-#import "RConstant.h"
-#import "NSObject+ROperators.h"
 @import Foundation.NSComparisonPredicate;
 @import Foundation.NSExpression;
+#import "RBinaryOperation.h"
 
 
 

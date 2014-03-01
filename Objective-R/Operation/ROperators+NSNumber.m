@@ -6,9 +6,8 @@
 //  Copyright (c) 2014 Triceratops Software, s.r.o. All rights reserved.
 //
 
-@import Foundation.NSDecimalNumber;
 #import <math.h>
-#import "NSNumber+ROperators.h"
+#import "ROperators+NSNumber.h"
 
 
 
