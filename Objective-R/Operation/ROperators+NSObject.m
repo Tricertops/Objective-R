@@ -155,8 +155,8 @@
 
 
 - (BOOL)R_booleanValue {
-    if ([self respondsToSelector:@selector(boolValue)]) {
-        return [(id)self boolValue];
+    if ([self isKindOfClass:[NSNumber class]]) {
+        return [(NSNumber *)self boolValue];
     }
     else return ! [self isKindOfClass:[NSNull class]];
 }

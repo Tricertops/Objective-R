@@ -31,6 +31,8 @@
 - (id)evaluateInScope:(RScope *)scope {
     id result = [self.operand evaluateInScope:scope];
     
+    if ( ! result) return nil;
+    
     switch ((RUnaryOperator)self.operator) {
         case ROperatorUnaryPlus:    return result;
         case ROperatorUnaryMinus:   return [result R_resultOfUnaryMinus];
