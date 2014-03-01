@@ -11,6 +11,7 @@
 #import "RResult.h"
 #import "RConstant.h"
 #import "ROperation.h"
+#import "RExpression+ROperation.h"
 
 
 
@@ -45,9 +46,9 @@
 
 - (void)test_RLast {
     RScope *scope = [RScope scope:
-                     [ROperation binary:ROperatorMultiply left:R(@4) right:R(@6)],
-                     [ROperation binary:ROperatorMinus left:RLast right:R(@14)],
-                     [ROperation binary:ROperatorDivide left:R(@3) right:RLast],
+                     [R(@4) multiply:R(@6)],
+                     [RLast minus:R(@14)],
+                     [R(@3) divide:RLast],
                      nil];
     id result = [scope evaluateInScope:nil];
     XCTAssertEqualObjects(result, @0.3);
