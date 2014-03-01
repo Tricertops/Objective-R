@@ -25,8 +25,12 @@
 		5B1C9F3518C1C9CA00F0D092 /* RVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F2418C1C9CA00F0D092 /* RVariable.m */; };
 		5B1C9F3618C1C9CA00F0D092 /* RConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9F2618C1C9CA00F0D092 /* RConstant.h */; };
 		5B1C9F3718C1C9CA00F0D092 /* RConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F2718C1C9CA00F0D092 /* RConstant.m */; };
+		5B1C9F3A18C1CA8300F0D092 /* RUnaryOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9F3818C1CA8300F0D092 /* RUnaryOperation.h */; };
+		5B1C9F3B18C1CA8300F0D092 /* RUnaryOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F3918C1CA8300F0D092 /* RUnaryOperation.m */; };
 		5B1C9F3E18C1D8CB00F0D092 /* NSObject+ROperators.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9F3C18C1D8CB00F0D092 /* NSObject+ROperators.h */; };
 		5B1C9F3F18C1D8CB00F0D092 /* NSObject+ROperators.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F3D18C1D8CB00F0D092 /* NSObject+ROperators.m */; };
+		5B1C9F4418C1DBC600F0D092 /* RBinaryOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C9F4218C1DBC600F0D092 /* RBinaryOperation.h */; };
+		5B1C9F4518C1DBC600F0D092 /* RBinaryOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F4318C1DBC600F0D092 /* RBinaryOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +66,12 @@
 		5B1C9F2418C1C9CA00F0D092 /* RVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVariable.m; sourceTree = "<group>"; };
 		5B1C9F2618C1C9CA00F0D092 /* RConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RConstant.h; sourceTree = "<group>"; };
 		5B1C9F2718C1C9CA00F0D092 /* RConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RConstant.m; sourceTree = "<group>"; };
+		5B1C9F3818C1CA8300F0D092 /* RUnaryOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUnaryOperation.h; sourceTree = "<group>"; };
+		5B1C9F3918C1CA8300F0D092 /* RUnaryOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUnaryOperation.m; sourceTree = "<group>"; };
 		5B1C9F3C18C1D8CB00F0D092 /* NSObject+ROperators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ROperators.h"; sourceTree = "<group>"; };
 		5B1C9F3D18C1D8CB00F0D092 /* NSObject+ROperators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ROperators.m"; sourceTree = "<group>"; };
+		5B1C9F4218C1DBC600F0D092 /* RBinaryOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBinaryOperation.h; sourceTree = "<group>"; };
+		5B1C9F4318C1DBC600F0D092 /* RBinaryOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBinaryOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +165,10 @@
 				5B1C9F1E18C1C9CA00F0D092 /* ROperation.m */,
 				5B1C9F3C18C1D8CB00F0D092 /* NSObject+ROperators.h */,
 				5B1C9F3D18C1D8CB00F0D092 /* NSObject+ROperators.m */,
+				5B1C9F3818C1CA8300F0D092 /* RUnaryOperation.h */,
+				5B1C9F3918C1CA8300F0D092 /* RUnaryOperation.m */,
+				5B1C9F4218C1DBC600F0D092 /* RBinaryOperation.h */,
+				5B1C9F4318C1DBC600F0D092 /* RBinaryOperation.m */,
 			);
 			path = Operation;
 			sourceTree = "<group>";
@@ -195,10 +207,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B1C9F4418C1DBC600F0D092 /* RBinaryOperation.h in Headers */,
 				5B1C9F3218C1C9CA00F0D092 /* RScope.h in Headers */,
 				5B1C9F3018C1C9CA00F0D092 /* ROperation.h in Headers */,
 				5B1C9F2C18C1C9CA00F0D092 /* RBranch.h in Headers */,
 				5B1C9F2E18C1C9CA00F0D092 /* RLoop.h in Headers */,
+				5B1C9F3A18C1CA8300F0D092 /* RUnaryOperation.h in Headers */,
 				5B1C9F3E18C1D8CB00F0D092 /* NSObject+ROperators.h in Headers */,
 				5B1C9F2A18C1C9CA00F0D092 /* RThing.h in Headers */,
 				5B1C9F3618C1C9CA00F0D092 /* RConstant.h in Headers */,
@@ -293,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B1C9F4518C1DBC600F0D092 /* RBinaryOperation.m in Sources */,
 				5B1C9F3F18C1D8CB00F0D092 /* NSObject+ROperators.m in Sources */,
 				5B1C9F3118C1C9CA00F0D092 /* ROperation.m in Sources */,
 				5B1C9F3318C1C9CA00F0D092 /* RScope.m in Sources */,
@@ -301,6 +316,7 @@
 				5B1C9F2D18C1C9CA00F0D092 /* RBranch.m in Sources */,
 				5B1C9F2918C1C9CA00F0D092 /* RExpression.m in Sources */,
 				5B1C9F2F18C1C9CA00F0D092 /* RLoop.m in Sources */,
+				5B1C9F3B18C1CA8300F0D092 /* RUnaryOperation.m in Sources */,
 				5B1C9F2B18C1C9CA00F0D092 /* RThing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
