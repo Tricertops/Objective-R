@@ -36,6 +36,8 @@
 		5B1C9F4B18C21B9A00F0D092 /* ROperators+NSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F4918C21B9A00F0D092 /* ROperators+NSNumber.m */; };
 		5B1C9F4D18C2242100F0D092 /* RUnaryOperation_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F4C18C2242100F0D092 /* RUnaryOperation_Test.m */; };
 		5B1C9F4F18C22F6700F0D092 /* RBinaryOperation_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C9F4E18C22F6700F0D092 /* RBinaryOperation_Test.m */; };
+		5B57079D18C2501600CAEA5E /* RResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B57079B18C2501600CAEA5E /* RResult.h */; };
+		5B57079E18C2501600CAEA5E /* RResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B57079C18C2501600CAEA5E /* RResult.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		5B1C9F4918C21B9A00F0D092 /* ROperators+NSNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ROperators+NSNumber.m"; sourceTree = "<group>"; };
 		5B1C9F4C18C2242100F0D092 /* RUnaryOperation_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUnaryOperation_Test.m; sourceTree = "<group>"; };
 		5B1C9F4E18C22F6700F0D092 /* RBinaryOperation_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBinaryOperation_Test.m; sourceTree = "<group>"; };
+		5B57079B18C2501600CAEA5E /* RResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RResult.h; sourceTree = "<group>"; };
+		5B57079C18C2501600CAEA5E /* RResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RResult.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,8 @@
 			children = (
 				5B1C9F2018C1C9CA00F0D092 /* RScope.h */,
 				5B1C9F2118C1C9CA00F0D092 /* RScope.m */,
+				5B57079B18C2501600CAEA5E /* RResult.h */,
+				5B57079C18C2501600CAEA5E /* RResult.m */,
 			);
 			path = Scope;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B1C9F4418C1DBC600F0D092 /* RBinaryOperation.h in Headers */,
+				5B57079D18C2501600CAEA5E /* RResult.h in Headers */,
 				5B1C9F4A18C21B9A00F0D092 /* ROperators+NSNumber.h in Headers */,
 				5B1C9F3218C1C9CA00F0D092 /* RScope.h in Headers */,
 				5B1C9F3018C1C9CA00F0D092 /* ROperation.h in Headers */,
@@ -323,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B57079E18C2501600CAEA5E /* RResult.m in Sources */,
 				5B1C9F4518C1DBC600F0D092 /* RBinaryOperation.m in Sources */,
 				5B1C9F3F18C1D8CB00F0D092 /* ROperators+NSObject.m in Sources */,
 				5B1C9F3118C1C9CA00F0D092 /* ROperation.m in Sources */,
