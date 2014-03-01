@@ -16,7 +16,7 @@
 
 
 
-- (id)evaluateInScope:(RScope *)scope {
+- (id)evaluateInScope:(__unused RScope *)scope {
     return nil;
 }
 

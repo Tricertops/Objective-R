@@ -187,27 +187,27 @@
 }
 
 
-- (id)R_plus:(id)other {
+- (id)R_plus:(__unused id)other {
     return nil;
 }
 
 
-- (id)R_minus:(id)other {
+- (id)R_minus:(__unused id)other {
     return nil;
 }
 
 
-- (id)R_multiply:(id)other {
+- (id)R_multiply:(__unused id)other {
     return nil;
 }
 
 
-- (id)R_divide:(id)other {
+- (id)R_divide:(__unused id)other {
     return nil;
 }
 
 
-- (id)R_modulo:(id)other {
+- (id)R_modulo:(__unused id)other {
     return nil;
 }
 

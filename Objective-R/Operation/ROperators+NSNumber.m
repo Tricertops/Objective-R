@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Triceratops Software, s.r.o. All rights reserved.
 //
 
-#import <math.h>
+@import Darwin.C.math;
 #import "ROperators+NSNumber.h"
 
 
