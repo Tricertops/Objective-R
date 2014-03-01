@@ -7,6 +7,13 @@
 //
 
 #import "ROperation.h"
+#import "RUnaryOperation.h"
+#import "RBinaryOperation.h"
+
+
+
+
+
 
 
 
@@ -18,17 +25,18 @@
 
 
 + (instancetype)unary:(RUnaryOperator)operator of:(RExpression *)operand {
-    ROperation *operation = [[ROperation alloc] init];
+    RUnaryOperation *operation = [[RUnaryOperation alloc] init];
     operation.operator = operator;
-    operation.operands = @[ operand ];
+    operation.operand = operand;
     return operation;
 }
 
 
 + (instancetype)left:(RExpression *)left binary:(RBinaryOperator)operator right:(RExpression *)right {
-    ROperation *operation = [[ROperation alloc] init];
+    RBinaryOperation *operation = [[RBinaryOperation alloc] init];
     operation.operator = operator;
-    operation.operands = @[ left, right ];
+    operation.leftOperand = left;
+    operation.rightOperand = right;
     return operation;
 }
 
