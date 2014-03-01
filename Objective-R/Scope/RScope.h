@@ -21,8 +21,11 @@
 
 @property (atomic, readwrite, copy) NSArray *expressions;
 
+
 - (id)evaluateInScope:(RScope *)scope;
 
+@property (atomic, readonly, weak) RScope *parent;
+@property (atomic, readonly, strong) id result;
 
 
 @end

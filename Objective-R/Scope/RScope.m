@@ -13,6 +13,19 @@
 
 
 
+@interface RScope ()
+
+
+@property (atomic, readwrite, weak) RScope *parent;
+@property (atomic, readwrite, strong) id result;
+
+
+@end
+
+
+
+
+
 @implementation RScope
 
 
@@ -27,14 +40,16 @@
 
 
 - (id)evaluateInScope:(RScope *)scope {
-    id result = nil;
-    
-    //TODO: Accessible result and parentScope
+    self.result = nil;
+    self.parent = scope;
     
     for (RExpression *exp in self.expressions) {
-        result = [exp evaluateInScope:self];
+        self.result = [exp evaluateInScope:self];
     }
     
+    id result = self.result;
+    self.parent = nil;
+    self.result = nil;
     return result;
 }
 
