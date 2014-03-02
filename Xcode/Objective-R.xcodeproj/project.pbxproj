@@ -43,6 +43,7 @@
 		5B5707A418C2543500CAEA5E /* RExpression+ROperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5707A218C2543500CAEA5E /* RExpression+ROperation.m */; };
 		5B5707A718C3378400CAEA5E /* RIfElseBranch.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B5707A518C3378400CAEA5E /* RIfElseBranch.h */; };
 		5B5707A818C3378400CAEA5E /* RIfElseBranch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5707A618C3378400CAEA5E /* RIfElseBranch.m */; };
+		5B5707AA18C3390700CAEA5E /* RIfElseBranch_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5707A918C3390700CAEA5E /* RIfElseBranch_Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		5B5707A218C2543500CAEA5E /* RExpression+ROperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RExpression+ROperation.m"; sourceTree = "<group>"; };
 		5B5707A518C3378400CAEA5E /* RIfElseBranch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIfElseBranch.h; sourceTree = "<group>"; };
 		5B5707A618C3378400CAEA5E /* RIfElseBranch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIfElseBranch.m; sourceTree = "<group>"; };
+		5B5707A918C3390700CAEA5E /* RIfElseBranch_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIfElseBranch_Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				5B1C9F4C18C2242100F0D092 /* RUnaryOperation_Test.m */,
 				5B1C9F4E18C22F6700F0D092 /* RBinaryOperation_Test.m */,
 				5B57079F18C2512F00CAEA5E /* RScope_Test.m */,
+				5B5707A918C3390700CAEA5E /* RIfElseBranch_Test.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5707AA18C3390700CAEA5E /* RIfElseBranch_Test.m in Sources */,
 				5B1C9F4718C21B6100F0D092 /* ROperators+NSNumber_Test.m in Sources */,
 				5B5707A018C2512F00CAEA5E /* RScope_Test.m in Sources */,
 				5B1C9F4F18C22F6700F0D092 /* RBinaryOperation_Test.m in Sources */,

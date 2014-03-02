@@ -20,10 +20,7 @@
 
 
 + (RBranch *)if:(RExpression *)condition then:(RExpression *)thenExpression {
-    RIfElseBranch *branch = [[RIfElseBranch alloc] init];
-    branch.condition = condition;
-    branch.thenExpression = thenExpression;
-    return branch;
+    return [RBranch if:condition then:thenExpression else:nil];
 }
 
 
