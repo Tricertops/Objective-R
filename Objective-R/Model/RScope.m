@@ -8,7 +8,6 @@
 
 #import "RScope.h"
 #import "RConstant.h"
-#import "NSString+RCode.h"
 
 
 
@@ -62,12 +61,25 @@
     NSMutableString *code = [[NSMutableString alloc] init];
     [code appendString:@"{\n"];
     for (RExpression *exp in self.expressions) {
-        NSString *subcode = [[exp code] stringByIndentingLinesBy:RCodeIndent];
+        NSString *subcode = [exp code];
+        
+        NSMutableString *builder = [[NSMutableString alloc] init];
+        [subcode enumerateLinesUsingBlock:^(NSString *line, __unused BOOL *stop) {
+            
+            for (NSUInteger index = 0; index < 4; index++) {
+                [builder appendString:@" "];
+            }
+            [builder appendString:line];
+            [builder appendString:@"\n"];
+            
+        }];
+        
         [code appendString:subcode];
     }
     [code appendString:@"}"];
     return code;
 }
+
 
 
 

@@ -39,7 +39,6 @@
 		5B57082C18C3ABE600CAEA5E /* RFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B57080C18C396DF00CAEA5E /* RFrame.m */; };
 		5B57083218C3B3B400CAEA5E /* RForLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B57083118C3B3B400CAEA5E /* RForLoop.m */; };
 		5B57083518C3B59000CAEA5E /* RSetVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B57083418C3B59000CAEA5E /* RSetVariable.m */; };
-		5B57083818C3BCF800CAEA5E /* NSString+RCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B57083718C3BCF800CAEA5E /* NSString+RCode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,8 +111,6 @@
 		5B57083118C3B3B400CAEA5E /* RForLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RForLoop.m; sourceTree = "<group>"; };
 		5B57083318C3B59000CAEA5E /* RSetVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSetVariable.h; sourceTree = "<group>"; };
 		5B57083418C3B59000CAEA5E /* RSetVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSetVariable.m; sourceTree = "<group>"; };
-		5B57083618C3BCF800CAEA5E /* NSString+RCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RCode.h"; sourceTree = "<group>"; };
-		5B57083718C3BCF800CAEA5E /* NSString+RCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RCode.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,8 +269,6 @@
 			children = (
 				5B57080218C3966F00CAEA5E /* RThing.h */,
 				5B57080318C3966F00CAEA5E /* RThing.m */,
-				5B57083618C3BCF800CAEA5E /* NSString+RCode.h */,
-				5B57083718C3BCF800CAEA5E /* NSString+RCode.m */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -430,7 +425,6 @@
 				5B1C9F4F18C22F6700F0D092 /* RBinaryOperation_Test.m in Sources */,
 				5B57081718C39E4C00CAEA5E /* Objective-R_Test.m in Sources */,
 				5B1C9F4D18C2242100F0D092 /* RUnaryOperation_Test.m in Sources */,
-				5B57083818C3BCF800CAEA5E /* NSString+RCode.m in Sources */,
 				5B57083518C3B59000CAEA5E /* RSetVariable.m in Sources */,
 				5B1C9EF218BFB05600F0D092 /* RConstant_Test.m in Sources */,
 				5B5707B018C33D4600CAEA5E /* RWhileLoop_Test.m in Sources */,
