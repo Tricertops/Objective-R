@@ -7,7 +7,6 @@
 //
 
 #import "RVariable.h"
-#import "RCreateVariable.h"
 #import "RSetVariable.h"
 #import "RExpression+ROperation.h"
 

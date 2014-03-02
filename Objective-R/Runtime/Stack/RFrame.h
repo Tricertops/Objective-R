@@ -21,9 +21,9 @@
 @property (atomic, readonly, weak) RFrame *parent;
 
 @property (atomic, readonly, copy) NSDictionary *variables;
-- (BOOL)createVariableWithName:(NSString *)name initialValue:(id)value;
-- (id)variableForName:(NSString *)name;
-- (void)setVariableForName:(NSString *)name value:(id)value;
+//TODO: - (BOOL)createVariableWithName:(NSString *)name initialValue:(id)value;
+//TODO: - (id)variableForName:(NSString *)name;
+//TODO: - (void)setVariableForName:(NSString *)name value:(id)value;
 
 
 @end
