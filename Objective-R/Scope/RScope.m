@@ -40,8 +40,8 @@
 
 
 - (id)evaluateInScope:(RScope *)scope {
-    self.result = nil;
     self.parent = scope;
+    self.result = scope.result;
     
     for (RExpression *exp in self.expressions) {
         self.result = [exp evaluateInScope:self];
