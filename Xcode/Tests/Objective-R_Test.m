@@ -86,6 +86,26 @@
 }
 
 
+- (void)test_LCM {
+    RFunction *f = [RFunction function:@"LCM"
+                             arguments:@[ RArg(A, @0),
+                                          RArg(B, @0)]
+                        implementation:
+                    [RVar(a) setTo:RVar(A)],
+                    [RVar(b) setTo:RVar(B)],
+                    [RLoop while:[RVar(B) isNotEqualTo:R(@0)] do:
+                     [RVar(t) create:RVar(b)],
+                     [RVar(b) setTo:[RVar(a) modulo:RVar(b)]],
+                     [RVar(a) setTo:RVar(t)],
+                     nil],
+                    [RVar(GCD) create:RVar(a)],
+                    [RVar(LCM) create:[[RVar(A) multiply:RVar(B)] divide:RVar(GCD)]],
+                    nil];
+    NSLog(@"\n\n%@\n\n", [f code]);
+}
+
+
+
 
 
 @end
