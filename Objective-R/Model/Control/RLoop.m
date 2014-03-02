@@ -27,10 +27,31 @@
 
 
 
-+ (RLoop *)while:(RExpression *)condition do:(RExpression *)expression {
++ (RLoop *)while:(RExpression *)condition do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION {
     RWhileLoop *loop = [[RWhileLoop alloc] init];
     loop.condition = condition;
-    loop.expression = expression;
+    
+    RScope *scope = [[RScope alloc] init];
+    scope.expressions = RVariadicArray(expression);
+    loop.expression = scope;
+    
+    return loop;
+}
+
+
+
+
+
++ (RLoop *)for:(RVariable *)variable condition:(RExpression *)condition step:(RExpression *)step do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION {
+    RForLoop *loop = [[RForLoop alloc] init];
+    loop.variable = variable;
+    loop.condition = condition;
+    loop.step = step;
+    
+    RScope *scope = [[RScope alloc] init];
+    scope.expressions = RVariadicArray(expression);
+    loop.expression = scope;
+    
     return loop;
 }
 
@@ -43,7 +64,7 @@
     
     RScope *scope = [[RScope alloc] init];
     scope.expressions = RVariadicArray(expression);
-    loop.scope = scope;
+    loop.expression = scope;
     
     return loop;
 }

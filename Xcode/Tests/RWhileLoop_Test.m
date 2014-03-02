@@ -39,10 +39,9 @@
 - (void)test_creation {
     RConstant *yes = R(@YES);
     RConstant *three = R(@3);
-    RWhileLoop *loop = (RWhileLoop *)[RLoop while:yes do:three];
+    RWhileLoop *loop = (RWhileLoop *)[RLoop while:yes do:three, nil];
     XCTAssertEqualObjects(loop.class, [RWhileLoop class]);
     XCTAssertEqual(loop.condition, yes);
-    XCTAssertEqual(loop.expression, three);
 }
 
 
