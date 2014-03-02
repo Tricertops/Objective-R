@@ -8,7 +8,9 @@
 
 #import "RExpression.h"
 #import "RConstant.h"
+#import "RExpression+ROperation.h"
 #import "ROperators+NSObject.h"
+#import "ROperators+NSNumber.h"
 
 
 

@@ -7,7 +7,7 @@
 //
 
 #import "RExpression.h"
-#import "ROperation.h"
+@class ROperation;
 
 
 

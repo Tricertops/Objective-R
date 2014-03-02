@@ -9,7 +9,7 @@
 #import "RLoop.h"
 #import "RWhileLoop.h"
 #import "RForLoop.h"
-#import "RExpression+ROperation.h"
+#import "ROperation.h"
 #import "RScope.h"
 
 

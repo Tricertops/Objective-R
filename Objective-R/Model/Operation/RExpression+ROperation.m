@@ -7,6 +7,7 @@
 //
 
 #import "RExpression+ROperation.h"
+#import "ROperation.h"
 
 
 
