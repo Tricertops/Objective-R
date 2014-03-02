@@ -58,7 +58,7 @@
 
 
 - (NSString *)code {
-    return [NSString stringWithFormat:@"%@$%@ = %@", (self.shouldCreate? @"var " : @""), self.name, [self.value code]];
+    return [NSString stringWithFormat:@"%@%@ ← %@", (self.shouldCreate? @"def " : @""), self.name, [self.value code]];
 }
 
 

@@ -62,7 +62,7 @@
 
 
 - (NSString *)code {
-    return [NSString stringWithFormat:@"$%@", self.name];
+    return self.name;
 }
 
 
