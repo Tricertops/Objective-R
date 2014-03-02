@@ -32,7 +32,7 @@
 
 
 
-- (void)test_ {
+- (void)test_factorial {
     RFunction *f = [RFunction function:@"factorial"
                              arguments:@[ RArg(n, @0) ]
                         implementation:
@@ -42,8 +42,25 @@
                      nil],
                     RVar(result),
                     nil];
-    NSLog(@"%@", [f code]);
+    NSLog(@"\n\n%@\n\n", [f code]);
     XCTAssertNotNil(f);
+}
+
+
+- (void)test_fibonacci {
+    RFunction *f = [RFunction function:@"fibonacci"
+                             arguments:@[ RArg(n, @0) ]
+                        implementation:
+                    [RVar(previous) create:R(@0)],
+                    [RVar(current) create:R(@1)],
+                    [RLoop for:RVar(i) from:R(@3) to:RVar(n) do:
+                     [RVar(next) create:[RVar(previous) plus:RVar(current)]],
+                     [RVar(previous) setTo:RVar(current)],
+                     [RVar(current) setTo:RVar(next)],
+                     nil],
+                    RVar(current),
+                    nil];
+    NSLog(@"\n\n%@\n\n", [f code]);
 }
 
 

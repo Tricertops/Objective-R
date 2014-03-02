@@ -74,7 +74,7 @@
             
         }];
         
-        [code appendString:subcode];
+        [code appendString:builder];
     }
     [code appendString:@"}"];
     return code;

@@ -30,6 +30,7 @@
 #import "ROperation.h"
 
 #import "RVariable.h"
+#import "RResult.h"
 
 #import "RBranch.h"
 #import "RLoop.h"
