@@ -36,12 +36,11 @@
     [RFunction function:@"factorial"
               arguments:@[ RArg(n, @0) ]
          implementation:
-     [RVar(result) create:@1],
-//     [RLoop for:RVar(i) from:@1 to:RVar(n) do:
-//      [[RVar(result) multiply:RVar(i)]
-//       storeIn:RVar(result)],
-//      ],
-//     [RFunction return:RVar(result)],
+     [RVar(result) create:R(@1)],
+     [RLoop for:RVar(i) from:R(@1) to:RVar(n) do:
+      [RVar(result) setTo:[RVar(result) multiply:RVar(i)]],
+      nil],
+     RVar(result),
      nil];
 }
 

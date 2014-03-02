@@ -8,6 +8,8 @@
 
 #import "RVariable.h"
 #import "RCreateVariable.h"
+#import "RSetVariable.h"
+#import "RExpression+ROperation.h"
 
 
 
@@ -31,11 +33,29 @@
 }
 
 
-- (RExpression *)create:(id)initialValue {
-    RCreateVariable *creation = [[RCreateVariable alloc] init];
+- (RVariable *)create:(RExpression *)initialValue {
+    RSetVariable *creation = [[RSetVariable alloc] init];
+    creation.shouldCreate = YES;
     creation.variable = self;
-    creation = initialValue;
+    creation.value = initialValue;
     return creation;
+}
+
+
+- (RVariable *)setTo:(RExpression *)value {
+    RSetVariable *setter = [[RSetVariable alloc] init];
+    setter.shouldCreate = NO;
+    setter.variable = self;
+    setter.value = value;
+    return setter;
+}
+
+
+
+
+
+- (RVariable *)incrementBy:(RExpression *)value {
+    return [self setTo:[self plus:value]];
 }
 
 

@@ -7,6 +7,7 @@
 //
 
 #import "RExpression.h"
+#import "RVariable.h"
 
 
 
@@ -17,6 +18,7 @@
 
 
 + (RLoop *)while:(RExpression *)condition do:(RExpression *)expression;
++ (RLoop *)for:(RVariable *)iterator from:(RExpression *)fromValue to:(RExpression *)toValue do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION;
 
 
 
