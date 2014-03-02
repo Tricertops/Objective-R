@@ -42,9 +42,9 @@
 
 
 
-+ (RLoop *)for:(RVariable *)variable condition:(RExpression *)condition step:(RExpression *)step do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION {
++ (RLoop *)for:(RExpression *)initializer condition:(RExpression *)condition step:(RExpression *)step do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION {
     RForLoop *loop = [[RForLoop alloc] init];
-    loop.variable = variable;
+    loop.initializer = initializer;
     loop.condition = condition;
     loop.step = step;
     
@@ -58,7 +58,7 @@
 
 + (RLoop *)for:(RVariable *)iterator from:(RExpression *)fromValue to:(RExpression *)toValue do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION {
     RForLoop *loop = [[RForLoop alloc] init];
-    loop.variable = [iterator create:fromValue];
+    loop.initializer = [iterator create:fromValue];
     loop.condition = [iterator isLessThanOrEqualTo:toValue];
     loop.step = [iterator incrementBy:R(@1)];
     

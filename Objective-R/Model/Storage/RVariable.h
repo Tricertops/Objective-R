@@ -22,10 +22,10 @@
 @property (atomic, readwrite, copy) NSString *name;
 
 
-- (RVariable *)create:(RExpression *)initialValue;
-- (RVariable *)setTo:(RExpression *)value;
+- (RExpression *)create:(RExpression *)initialValue;
+- (RExpression *)setTo:(RExpression *)value;
 
-- (RVariable *)incrementBy:(RExpression *)value;
+- (RExpression *)incrementBy:(RExpression *)value;
 
 
 

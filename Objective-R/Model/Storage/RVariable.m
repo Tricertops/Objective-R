@@ -25,14 +25,17 @@
 
 
 
-+ (RVariable *)variable:(NSString *)name {
++ (RExpression *)variable:(NSString *)name {
     RVariable *variable = [[RVariable alloc] init];
     variable.name = name;
     return variable;
 }
 
 
-- (RVariable *)create:(RExpression *)initialValue {
+
+
+
+- (RExpression *)create:(RExpression *)initialValue {
     RSetVariable *creation = [[RSetVariable alloc] init];
     creation.shouldCreate = YES;
     creation.variable = self;
@@ -41,7 +44,7 @@
 }
 
 
-- (RVariable *)setTo:(RExpression *)value {
+- (RExpression *)setTo:(RExpression *)value {
     RSetVariable *setter = [[RSetVariable alloc] init];
     setter.shouldCreate = NO;
     setter.variable = self;
@@ -53,7 +56,7 @@
 
 
 
-- (RVariable *)incrementBy:(RExpression *)value {
+- (RExpression *)incrementBy:(RExpression *)value {
     return [self setTo:[self plus:value]];
 }
 

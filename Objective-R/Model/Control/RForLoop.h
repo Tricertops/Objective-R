@@ -16,7 +16,7 @@
 
 
 
-@property (atomic, readwrite, strong) RVariable *variable;
+@property (atomic, readwrite, strong) RExpression *initializer;
 @property (atomic, readwrite, strong) RExpression *condition;
 @property (atomic, readwrite, strong) RExpression *step;
 @property (atomic, readwrite, strong) RExpression *expression;

@@ -23,42 +23,8 @@
 
 
 
-- (NSString *)name {
-    return self.variable.name;
-}
-
-
-- (void)setName:(NSString *)name {
-    self.variable.name = name;
-}
-
-
-
-
-
-- (RVariable *)create:(RExpression *)initialValue {
-    return [self.variable create:initialValue];
-}
-
-
-- (RVariable *)setTo:(RExpression *)value {
-    return [self.variable setTo:value];
-}
-
-
-
-
-
-- (RVariable *)incrementBy:(RExpression *)value {
-    return [self.variable incrementBy:value];
-}
-
-
-
-
-
 - (NSString *)code {
-    return [NSString stringWithFormat:@"%@%@ ← %@", (self.shouldCreate? @"def " : @""), self.name, [self.value code]];
+    return [NSString stringWithFormat:@"%@%@ ← %@", (self.shouldCreate? @"def " : @""), self.variable.name, [self.value code]];
 }
 
 
