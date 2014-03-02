@@ -46,14 +46,14 @@
 }
 
 
-- (void)test_looping {
-    RScope *scope = [RScope scope:
-                     R(@0),
-                     [RLoop while:[RLast isLessThan:R(@5)] do:[RLast plus:R(@1)]],
-                     nil];
-    id result = [scope evaluateInScope:nil];
-    XCTAssertEqualObjects(result, @4);
-}
+//- (void)test_looping {
+//    RScope *scope = [RScope scope:
+//                     R(@0),
+//                     [RLoop while:[RLast isLessThan:R(@5)] do:[RLast plus:R(@1)]],
+//                     nil];
+//    id result = [scope evaluateInScope:nil];
+//    XCTAssertEqualObjects(result, @4);
+//}
 
 
 

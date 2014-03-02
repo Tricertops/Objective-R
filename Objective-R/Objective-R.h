@@ -23,6 +23,7 @@
 
 #import "RConstant.h"
 #import "RScope.h"
+#import "RVariable.h"
 
 #import "ROperation.h"
 #import "ROperators+NSNumber.h"
@@ -30,4 +31,6 @@
 
 #import "RBranch.h"
 #import "RLoop.h"
+
+#import "RFunction.h"
 

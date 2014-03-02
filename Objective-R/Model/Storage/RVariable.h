@@ -8,6 +8,24 @@
 
 #import "RExpression.h"
 
+
+
+
+
 @interface RVariable : RExpression
 
+
+
+#define RVar(NAME)      [RVariable variable:@#NAME]
++ (RVariable *)variable:(NSString *)name;
+
+@property (atomic, readwrite, copy) NSString *name;
+
+
+- (RExpression *)create:(id)initialValue;
+
+
+
 @end
+
+

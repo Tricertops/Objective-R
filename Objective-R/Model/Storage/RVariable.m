@@ -8,6 +8,37 @@
 
 #import "RVariable.h"
 
+
+
+
+
+
+
+
+
+
 @implementation RVariable
 
+
+
+
+
++ (RVariable *)variable:(NSString *)name {
+    RVariable *variable = [[RVariable alloc] init];
+    variable.name = name;
+    return variable;
+}
+
+
+- (RExpression *)create:(id)initialValue {
+    //TODO: Return RVariableDeclaration
+    return self;
+}
+
+
+
+
+
 @end
+
+

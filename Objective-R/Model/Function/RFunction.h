@@ -18,9 +18,14 @@
 
 
 
++ (RFunction *)function:(NSString *)name arguments:(NSArray *)args implementation:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION;
+
 @property (atomic, readwrite, copy) NSString *name;
 @property (atomic, readwrite, copy) NSArray *arguments;
 @property (atomic, readwrite, strong) RScope *implementation;
+
+
+//TODO: + (RExpression *)return:(RExpression *)value;
 
 
 

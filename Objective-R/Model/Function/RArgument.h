@@ -16,6 +16,9 @@
 
 
 
+#define RArg(NAME, DEFAULT)     [RArgument argument:@#NAME defaultValue:DEFAULT]
++ (RArgument *)argument:(NSString *)name defaultValue:(id)value;
+
 @property (atomic, readwrite, strong) NSString *name;
 @property (atomic, readwrite, strong) id defaultValue;
 

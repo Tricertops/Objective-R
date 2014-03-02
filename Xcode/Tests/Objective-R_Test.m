@@ -33,7 +33,16 @@
 
 
 - (void)test_ {
-    
+    [RFunction function:@"factorial"
+              arguments:@[ RArg(n, @0) ]
+         implementation:
+     [RVar(result) create:@1],
+//     [RLoop for:RVar(i) from:@1 to:RVar(n) do:
+//      [[RVar(result) multiply:RVar(i)]
+//       storeIn:RVar(result)],
+//      ],
+//     [RFunction return:RVar(result)],
+     nil];
 }
 
 

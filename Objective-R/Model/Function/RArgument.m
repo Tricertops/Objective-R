@@ -8,6 +8,32 @@
 
 #import "RArgument.h"
 
+
+
+
+
+
+
+
+
+
 @implementation RArgument
 
+
+
+
+
++ (RArgument *)argument:(NSString *)name defaultValue:(id)value {
+    RArgument *argument = [[RArgument alloc] init];
+    argument.name = name;
+    argument.defaultValue = value;
+    return argument;
+}
+
+
+
+
+
 @end
+
+
