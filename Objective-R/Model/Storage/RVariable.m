@@ -7,6 +7,7 @@
 //
 
 #import "RVariable.h"
+#import "RCreateVariable.h"
 
 
 
@@ -31,8 +32,10 @@
 
 
 - (RExpression *)create:(id)initialValue {
-    //TODO: Return RVariableDeclaration
-    return self;
+    RCreateVariable *creation = [[RCreateVariable alloc] init];
+    creation.variable = self;
+    creation = initialValue;
+    return creation;
 }
 
 
