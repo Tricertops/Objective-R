@@ -59,6 +59,40 @@
 
 
 
+
+- (ROperation *)isEqualTo:(RExpression *)other {
+    return [ROperation binary:ROperatorEqualTo left:self right:other];
+}
+
+
+- (ROperation *)isNotEqualTo:(RExpression *)other {
+    return [ROperation binary:ROperatorNotEqualTo left:self right:other];
+}
+
+
+- (ROperation *)isLessThan:(RExpression *)other {
+    return [ROperation binary:ROperatorLessThan left:self right:other];
+}
+
+
+- (ROperation *)isGreaterThan:(RExpression *)other {
+    return [ROperation binary:ROperatorGreaterThan left:self right:other];
+}
+
+
+- (ROperation *)isLessThanOrEqualTo:(RExpression *)other {
+    return [ROperation binary:ROperatorLessThanOrEqualTo left:self right:other];
+}
+
+
+- (ROperation *)isGreaterThanOrEqualTo:(RExpression *)other {
+    return [ROperation binary:ROperatorGreaterThanOrEqualTo left:self right:other];
+}
+
+
+
+
+
 @end
 
 

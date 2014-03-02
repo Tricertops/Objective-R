@@ -25,6 +25,13 @@
 - (ROperation *)divide:(RExpression *)other;
 - (ROperation *)modulo:(RExpression *)other;
 
+- (ROperation *)isEqualTo:(RExpression *)other;
+- (ROperation *)isNotEqualTo:(RExpression *)other;
+- (ROperation *)isLessThan:(RExpression *)other;
+- (ROperation *)isGreaterThan:(RExpression *)other;
+- (ROperation *)isLessThanOrEqualTo:(RExpression *)other;
+- (ROperation *)isGreaterThanOrEqualTo:(RExpression *)other;
+
 
 
 @end
