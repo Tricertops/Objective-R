@@ -38,7 +38,11 @@
 
 
 - (NSString *)code {
-    return [NSString stringWithFormat:@"if (%@) %@ else %@", [self.condition code], [self.thenExpression code], [self.elseExpression code]];
+    NSString *code = [NSString stringWithFormat:@"if (%@) %@", [self.condition code], [self.thenExpression code]];
+    if (self.elseExpression) {
+        code = [code stringByAppendingFormat:@" else %@", [self.elseExpression code]];
+    }
+    return code;
 }
 
 

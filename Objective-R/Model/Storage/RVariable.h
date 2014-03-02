@@ -26,6 +26,7 @@
 - (RExpression *)setTo:(RExpression *)value;
 
 - (RExpression *)incrementBy:(RExpression *)value;
+- (RExpression *)decrementBy:(RExpression *)value;
 
 
 

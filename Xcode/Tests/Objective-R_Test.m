@@ -64,6 +64,28 @@
 }
 
 
+- (void)test_armstrong {
+    RFunction *f = [RFunction function:@"armstrong"
+                             arguments:@[ RArg(n, @0) ]
+                        implementation:
+                    [RVar(result) create:R(@0)],
+                    [RLoop for:RVar(i) from:R(@1) to:RVar(n) do:
+                     [RVar(number) create:RVar(i)],
+                     [RVar(sum) create:R(@0)],
+                     [RLoop while:[RVar(number) isGreaterThan:R(@0)] do:
+                      [RVar(digit) create:[RVar(number) modulo:R(@10)]],
+                      [RVar(sum) incrementBy:[RVar(digit) multiply:[RVar(digit) multiply:RVar(digit)]]],
+                      [RVar(number) decrementBy:RVar(digit)],
+                      [RVar(number) setTo:[RVar(number) divide:R(@10)]],
+                      nil],
+                     [RBranch if:[RVar(i) isEqualTo:RVar(sum)] then:[RVar(result) setTo:RVar(i)]],
+                     nil],
+                    RVar(current),
+                    nil];
+    NSLog(@"\n\n%@\n\n", [f code]);
+}
+
+
 
 
 @end

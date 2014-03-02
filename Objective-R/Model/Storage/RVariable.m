@@ -61,6 +61,11 @@
 }
 
 
+- (RExpression *)decrementBy:(RExpression *)value {
+    return [self setTo:[self minus:value]];
+}
+
+
 
 
 
