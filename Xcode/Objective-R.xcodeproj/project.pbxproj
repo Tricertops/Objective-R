@@ -44,6 +44,8 @@
 		5B5707A718C3378400CAEA5E /* RIfElseBranch.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B5707A518C3378400CAEA5E /* RIfElseBranch.h */; };
 		5B5707A818C3378400CAEA5E /* RIfElseBranch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5707A618C3378400CAEA5E /* RIfElseBranch.m */; };
 		5B5707AA18C3390700CAEA5E /* RIfElseBranch_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5707A918C3390700CAEA5E /* RIfElseBranch_Test.m */; };
+		5B5707AD18C33C1D00CAEA5E /* RWhileLoop.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B5707AB18C33C1D00CAEA5E /* RWhileLoop.h */; };
+		5B5707AE18C33C1D00CAEA5E /* RWhileLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5707AC18C33C1D00CAEA5E /* RWhileLoop.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		5B5707A518C3378400CAEA5E /* RIfElseBranch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIfElseBranch.h; sourceTree = "<group>"; };
 		5B5707A618C3378400CAEA5E /* RIfElseBranch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIfElseBranch.m; sourceTree = "<group>"; };
 		5B5707A918C3390700CAEA5E /* RIfElseBranch_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIfElseBranch_Test.m; sourceTree = "<group>"; };
+		5B5707AB18C33C1D00CAEA5E /* RWhileLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWhileLoop.h; sourceTree = "<group>"; };
+		5B5707AC18C33C1D00CAEA5E /* RWhileLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWhileLoop.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,8 @@
 				5B5707A618C3378400CAEA5E /* RIfElseBranch.m */,
 				5B1C9F1A18C1C9CA00F0D092 /* RLoop.h */,
 				5B1C9F1B18C1C9CA00F0D092 /* RLoop.m */,
+				5B5707AB18C33C1D00CAEA5E /* RWhileLoop.h */,
+				5B5707AC18C33C1D00CAEA5E /* RWhileLoop.m */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -253,6 +259,7 @@
 				5B1C9F3218C1C9CA00F0D092 /* RScope.h in Headers */,
 				5B1C9F3018C1C9CA00F0D092 /* ROperation.h in Headers */,
 				5B1C9F2C18C1C9CA00F0D092 /* RBranch.h in Headers */,
+				5B5707AD18C33C1D00CAEA5E /* RWhileLoop.h in Headers */,
 				5B1C9F2E18C1C9CA00F0D092 /* RLoop.h in Headers */,
 				5B1C9F3A18C1CA8300F0D092 /* RUnaryOperation.h in Headers */,
 				5B1C9F3E18C1D8CB00F0D092 /* ROperators+NSObject.h in Headers */,
@@ -362,6 +369,7 @@
 				5B1C9F2D18C1C9CA00F0D092 /* RBranch.m in Sources */,
 				5B1C9F2918C1C9CA00F0D092 /* RExpression.m in Sources */,
 				5B1C9F2F18C1C9CA00F0D092 /* RLoop.m in Sources */,
+				5B5707AE18C33C1D00CAEA5E /* RWhileLoop.m in Sources */,
 				5B1C9F3B18C1CA8300F0D092 /* RUnaryOperation.m in Sources */,
 				5B1C9F4B18C21B9A00F0D092 /* ROperators+NSNumber.m in Sources */,
 				5B1C9F2B18C1C9CA00F0D092 /* RThing.m in Sources */,

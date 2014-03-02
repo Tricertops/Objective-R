@@ -8,6 +8,18 @@
 
 #import "RExpression.h"
 
+
+
+
+
 @interface RLoop : RExpression
 
+
+
++ (RLoop *)while:(RExpression *)condition do:(RExpression *)expression;
+
+
+
 @end
+
+

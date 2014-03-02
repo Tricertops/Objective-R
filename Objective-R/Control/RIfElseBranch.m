@@ -13,6 +13,11 @@
 
 
 
+
+
+
+
+
 @implementation RIfElseBranch
 
 
@@ -20,9 +25,7 @@
 
 
 - (id)evaluateInScope:(RScope *)scope {
-    id condition = [self.condition evaluateInScope:scope];
-    
-    if ([condition R_booleanValue]) {
+    if ( [[self.condition evaluateInScope:scope] R_booleanValue] ) {
         return [self.thenExpression evaluateInScope:scope];
     }
     else {
