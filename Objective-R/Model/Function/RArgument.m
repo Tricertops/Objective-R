@@ -1,13 +1,13 @@
 //
-//  RProgram.m
+//  RArgument.m
 //  Objective-R
 //
 //  Created by Martin Kiss on 2.3.14.
 //  Copyright (c) 2014 Triceratops Software, s.r.o. All rights reserved.
 //
 
-#import "RProgram.h"
+#import "RArgument.h"
 
-@implementation RProgram
+@implementation RArgument
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "RThing.h"
-#import "RProgram.h"
 
 
 
@@ -17,8 +16,6 @@
 //TODO: sandbox, debugger, delegate
 
 
-
-@property (atomic, readonly, strong) RProgram *program;
 
 @property (atomic, readonly, strong) id result;
 @property (atomic, readonly, copy) NSArray *callStack;
