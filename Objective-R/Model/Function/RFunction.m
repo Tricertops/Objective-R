@@ -7,6 +7,7 @@
 //
 
 #import "RFunction.h"
+@import Foundation.NSKeyValueCoding;
 
 
 
@@ -33,6 +34,15 @@
     function.implementation = scope;
     
     return function;
+}
+
+
+
+
+
+- (NSString *)code {
+    NSString *arguments = [[self.arguments valueForKeyPath:@"code"] componentsJoinedByString:@", "];
+    return [NSString stringWithFormat:@"function %@(%@) %@", self.name, arguments, [self.implementation code]];
 }
 
 

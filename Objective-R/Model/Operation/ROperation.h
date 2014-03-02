@@ -30,6 +30,9 @@ typedef enum RBinaryOperator : ROperator RBinaryOperator;
 - (NSArray *)operands;
 
 
++ (NSArray *)stringsForOperator:(ROperator)operator;
+
+
 @end
 
 

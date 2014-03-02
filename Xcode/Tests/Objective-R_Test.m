@@ -33,15 +33,17 @@
 
 
 - (void)test_ {
-    [RFunction function:@"factorial"
-              arguments:@[ RArg(n, @0) ]
-         implementation:
-     [RVar(result) create:R(@1)],
-     [RLoop for:RVar(i) from:R(@1) to:RVar(n) do:
-      [RVar(result) setTo:[RVar(result) multiply:RVar(i)]],
-      nil],
-     RVar(result),
-     nil];
+    RFunction *f = [RFunction function:@"factorial"
+                             arguments:@[ RArg(n, @0) ]
+                        implementation:
+                    [RVar(result) create:R(@1)],
+                    [RLoop for:RVar(i) from:R(@1) to:RVar(n) do:
+                     [RVar(result) setTo:[RVar(result) multiply:RVar(i)]],
+                     nil],
+                    RVar(result),
+                    nil];
+    NSLog(@"%@", [f code]);
+    XCTAssertNotNil(f);
 }
 
 

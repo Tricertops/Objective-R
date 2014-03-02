@@ -76,6 +76,14 @@
 
 
 
+- (NSString *)code {
+    return [NSString stringWithFormat:@"%@ %@ %@", [self.leftOperand code], [[ROperation stringsForOperator:self.operator] firstObject], [self.rightOperand code]];
+}
+
+
+
+
+
 @end
 
 

@@ -7,6 +7,12 @@
 //
 
 #import "RExpression.h"
+#import "NSString+RCode.h"
+
+
+
+
+
 
 
 
@@ -16,9 +22,18 @@
 
 
 
+
+
 - (id)evaluateInScope:(__unused RScope *)scope {
     return nil;
 }
+
+
+- (NSString *)code {
+    return @"<?>";
+}
+
+
 
 
 

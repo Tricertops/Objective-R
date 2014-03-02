@@ -36,6 +36,14 @@
 
 
 
+- (NSString *)code {
+    return [NSString stringWithFormat:@"while (%@) %@", [self.condition code], [self.expression code]];
+}
+
+
+
+
+
 @end
 
 

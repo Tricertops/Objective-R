@@ -8,6 +8,7 @@
 
 #import "RScope.h"
 #import "RConstant.h"
+#import "NSString+RCode.h"
 
 
 
@@ -51,6 +52,21 @@
     self.parent = nil;
     self.result = nil;
     return result;
+}
+
+
+
+
+
+- (NSString *)code {
+    NSMutableString *code = [[NSMutableString alloc] init];
+    [code appendString:@"{\n"];
+    for (RExpression *exp in self.expressions) {
+        NSString *subcode = [[exp code] stringByIndentingLinesBy:RCodeIndent];
+        [code appendString:subcode];
+    }
+    [code appendString:@"}"];
+    return code;
 }
 
 

@@ -28,6 +28,9 @@
 @property (atomic, readonly, strong) id result;
 
 
+- (NSString *)code;
+
+
 @end
 
 

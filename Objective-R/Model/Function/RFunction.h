@@ -29,6 +29,10 @@
 
 
 
+- (NSString *)code;
+
+
+
 @end
 
 

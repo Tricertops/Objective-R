@@ -37,6 +37,14 @@
 
 
 
+- (NSString *)code {
+    return [NSString stringWithFormat:@"if (%@) %@ else %@", [self.condition code], [self.thenExpression code], [self.elseExpression code]];
+}
+
+
+
+
+
 @end
 
 

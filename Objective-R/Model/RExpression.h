@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Triceratops Software, s.r.o. All rights reserved.
 //
 
+@import Foundation.NSString;;
 #import "RThing.h"
 @class RScope;
 
@@ -17,6 +18,9 @@
 
 
 - (id)evaluateInScope:(RScope *)scope;
+
+
+- (NSString *)code;
 
 
 @end

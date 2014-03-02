@@ -8,6 +8,29 @@
 
 #import "RForLoop.h"
 
+
+
+
+
+
+
+
+
+
 @implementation RForLoop
 
+
+
+
+
+- (NSString *)code {
+    return [NSString stringWithFormat:@"for (%@; %@; %@) %@", [self.variable code], [self.condition code], [self.step code], [self.expression code]];
+}
+
+
+
+
+
 @end
+
+

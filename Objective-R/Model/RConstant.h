@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Triceratops Software, s.r.o. All rights reserved.
 //
 
+@import Foundation.NSNull;
 #import "RExpression.h"
 
 
@@ -26,6 +27,9 @@
 
 - (id)evaluateInScope:(RScope *)scope;
 
+
+
+- (NSString *)code;
 
 
 @end

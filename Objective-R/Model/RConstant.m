@@ -46,6 +46,16 @@
 
 
 
+- (NSString *)code {
+    if (self.value == nil) return @"void";
+    if (self.value == NSNull.null) return @"nil";
+    return [self.value description];
+}
+
+
+
+
+
 @end
 
 
