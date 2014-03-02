@@ -7,14 +7,18 @@
 //
 
 #import "RThing.h"
+#import "RProgram.h"
 
 
 
 
 
 @interface RProcess : RThing
-//TODO: program, sandbox, debugger, delegate
+//TODO: sandbox, debugger, delegate
 
+
+
+@property (atomic, readonly, strong) RProgram *program;
 
 @property (atomic, readonly, strong) id result;
 @property (atomic, readonly, copy) NSArray *callStack;
