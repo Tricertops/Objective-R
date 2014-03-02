@@ -7,7 +7,34 @@
 //
 
 #import "RLoop.h"
+#import "RWhileLoop.h"
+
+
+
+
+
+
+
+
+
 
 @implementation RLoop
 
+
+
+
+
++ (RLoop *)while:(RExpression *)condition do:(RExpression *)expression {
+    RWhileLoop *loop = [[RWhileLoop alloc] init];
+    loop.condition = condition;
+    loop.expression = expression;
+    return loop;
+}
+
+
+
+
+
 @end
+
+

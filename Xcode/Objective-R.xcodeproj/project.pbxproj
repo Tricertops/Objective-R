@@ -46,6 +46,7 @@
 		5B5707AA18C3390700CAEA5E /* RIfElseBranch_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5707A918C3390700CAEA5E /* RIfElseBranch_Test.m */; };
 		5B5707AD18C33C1D00CAEA5E /* RWhileLoop.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B5707AB18C33C1D00CAEA5E /* RWhileLoop.h */; };
 		5B5707AE18C33C1D00CAEA5E /* RWhileLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5707AC18C33C1D00CAEA5E /* RWhileLoop.m */; };
+		5B5707B018C33D4600CAEA5E /* RWhileLoop_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5707AF18C33D4600CAEA5E /* RWhileLoop_Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		5B5707A918C3390700CAEA5E /* RIfElseBranch_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIfElseBranch_Test.m; sourceTree = "<group>"; };
 		5B5707AB18C33C1D00CAEA5E /* RWhileLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWhileLoop.h; sourceTree = "<group>"; };
 		5B5707AC18C33C1D00CAEA5E /* RWhileLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWhileLoop.m; sourceTree = "<group>"; };
+		5B5707AF18C33D4600CAEA5E /* RWhileLoop_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWhileLoop_Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				5B1C9F4E18C22F6700F0D092 /* RBinaryOperation_Test.m */,
 				5B57079F18C2512F00CAEA5E /* RScope_Test.m */,
 				5B5707A918C3390700CAEA5E /* RIfElseBranch_Test.m */,
+				5B5707AF18C33D4600CAEA5E /* RWhileLoop_Test.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				5B1C9F4F18C22F6700F0D092 /* RBinaryOperation_Test.m in Sources */,
 				5B1C9F4D18C2242100F0D092 /* RUnaryOperation_Test.m in Sources */,
 				5B1C9EF218BFB05600F0D092 /* RConstant_Test.m in Sources */,
+				5B5707B018C33D4600CAEA5E /* RWhileLoop_Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,7 +26,7 @@
 
 - (id)evaluateInScope:(RScope *)scope {
     id result = nil;
-    while ( [[self.expression evaluateInScope:scope] R_booleanValue] ) {
+    while ( [[self.condition evaluateInScope:scope] R_booleanValue] ) {
         result = [self.expression evaluateInScope:scope];
     }
     return result;
