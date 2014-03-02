@@ -7,7 +7,38 @@
 //
 
 #import "RBranch.h"
+#import "RIfElseBranch.h"
+
+
+
+
 
 @implementation RBranch
 
+
+
+
+
++ (RBranch *)if:(RExpression *)condition then:(RExpression *)thenExpression {
+    RIfElseBranch *branch = [[RIfElseBranch alloc] init];
+    branch.condition = condition;
+    branch.thenExpression = thenExpression;
+    return branch;
+}
+
+
++ (RBranch *)if:(RExpression *)condition then:(RExpression *)thenExpression else:(RExpression *)elseExpression {
+    RIfElseBranch *branch = [[RIfElseBranch alloc] init];
+    branch.condition = condition;
+    branch.thenExpression = thenExpression;
+    branch.elseExpression = elseExpression;
+    return branch;
+}
+
+
+
+
+
 @end
+
+
