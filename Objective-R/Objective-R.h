@@ -8,12 +8,15 @@
 
 
 
+//TODO: Control statements evaluate condition in scope
+
+
+
 //TODO: RFunction: name, arguments, scope
 
-//TODO: RFrame: scope, parent, variables, result
-//TODO: RStack: frames
-//TODO: RRuntime: stack, sandbox, debugger
+
 //TODO: RIssue: expression, type, description
 //TODO: RDebugger: log, issues
+//TODO: RClosure or RBlock
 
 
