@@ -47,6 +47,10 @@
 		5B630BFC18C49F9E0010639F /* RForInLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B630BFA18C49F9E0010639F /* RForInLoop.m */; };
 		5B630BFF18C4B4720010639F /* RReturn.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B630BFD18C4B4720010639F /* RReturn.h */; };
 		5B630C0018C4B4720010639F /* RReturn.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B630BFE18C4B4720010639F /* RReturn.m */; };
+		5B630C0318C4B94E0010639F /* RBreak.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B630C0118C4B94E0010639F /* RBreak.h */; };
+		5B630C0418C4B94E0010639F /* RBreak.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B630C0218C4B94E0010639F /* RBreak.m */; };
+		5B630C0718C4BAD10010639F /* RContinue.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B630C0518C4BAD10010639F /* RContinue.h */; };
+		5B630C0818C4BAD10010639F /* RContinue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B630C0618C4BAD10010639F /* RContinue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +131,10 @@
 		5B630BFA18C49F9E0010639F /* RForInLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RForInLoop.m; sourceTree = "<group>"; };
 		5B630BFD18C4B4720010639F /* RReturn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RReturn.h; sourceTree = "<group>"; };
 		5B630BFE18C4B4720010639F /* RReturn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RReturn.m; sourceTree = "<group>"; };
+		5B630C0118C4B94E0010639F /* RBreak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBreak.h; sourceTree = "<group>"; };
+		5B630C0218C4B94E0010639F /* RBreak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBreak.m; sourceTree = "<group>"; };
+		5B630C0518C4BAD10010639F /* RContinue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RContinue.h; sourceTree = "<group>"; };
+		5B630C0618C4BAD10010639F /* RContinue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RContinue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +236,10 @@
 				5B57083118C3B3B400CAEA5E /* RForLoop.m */,
 				5B630BF918C49F9E0010639F /* RForInLoop.h */,
 				5B630BFA18C49F9E0010639F /* RForInLoop.m */,
+				5B630C0118C4B94E0010639F /* RBreak.h */,
+				5B630C0218C4B94E0010639F /* RBreak.m */,
+				5B630C0518C4BAD10010639F /* RContinue.h */,
+				5B630C0618C4BAD10010639F /* RContinue.m */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -325,10 +337,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B630C0718C4BAD10010639F /* RContinue.h in Headers */,
 				5B630BF318C474F80010639F /* RStorage.h in Headers */,
 				5B630BFF18C4B4720010639F /* RReturn.h in Headers */,
 				5B630BF718C47B1F0010639F /* RStorageOperation.h in Headers */,
 				5B630BFB18C49F9E0010639F /* RForInLoop.h in Headers */,
+				5B630C0318C4B94E0010639F /* RBreak.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,9 +447,11 @@
 				5B57081F18C3ABCE00CAEA5E /* RExpression+ROperation.m in Sources */,
 				5B57082A18C3ABE600CAEA5E /* RProcess.m in Sources */,
 				5B630BF418C474F80010639F /* RStorage.m in Sources */,
+				5B630C0818C4BAD10010639F /* RContinue.m in Sources */,
 				5B57081818C3ABBD00CAEA5E /* RThing.m in Sources */,
 				5B57081D18C3ABCE00CAEA5E /* RUnaryOperation.m in Sources */,
 				5B57082818C3ABE600CAEA5E /* RResult.m in Sources */,
+				5B630C0418C4B94E0010639F /* RBreak.m in Sources */,
 				5B57082718C3ABE600CAEA5E /* RArgument.m in Sources */,
 				5B57082418C3ABE600CAEA5E /* RLoop.m in Sources */,
 				5B630BF818C47B1F0010639F /* RStorageOperation.m in Sources */,
