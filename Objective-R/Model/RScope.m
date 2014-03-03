@@ -58,26 +58,40 @@
 
 
 - (NSString *)code {
-    NSMutableString *code = [[NSMutableString alloc] init];
-    [code appendString:@"{\n"];
-    for (RExpression *exp in self.expressions) {
-        NSString *subcode = [exp code];
-        
-        NSMutableString *builder = [[NSMutableString alloc] init];
-        [subcode enumerateLinesUsingBlock:^(NSString *line, __unused BOOL *stop) {
-            
-            for (NSUInteger index = 0; index < 4; index++) {
-                [builder appendString:@" "];
-            }
-            [builder appendString:line];
-            [builder appendString:@"\n"];
-            
-        }];
-        
-        [code appendString:builder];
+    if (self.expressions.count == 0) {
+        return @"{ }";
     }
-    [code appendString:@"}"];
-    return code;
+    else if (self.expressions.count == 1) {
+        NSMutableString *builder = [[NSMutableString alloc] init];
+        [builder appendString:@"\n"];
+        for (NSUInteger index = 0; index < 4; index++) {
+            [builder appendString:@" "];
+        }
+        [builder appendString:[self.expressions.firstObject code]];
+        return builder;
+    }
+    else {
+        NSMutableString *code = [[NSMutableString alloc] init];
+        [code appendString:@"{\n"];
+        for (RExpression *exp in self.expressions) {
+            NSString *subcode = [exp code];
+            
+            NSMutableString *builder = [[NSMutableString alloc] init];
+            [subcode enumerateLinesUsingBlock:^(NSString *line, __unused BOOL *stop) {
+                
+                for (NSUInteger index = 0; index < 4; index++) {
+                    [builder appendString:@" "];
+                }
+                [builder appendString:line];
+                [builder appendString:@"\n"];
+                
+            }];
+            
+            [code appendString:builder];
+        }
+        [code appendString:@"}"];
+        return code;
+    }
 }
 
 
