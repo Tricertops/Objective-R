@@ -96,11 +96,6 @@
 }
 
 
-- (NSArray *)operands {
-    return nil;
-}
-
-
 
 
 

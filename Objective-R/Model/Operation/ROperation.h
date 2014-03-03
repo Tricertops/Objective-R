@@ -32,7 +32,6 @@ typedef enum RStorageOperator : ROperator RStorageOperator;
 + (ROperation *)storage:(RStorageOperator)operator left:(RStorage *)storage right:(RExpression *)operand;
 
 @property (atomic, readwrite, assign) ROperator operator;
-- (NSArray *)operands;
 
 
 + (NSArray *)stringsForOperator:(ROperator)operator;

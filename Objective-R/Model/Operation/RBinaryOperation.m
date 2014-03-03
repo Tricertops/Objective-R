@@ -25,14 +25,6 @@
 
 
 
-- (NSArray *)operands {
-    return @[
-             self.leftOperand ?: RVoid,
-             self.rightOperand ?: RVoid,
-             ];
-}
-
-
 - (id)evaluateInScope:(RScope *)scope {
     id leftResult = [self.leftOperand evaluateInScope:scope];
     id rightResult = [self.rightOperand evaluateInScope:scope];

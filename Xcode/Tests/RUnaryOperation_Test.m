@@ -38,7 +38,6 @@
     XCTAssertEqualObjects(op.class, [RUnaryOperation class]);
     XCTAssertEqual(op.operator, ROperatorUnaryPlus);
     XCTAssertEqual(op.operand, c);
-    XCTAssertEqualObjects(op.operands, @[c]);
 }
 
 

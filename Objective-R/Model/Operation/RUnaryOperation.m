@@ -23,11 +23,6 @@
 
 
 
-- (NSArray *)operands {
-    return @[ self.operand ?: RVoid ];
-}
-
-
 - (id)evaluateInScope:(RScope *)scope {
     id result = [self.operand evaluateInScope:scope];
     

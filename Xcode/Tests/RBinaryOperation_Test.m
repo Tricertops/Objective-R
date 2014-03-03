@@ -40,8 +40,6 @@
     XCTAssertEqual(op.operator, ROperatorPlus);
     XCTAssertEqual(op.leftOperand, left);
     XCTAssertEqual(op.rightOperand, right);
-    NSArray *constants = @[ left, right ];
-    XCTAssertEqualObjects(op.operands, constants);
 }
 
 
