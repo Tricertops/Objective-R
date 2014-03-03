@@ -36,7 +36,7 @@
 
 
 - (NSString *)code {
-    return [NSString stringWithFormat:@"%@: %@", self.name, self.defaultValue];
+    return [NSString stringWithFormat:@"$%@ ← %@", self.name, self.defaultValue];
 }
 
 

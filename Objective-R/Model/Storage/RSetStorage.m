@@ -24,7 +24,7 @@
 
 
 - (NSString *)code {
-    return [NSString stringWithFormat:@"%@%@ ← %@", (self.shouldCreate? @"def " : @""), [self.storage code], [self.value code]];
+    return [NSString stringWithFormat:@"%@%@ ← %@", (self.shouldCreate? @"$" : @""), [self.storage code], [self.value code]];
 }
 
 

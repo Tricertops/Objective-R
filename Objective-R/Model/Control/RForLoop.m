@@ -24,7 +24,7 @@
 
 
 - (NSString *)code {
-    return [NSString stringWithFormat:@"for (%@; %@; %@) %@", [self.initializer code], [self.condition code], [self.step code], [self.expression code]];
+    return [NSString stringWithFormat:@"for (%@, %@, %@) %@", [self.initializer code], [self.condition code], [self.step code], [self.expression code]];
 }
 
 

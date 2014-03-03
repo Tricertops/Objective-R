@@ -50,7 +50,7 @@
 
 - (NSString *)code {
     NSString *arguments = [[self.arguments valueForKeyPath:@"code"] componentsJoinedByString:@", "];
-    return [NSString stringWithFormat:@"function %@(%@) %@", self.name, arguments, [self.implementation code]];
+    return [NSString stringWithFormat:@": %@(%@) %@", self.name, arguments, [self.implementation code]];
 }
 
 

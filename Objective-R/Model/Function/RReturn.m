@@ -19,7 +19,7 @@
 
 
 - (NSString *)code {
-    return [NSString stringWithFormat:@"return %@", [self.value code]];
+    return [NSString stringWithFormat:@"⇦ %@", [self.value code]];
 }
 
 
