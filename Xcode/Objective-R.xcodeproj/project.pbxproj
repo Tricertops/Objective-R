@@ -38,7 +38,9 @@
 		5B57082B18C3ABE600CAEA5E /* RCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B57080A18C396DF00CAEA5E /* RCall.m */; };
 		5B57082C18C3ABE600CAEA5E /* RFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B57080C18C396DF00CAEA5E /* RFrame.m */; };
 		5B57083218C3B3B400CAEA5E /* RForLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B57083118C3B3B400CAEA5E /* RForLoop.m */; };
-		5B57083518C3B59000CAEA5E /* RSetVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B57083418C3B59000CAEA5E /* RSetVariable.m */; };
+		5B57083518C3B59000CAEA5E /* RSetStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B57083418C3B59000CAEA5E /* RSetStorage.m */; };
+		5B630BF318C474F80010639F /* RStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B630BF118C474F80010639F /* RStorage.h */; };
+		5B630BF418C474F80010639F /* RStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B630BF218C474F80010639F /* RStorage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,8 +111,10 @@
 		5B57081618C39E4C00CAEA5E /* Objective-R_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Objective-R_Test.m"; sourceTree = "<group>"; };
 		5B57083018C3B3B400CAEA5E /* RForLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RForLoop.h; sourceTree = "<group>"; };
 		5B57083118C3B3B400CAEA5E /* RForLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RForLoop.m; sourceTree = "<group>"; };
-		5B57083318C3B59000CAEA5E /* RSetVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSetVariable.h; sourceTree = "<group>"; };
-		5B57083418C3B59000CAEA5E /* RSetVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSetVariable.m; sourceTree = "<group>"; };
+		5B57083318C3B59000CAEA5E /* RSetStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSetStorage.h; sourceTree = "<group>"; };
+		5B57083418C3B59000CAEA5E /* RSetStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSetStorage.m; sourceTree = "<group>"; };
+		5B630BF118C474F80010639F /* RStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RStorage.h; sourceTree = "<group>"; };
+		5B630BF218C474F80010639F /* RStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RStorage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,10 +260,12 @@
 		5B5707ED18C3964F00CAEA5E /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				5B630BF118C474F80010639F /* RStorage.h */,
+				5B630BF218C474F80010639F /* RStorage.m */,
+				5B57083318C3B59000CAEA5E /* RSetStorage.h */,
+				5B57083418C3B59000CAEA5E /* RSetStorage.m */,
 				5B5707EE18C3964F00CAEA5E /* RVariable.h */,
 				5B5707EF18C3964F00CAEA5E /* RVariable.m */,
-				5B57083318C3B59000CAEA5E /* RSetVariable.h */,
-				5B57083418C3B59000CAEA5E /* RSetVariable.m */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -301,6 +307,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B630BF318C474F80010639F /* RStorage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +409,7 @@
 				5B57082918C3ABE600CAEA5E /* RVariable.m in Sources */,
 				5B57081F18C3ABCE00CAEA5E /* RExpression+ROperation.m in Sources */,
 				5B57082A18C3ABE600CAEA5E /* RProcess.m in Sources */,
+				5B630BF418C474F80010639F /* RStorage.m in Sources */,
 				5B57081818C3ABBD00CAEA5E /* RThing.m in Sources */,
 				5B57081D18C3ABCE00CAEA5E /* RUnaryOperation.m in Sources */,
 				5B57082818C3ABE600CAEA5E /* RResult.m in Sources */,
@@ -425,7 +433,7 @@
 				5B1C9F4F18C22F6700F0D092 /* RBinaryOperation_Test.m in Sources */,
 				5B57081718C39E4C00CAEA5E /* Objective-R_Test.m in Sources */,
 				5B1C9F4D18C2242100F0D092 /* RUnaryOperation_Test.m in Sources */,
-				5B57083518C3B59000CAEA5E /* RSetVariable.m in Sources */,
+				5B57083518C3B59000CAEA5E /* RSetStorage.m in Sources */,
 				5B1C9EF218BFB05600F0D092 /* RConstant_Test.m in Sources */,
 				5B5707B018C33D4600CAEA5E /* RWhileLoop_Test.m in Sources */,
 			);

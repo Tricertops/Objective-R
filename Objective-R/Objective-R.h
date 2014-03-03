@@ -8,7 +8,6 @@
 
 
 //TODO: RSwitch
-//TODO: RStorage
 //TODO: +for:in:do:
 
 

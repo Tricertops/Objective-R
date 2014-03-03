@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Triceratops Software, s.r.o. All rights reserved.
 //
 
-#import "RExpression.h"
+#import "RStorage.h"
 
 
 
 
 
-@interface RVariable : RExpression
+@interface RVariable : RStorage
 
 
 
@@ -20,13 +20,6 @@
 + (RVariable *)variable:(NSString *)name;
 
 @property (atomic, readwrite, copy) NSString *name;
-
-
-- (RExpression *)create:(RExpression *)initialValue;
-- (RExpression *)setTo:(RExpression *)value;
-
-- (RExpression *)incrementBy:(RExpression *)value;
-- (RExpression *)decrementBy:(RExpression *)value;
 
 
 

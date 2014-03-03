@@ -7,8 +7,6 @@
 //
 
 #import "RVariable.h"
-#import "RSetVariable.h"
-#import "ROperation.h"
 
 
 
@@ -29,40 +27,6 @@
     RVariable *variable = [[RVariable alloc] init];
     variable.name = name;
     return variable;
-}
-
-
-
-
-
-- (RExpression *)create:(RExpression *)initialValue {
-    RSetVariable *creation = [[RSetVariable alloc] init];
-    creation.shouldCreate = YES;
-    creation.variable = self;
-    creation.value = initialValue;
-    return creation;
-}
-
-
-- (RExpression *)setTo:(RExpression *)value {
-    RSetVariable *setter = [[RSetVariable alloc] init];
-    setter.shouldCreate = NO;
-    setter.variable = self;
-    setter.value = value;
-    return setter;
-}
-
-
-
-
-
-- (RExpression *)incrementBy:(RExpression *)value {
-    return [self setTo:[self plus:value]];
-}
-
-
-- (RExpression *)decrementBy:(RExpression *)value {
-    return [self setTo:[self minus:value]];
 }
 
 
