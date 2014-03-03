@@ -7,6 +7,7 @@
 //
 
 #import "RThing.h"
+#import "RFunction.h"
 #import "RFrame.h"
 
 
@@ -14,12 +15,17 @@
 
 
 @interface RCall : RThing
-//TODO: function
 
 
+
+- (instancetype)initWithFunction:(RFunction *)function parent:(RCall *)call;
+@property (atomic, readonly, strong) RFunction *function;
 @property (atomic, readonly, weak) RCall *parent;
-@property (atomic, readonly, copy) NSArray *frames;
+
+
 @property (atomic, readonly, strong) RFrame *currentFrame;
+- (RFrame *)pushFrameForScope:(RScope *)scope;
+- (BOOL)popFrame:(RFrame *)frame;
 
 
 

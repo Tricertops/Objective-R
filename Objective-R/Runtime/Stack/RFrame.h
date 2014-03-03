@@ -17,13 +17,15 @@
 
 
 
+- (instancetype)initWithScope:(RScope *)scope parent:(RFrame *)frame;
 @property (atomic, readonly, strong) RScope *scope;
 @property (atomic, readonly, weak) RFrame *parent;
 
-@property (atomic, readonly, copy) NSDictionary *variables;
-//TODO: - (BOOL)createVariableWithName:(NSString *)name initialValue:(id)value;
-//TODO: - (id)variableForName:(NSString *)name;
-//TODO: - (void)setVariableForName:(NSString *)name value:(id)value;
+
+- (BOOL)createVariableWithName:(NSString *)name;
+- (id)variableForName:(NSString *)name;
+- (void)setVariableForName:(NSString *)name withValue:(id)value;
+
 
 
 @end
