@@ -24,10 +24,11 @@
 @property (atomic, readonly, strong) NSOperationQueue *queue;
 
 
-- (void)executeWithArguments:(NSDictionary *)arguments;
+- (id)execute;
+- (void)executeWithCompletion:(void(^)(id))handler;
 
 
-@property (atomic, readonly, strong) id result;
+@property (atomic, readwrite, strong) id result;
 
 @property (atomic, readonly, strong) RCall *currentCall;
 - (RCall *)pushCallForFunction:(RFunction *)function  arguments:(NSDictionary *)arguments;

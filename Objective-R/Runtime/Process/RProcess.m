@@ -58,8 +58,41 @@
 
 
 
-- (void)executeWithArguments:(NSDictionary *)arguments {
+- (id)execute {
+    NSAssert(self.callStack.count == 1, @"Call stack in invalid state: %@", self.callStack);
+    RFunction *rootFunction = self.callStack.firstObject;
     
+    if (self.queue == [NSOperationQueue currentQueue]) {
+        [self evaluateFunction:rootFunction];
+    }
+    else {
+        NSOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
+            [self evaluateFunction:rootFunction];
+        }];
+        [self.queue addOperations:@[ operation ] waitUntilFinished:YES];
+    }
+    return self.result;
+}
+
+
+- (void)executeWithCompletion:(void(^)(id))handler {
+    NSAssert(self.callStack.count == 1, @"Call stack in invalid state: %@", self.callStack);
+    RFunction *rootFunction = self.callStack.firstObject;
+    
+    NSOperationQueue *callerQueue = [NSOperationQueue currentQueue];
+    [self.queue addOperationWithBlock:^{
+        
+        [self evaluateFunction:rootFunction];
+        
+        [callerQueue addOperationWithBlock:^{
+            handler(self.result);
+        }];
+    }];
+}
+
+
+- (void)evaluateFunction:(RFunction *)function {
+    self.result = [function.implementation evaluateInProcess:self];
 }
 
 
@@ -111,8 +144,9 @@
 
 
 - (id)invokeWithArguments:(NSDictionary *)arguments {
-    RProcess *process = [[RProcess alloc] initWithFunction:self queue:[NSOperationQueue currentQueue]];
-    [process executeWithArguments:arguments];
+    RProcess *process = [[RProcess alloc] initWithQueue:[NSOperationQueue currentQueue]];
+    [process pushCallForFunction:self arguments:arguments];
+    [process execute];
     return process.result;
 }
 

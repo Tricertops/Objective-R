@@ -333,10 +333,10 @@
 		5B630C0918C4C9960010639F /* Expression */ = {
 			isa = PBXGroup;
 			children = (
-				5B630C0A18C4C9960010639F /* RConstant.h */,
-				5B630C0B18C4C9960010639F /* RConstant.m */,
 				5B630C0C18C4C9960010639F /* RExpression.h */,
 				5B630C0D18C4C9960010639F /* RExpression.m */,
+				5B630C0A18C4C9960010639F /* RConstant.h */,
+				5B630C0B18C4C9960010639F /* RConstant.m */,
 			);
 			path = Expression;
 			sourceTree = "<group>";

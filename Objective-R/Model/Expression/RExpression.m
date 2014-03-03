@@ -28,6 +28,14 @@
 }
 
 
+- (id)evaluateInProcess:(__unused RProcess *)process {
+    return nil;
+}
+
+
+
+
+
 - (NSString *)code {
     return @"<?>";
 }

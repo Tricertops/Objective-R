@@ -9,6 +9,7 @@
 @import Foundation.NSString;
 #import "RThing.h"
 @class RScope;
+@class RProcess;
 
 
 
@@ -17,7 +18,8 @@
 @interface RExpression : RThing
 
 
-- (id)evaluateInScope:(RScope *)scope;
+- (id)evaluateInProcess:(RProcess *)process;
+- (id)evaluateInScope:(RScope *)scope __deprecated;
 
 
 
