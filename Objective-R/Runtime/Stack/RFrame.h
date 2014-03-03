@@ -17,7 +17,7 @@
 
 
 
-- (instancetype)initWithScope:(RScope *)scope parent:(RFrame *)frame;
+- (instancetype)initWithScope:(RScope *)scope variables:(NSDictionary *)variables parent:(RFrame *)frame;
 @property (atomic, readonly, strong) RScope *scope;
 @property (atomic, readonly, weak) RFrame *parent;
 

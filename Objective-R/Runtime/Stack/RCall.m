@@ -38,7 +38,7 @@
 
 
 
-- (instancetype)initWithFunction:(RFunction *)function parent:(RCall *)parent {
+- (instancetype)initWithFunction:(RFunction *)function arguments:(NSDictionary *)arguments parent:(RCall *)parent {
     self = [super init];
     if (self) {
         NSParameterAssert(function);
@@ -48,6 +48,7 @@
         
         self->_frames = [[NSMutableArray alloc] init];
         
+        [self pushFrameForScope:nil variables:arguments];
     }
     return self;
 }
@@ -56,8 +57,13 @@
 
 
 
-- (RFrame *)pushFrameForScope:(RScope *)scope {
-    RFrame *frame = [[RFrame alloc] initWithScope:scope parent:self.frames.lastObject];
+- (RFrame *)currentFrame {
+    return self.frames.lastObject;
+}
+
+
+- (RFrame *)pushFrameForScope:(RScope *)scope variables:(NSDictionary *)variables {
+    RFrame *frame = [[RFrame alloc] initWithScope:scope variables:variables parent:self.frames.lastObject];
     [self.frames addObject:frame];
     return frame;
 }

@@ -20,7 +20,7 @@
 
 
 
-- (instancetype)initWithFunction:(RFunction *)function queue:(NSOperationQueue *)queue;
+- (instancetype)initWithQueue:(NSOperationQueue *)queue;
 @property (atomic, readonly, strong) NSOperationQueue *queue;
 
 
@@ -30,7 +30,7 @@
 @property (atomic, readonly, strong) id result;
 
 @property (atomic, readonly, strong) RCall *currentCall;
-- (RCall *)pushCallForFunction:(RFunction *)function;
+- (RCall *)pushCallForFunction:(RFunction *)function  arguments:(NSDictionary *)arguments;
 - (BOOL)popCall:(RCall *)call;
 
 

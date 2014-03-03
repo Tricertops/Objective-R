@@ -18,13 +18,13 @@
 
 
 
-- (instancetype)initWithFunction:(RFunction *)function parent:(RCall *)call;
+- (instancetype)initWithFunction:(RFunction *)function arguments:(NSDictionary *)arguments parent:(RCall *)call;
 @property (atomic, readonly, strong) RFunction *function;
 @property (atomic, readonly, weak) RCall *parent;
 
 
 @property (atomic, readonly, strong) RFrame *currentFrame;
-- (RFrame *)pushFrameForScope:(RScope *)scope;
+- (RFrame *)pushFrameForScope:(RScope *)scope variables:(NSDictionary *)variables;
 - (BOOL)popFrame:(RFrame *)frame;
 
 

@@ -38,13 +38,13 @@
 
 
 
-- (instancetype)initWithFunction:(RFunction *)function queue:(NSOperationQueue *)queue {
+- (instancetype)initWithQueue:(NSOperationQueue *)queue {
     self = [super init];
     if (self) {
         
         self->_queue = queue ?: ({
             NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-            queue.name = [NSString stringWithFormat:@"com.Triceratops.Objective-R.%@-%@", function.name, self];
+            queue.name = [NSString stringWithFormat:@"com.Triceratops.Objective-R.RProcess-%p", self];
             queue.maxConcurrentOperationCount = 1;
             queue;
         });
@@ -71,8 +71,8 @@
 }
 
 
-- (RCall *)pushCallForFunction:(RFunction *)function {
-    RCall *call = [[RCall alloc] initWithFunction:function parent:self.callStack.lastObject];
+- (RCall *)pushCallForFunction:(RFunction *)function arguments:(NSDictionary *)arguments {
+    RCall *call = [[RCall alloc] initWithFunction:function arguments:arguments parent:self.callStack.lastObject];
     [self.callStack addObject:call];
     return call;
 }

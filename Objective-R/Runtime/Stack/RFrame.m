@@ -40,7 +40,7 @@
 
 
 
-- (instancetype)initWithScope:(RScope *)scope parent:(RFrame *)parent {
+- (instancetype)initWithScope:(RScope *)scope variables:(NSDictionary *)variables parent:(RFrame *)parent {
     self = [super init];
     if (self) {
         NSParameterAssert(scope);
@@ -48,7 +48,7 @@
         self->_scope = scope;
         self->_parent = parent;
         
-        self->_variables = [[NSMutableDictionary alloc] init];
+        self->_variables = [[NSMutableDictionary alloc] initWithDictionary:variables];
     }
     return self;
 }
