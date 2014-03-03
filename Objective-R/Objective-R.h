@@ -8,15 +8,11 @@
 
 
 //TODO: RSwitch
-//TODO: +for:in:do:
 
 
 //TODO: Print nice constant descriptions
 //TODO: Control statements evaluate condition in scope
 
-
-
-//TODO: RFunction: name, arguments, scope
 
 
 //TODO: RIssue: expression, type, description

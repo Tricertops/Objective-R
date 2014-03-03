@@ -22,6 +22,8 @@
 + (RLoop *)for:(RExpression *)initializer condition:(RExpression *)condition step:(RExpression *)step do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION;
 + (RLoop *)for:(RStorage *)iterator from:(RExpression *)fromValue to:(RExpression *)toValue do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION;
 
++ (RLoop *)for:(RStorage *)iterator in:(RExpression *)container do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION;
+
 
 
 @end

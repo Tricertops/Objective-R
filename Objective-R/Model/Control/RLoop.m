@@ -9,6 +9,7 @@
 #import "RLoop.h"
 #import "RWhileLoop.h"
 #import "RForLoop.h"
+#import "RForInLoop.h"
 #import "ROperation.h"
 #import "RScope.h"
 
@@ -61,6 +62,22 @@
     loop.initializer = [iterator create:fromValue];
     loop.condition = [iterator isLessThanOrEqualTo:toValue];
     loop.step = [iterator incrementBy:R(@1)];
+    
+    RScope *scope = [[RScope alloc] init];
+    scope.expressions = RVariadicArray(expression);
+    loop.expression = scope;
+    
+    return loop;
+}
+
+
+
+
+
++ (RLoop *)for:(RStorage *)iterator in:(RExpression *)container do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION {
+    RForInLoop *loop = [[RForInLoop alloc] init];
+    loop.storage = iterator;
+    loop.container = container;
     
     RScope *scope = [[RScope alloc] init];
     scope.expressions = RVariadicArray(expression);
