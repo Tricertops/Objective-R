@@ -23,8 +23,8 @@
 
 
 
-- (id)evaluateInScope:(RScope *)scope {
-    id result = [self.operand evaluateInScope:scope];
+- (id)evaluateInProcess:(RProcess *)process {
+    id result = [self.operand evaluateInProcess:process];
     
     if ( ! result) return nil;
     

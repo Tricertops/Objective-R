@@ -29,8 +29,8 @@
 }
 
 
-- (id)evaluateInScope:(RScope *)scope {
-    return scope.result;
+- (id)evaluateInProcess:(__unused RProcess *)process {
+    return nil; //TODO: Obtain result from process.
 }
 
 

@@ -19,7 +19,7 @@
 @property (atomic, readwrite, assign) RUnaryOperator operator;
 @property (atomic, readwrite, strong) RExpression *operand;
 
-- (id)evaluateInScope:(RScope *)scope;
+- (id)evaluateInProcess:(RProcess *)process;
 
 
 

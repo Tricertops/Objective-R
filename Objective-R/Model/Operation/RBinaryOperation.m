@@ -25,9 +25,10 @@
 
 
 
-- (id)evaluateInScope:(RScope *)scope {
-    id leftResult = [self.leftOperand evaluateInScope:scope];
-    id rightResult = [self.rightOperand evaluateInScope:scope];
+- (id)evaluateInProcess:(RProcess *)process {
+    id leftResult = [self.leftOperand evaluateInProcess:process];
+    //TODO: Incomplete evaluation with Logical operators.
+    id rightResult = [self.rightOperand evaluateInProcess:process];
     
     if ( ! leftResult || ! rightResult) return nil;
     

@@ -19,7 +19,7 @@
 #define RLast     [RResult last]
 + (RResult *)last;
 
-- (id)evaluateInScope:(RScope *)scope;
+- (id)evaluateInProcess:(RProcess *)process;
 
 
 

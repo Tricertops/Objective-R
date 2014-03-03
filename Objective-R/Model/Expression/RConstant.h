@@ -25,7 +25,7 @@
 
 @property (atomic, readwrite, copy) id value;
 
-- (id)evaluateInScope:(RScope *)scope;
+- (id)evaluateInProcess:(RProcess *)process;
 
 
 

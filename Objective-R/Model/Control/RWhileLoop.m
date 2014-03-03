@@ -24,10 +24,10 @@
 
 
 
-- (id)evaluateInScope:(RScope *)scope {
+- (id)evaluateInProcess:(RProcess *)process {
     id result = nil;
-    while ( [[self.condition evaluateInScope:scope] R_booleanValue] ) {
-        result = [self.expression evaluateInScope:scope];
+    while ( [[self.condition evaluateInProcess:process] R_booleanValue] ) {
+        result = [self.expression evaluateInProcess:process];
     }
     return result;
 }

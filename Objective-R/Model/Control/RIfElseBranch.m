@@ -24,12 +24,12 @@
 
 
 
-- (id)evaluateInScope:(RScope *)scope {
-    if ( [[self.condition evaluateInScope:scope] R_booleanValue] ) {
-        return [self.thenExpression evaluateInScope:scope];
+- (id)evaluateInProcess:(RProcess *)process {
+    if ( [[self.condition evaluateInProcess:process] R_booleanValue] ) {
+        return [self.thenExpression evaluateInProcess:process];
     }
     else {
-        return [self.elseExpression evaluateInScope:scope];
+        return [self.elseExpression evaluateInProcess:process];
     }
 }
 

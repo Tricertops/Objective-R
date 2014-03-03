@@ -20,7 +20,7 @@
 @property (atomic, readwrite, strong) RExpression *leftOperand;
 @property (atomic, readwrite, strong) RExpression *rightOperand;
 
-- (id)evaluateInScope:(RScope *)scope;
+- (id)evaluateInProcess:(RProcess *)process;
 
 
 

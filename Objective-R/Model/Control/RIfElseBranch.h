@@ -20,7 +20,7 @@
 @property (atomic, readwrite, strong) RExpression *thenExpression;
 @property (atomic, readwrite, strong) RExpression *elseExpression;
 
-- (id)evaluateInScope:(RScope *)scope;
+- (id)evaluateInProcess:(RProcess *)process;
 
 
 

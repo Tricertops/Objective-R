@@ -19,7 +19,7 @@
 @property (atomic, readwrite, strong) RExpression *condition;
 @property (atomic, readwrite, strong) RExpression *expression;
 
-- (id)evaluateInScope:(RScope *)scope;
+- (id)evaluateInProcess:(RProcess *)process;
 
 
 

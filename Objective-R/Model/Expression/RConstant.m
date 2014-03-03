@@ -38,7 +38,10 @@
 }
 
 
-- (id)evaluateInScope:(__unused RScope *)scope {
+
+
+
+- (id)evaluateInProcess:(__unused RProcess *)process {
     return self.value;
 }
 

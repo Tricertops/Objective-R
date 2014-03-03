@@ -8,6 +8,7 @@
 
 #import "RScope.h"
 #import "RConstant.h"
+#import "RProcess.h"
 
 
 
@@ -39,17 +40,18 @@
 }
 
 
-- (id)evaluateInScope:(RScope *)scope {
-    self.parent = scope;
-    self.result = scope.result;
+
+
+
+- (id)evaluateInProcess:(RProcess *)process {
+    RFrame *frame = [process.currentCall pushFrameForScope:self variables:nil];
     
+    id result = nil;
     for (RExpression *exp in self.expressions) {
-        self.result = [exp evaluateInScope:self];
+        result = [exp evaluateInProcess:process];
     }
     
-    id result = self.result;
-    self.parent = nil;
-    self.result = nil;
+    [process.currentCall popFrame:frame];
     return result;
 }
 

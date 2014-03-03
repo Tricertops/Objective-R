@@ -23,11 +23,6 @@
 
 
 
-- (id)evaluateInScope:(__unused RScope *)scope {
-    return nil;
-}
-
-
 - (id)evaluateInProcess:(__unused RProcess *)process {
     return nil;
 }

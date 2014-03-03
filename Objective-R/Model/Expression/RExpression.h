@@ -18,8 +18,8 @@
 @interface RExpression : RThing
 
 
+
 - (id)evaluateInProcess:(RProcess *)process;
-- (id)evaluateInScope:(RScope *)scope __deprecated;
 
 
 
