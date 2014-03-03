@@ -9,6 +9,9 @@
 
 //TODO: RSwitch
 
+//TODO: -isEqual:, -hash
+//TODO: NSCopying
+//TODO: NSSecureCoding
 
 //TODO: Print nice constant descriptions
 //TODO: Control statements evaluate condition in scope

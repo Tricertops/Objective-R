@@ -17,9 +17,6 @@
 		5B5707B018C33D4600CAEA5E /* RWhileLoop_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5707AF18C33D4600CAEA5E /* RWhileLoop_Test.m */; };
 		5B57081718C39E4C00CAEA5E /* Objective-R_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B57081618C39E4C00CAEA5E /* Objective-R_Test.m */; };
 		5B57081818C3ABBD00CAEA5E /* RThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B57080318C3966F00CAEA5E /* RThing.m */; };
-		5B57081918C3ABCE00CAEA5E /* RExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5707E718C3964F00CAEA5E /* RExpression.m */; };
-		5B57081A18C3ABCE00CAEA5E /* RConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5707E518C3964F00CAEA5E /* RConstant.m */; };
-		5B57081B18C3ABCE00CAEA5E /* RScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5707E918C3964F00CAEA5E /* RScope.m */; };
 		5B57081C18C3ABCE00CAEA5E /* ROperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5707DA18C3964F00CAEA5E /* ROperation.m */; };
 		5B57081D18C3ABCE00CAEA5E /* RUnaryOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5707E018C3964F00CAEA5E /* RUnaryOperation.m */; };
 		5B57081E18C3ABCE00CAEA5E /* RBinaryOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5707D618C3964F00CAEA5E /* RBinaryOperation.m */; };
@@ -51,6 +48,12 @@
 		5B630C0418C4B94E0010639F /* RBreak.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B630C0218C4B94E0010639F /* RBreak.m */; };
 		5B630C0718C4BAD10010639F /* RContinue.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B630C0518C4BAD10010639F /* RContinue.h */; };
 		5B630C0818C4BAD10010639F /* RContinue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B630C0618C4BAD10010639F /* RContinue.m */; };
+		5B630C0E18C4C9960010639F /* RConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B630C0A18C4C9960010639F /* RConstant.h */; };
+		5B630C0F18C4C9960010639F /* RConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B630C0B18C4C9960010639F /* RConstant.m */; };
+		5B630C1018C4C9960010639F /* RExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B630C0C18C4C9960010639F /* RExpression.h */; };
+		5B630C1118C4C9960010639F /* RExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B630C0D18C4C9960010639F /* RExpression.m */; };
+		5B630C1418C4C9A90010639F /* RScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B630C1218C4C9A90010639F /* RScope.h */; };
+		5B630C1518C4C9A90010639F /* RScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B630C1318C4C9A90010639F /* RScope.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,12 +99,6 @@
 		5B5707DE18C3964F00CAEA5E /* ROperators+NSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ROperators+NSObject.m"; sourceTree = "<group>"; };
 		5B5707DF18C3964F00CAEA5E /* RUnaryOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUnaryOperation.h; sourceTree = "<group>"; };
 		5B5707E018C3964F00CAEA5E /* RUnaryOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUnaryOperation.m; sourceTree = "<group>"; };
-		5B5707E418C3964F00CAEA5E /* RConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RConstant.h; sourceTree = "<group>"; };
-		5B5707E518C3964F00CAEA5E /* RConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RConstant.m; sourceTree = "<group>"; };
-		5B5707E618C3964F00CAEA5E /* RExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RExpression.h; sourceTree = "<group>"; };
-		5B5707E718C3964F00CAEA5E /* RExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RExpression.m; sourceTree = "<group>"; };
-		5B5707E818C3964F00CAEA5E /* RScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RScope.h; sourceTree = "<group>"; };
-		5B5707E918C3964F00CAEA5E /* RScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RScope.m; sourceTree = "<group>"; };
 		5B5707EB18C3964F00CAEA5E /* RResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RResult.h; sourceTree = "<group>"; };
 		5B5707EC18C3964F00CAEA5E /* RResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RResult.m; sourceTree = "<group>"; };
 		5B5707EE18C3964F00CAEA5E /* RVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVariable.h; sourceTree = "<group>"; };
@@ -135,6 +132,12 @@
 		5B630C0218C4B94E0010639F /* RBreak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBreak.m; sourceTree = "<group>"; };
 		5B630C0518C4BAD10010639F /* RContinue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RContinue.h; sourceTree = "<group>"; };
 		5B630C0618C4BAD10010639F /* RContinue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RContinue.m; sourceTree = "<group>"; };
+		5B630C0A18C4C9960010639F /* RConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RConstant.h; sourceTree = "<group>"; };
+		5B630C0B18C4C9960010639F /* RConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RConstant.m; sourceTree = "<group>"; };
+		5B630C0C18C4C9960010639F /* RExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RExpression.h; sourceTree = "<group>"; };
+		5B630C0D18C4C9960010639F /* RExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RExpression.m; sourceTree = "<group>"; };
+		5B630C1218C4C9A90010639F /* RScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RScope.h; sourceTree = "<group>"; };
+		5B630C1318C4C9A90010639F /* RScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RScope.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,12 +209,7 @@
 		5B5707CA18C3964F00CAEA5E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5B5707E618C3964F00CAEA5E /* RExpression.h */,
-				5B5707E718C3964F00CAEA5E /* RExpression.m */,
-				5B5707E418C3964F00CAEA5E /* RConstant.h */,
-				5B5707E518C3964F00CAEA5E /* RConstant.m */,
-				5B5707E818C3964F00CAEA5E /* RScope.h */,
-				5B5707E918C3964F00CAEA5E /* RScope.m */,
+				5B630C0918C4C9960010639F /* Expression */,
 				5B5707D418C3964F00CAEA5E /* Operation */,
 				5B5707CB18C3964F00CAEA5E /* Control */,
 				5B5707E118C3964F00CAEA5E /* Function */,
@@ -281,6 +279,8 @@
 		5B5707EA18C3964F00CAEA5E /* Scope */ = {
 			isa = PBXGroup;
 			children = (
+				5B630C1218C4C9A90010639F /* RScope.h */,
+				5B630C1318C4C9A90010639F /* RScope.m */,
 				5B5707EB18C3964F00CAEA5E /* RResult.h */,
 				5B5707EC18C3964F00CAEA5E /* RResult.m */,
 			);
@@ -330,6 +330,17 @@
 			path = Stack;
 			sourceTree = "<group>";
 		};
+		5B630C0918C4C9960010639F /* Expression */ = {
+			isa = PBXGroup;
+			children = (
+				5B630C0A18C4C9960010639F /* RConstant.h */,
+				5B630C0B18C4C9960010639F /* RConstant.m */,
+				5B630C0C18C4C9960010639F /* RExpression.h */,
+				5B630C0D18C4C9960010639F /* RExpression.m */,
+			);
+			path = Expression;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -340,7 +351,10 @@
 				5B630C0718C4BAD10010639F /* RContinue.h in Headers */,
 				5B630BF318C474F80010639F /* RStorage.h in Headers */,
 				5B630BFF18C4B4720010639F /* RReturn.h in Headers */,
+				5B630C1418C4C9A90010639F /* RScope.h in Headers */,
 				5B630BF718C47B1F0010639F /* RStorageOperation.h in Headers */,
+				5B630C0E18C4C9960010639F /* RConstant.h in Headers */,
+				5B630C1018C4C9960010639F /* RExpression.h in Headers */,
 				5B630BFB18C49F9E0010639F /* RForInLoop.h in Headers */,
 				5B630C0318C4B94E0010639F /* RBreak.h in Headers */,
 			);
@@ -435,15 +449,14 @@
 				5B57082218C3ABE600CAEA5E /* RBranch.m in Sources */,
 				5B57082118C3ABCE00CAEA5E /* ROperators+NSNumber.m in Sources */,
 				5B57081C18C3ABCE00CAEA5E /* ROperation.m in Sources */,
-				5B57081A18C3ABCE00CAEA5E /* RConstant.m in Sources */,
 				5B57082B18C3ABE600CAEA5E /* RCall.m in Sources */,
 				5B57082618C3ABE600CAEA5E /* RFunction.m in Sources */,
 				5B57082518C3ABE600CAEA5E /* RWhileLoop.m in Sources */,
-				5B57081918C3ABCE00CAEA5E /* RExpression.m in Sources */,
 				5B630C0018C4B4720010639F /* RReturn.m in Sources */,
 				5B57082018C3ABCE00CAEA5E /* ROperators+NSObject.m in Sources */,
 				5B630BFC18C49F9E0010639F /* RForInLoop.m in Sources */,
 				5B57082918C3ABE600CAEA5E /* RVariable.m in Sources */,
+				5B630C1518C4C9A90010639F /* RScope.m in Sources */,
 				5B57081F18C3ABCE00CAEA5E /* RExpression+ROperation.m in Sources */,
 				5B57082A18C3ABE600CAEA5E /* RProcess.m in Sources */,
 				5B630BF418C474F80010639F /* RStorage.m in Sources */,
@@ -454,11 +467,12 @@
 				5B630C0418C4B94E0010639F /* RBreak.m in Sources */,
 				5B57082718C3ABE600CAEA5E /* RArgument.m in Sources */,
 				5B57082418C3ABE600CAEA5E /* RLoop.m in Sources */,
+				5B630C0F18C4C9960010639F /* RConstant.m in Sources */,
 				5B630BF818C47B1F0010639F /* RStorageOperation.m in Sources */,
 				5B57081E18C3ABCE00CAEA5E /* RBinaryOperation.m in Sources */,
 				5B57082318C3ABE600CAEA5E /* RIfElseBranch.m in Sources */,
 				5B57082C18C3ABE600CAEA5E /* RFrame.m in Sources */,
-				5B57081B18C3ABCE00CAEA5E /* RScope.m in Sources */,
+				5B630C1118C4C9960010639F /* RExpression.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
