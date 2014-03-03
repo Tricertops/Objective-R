@@ -45,6 +45,8 @@
 		5B630BF818C47B1F0010639F /* RStorageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B630BF618C47B1F0010639F /* RStorageOperation.m */; };
 		5B630BFB18C49F9E0010639F /* RForInLoop.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B630BF918C49F9E0010639F /* RForInLoop.h */; };
 		5B630BFC18C49F9E0010639F /* RForInLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B630BFA18C49F9E0010639F /* RForInLoop.m */; };
+		5B630BFF18C4B4720010639F /* RReturn.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B630BFD18C4B4720010639F /* RReturn.h */; };
+		5B630C0018C4B4720010639F /* RReturn.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B630BFE18C4B4720010639F /* RReturn.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +125,8 @@
 		5B630BF618C47B1F0010639F /* RStorageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RStorageOperation.m; sourceTree = "<group>"; };
 		5B630BF918C49F9E0010639F /* RForInLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RForInLoop.h; sourceTree = "<group>"; };
 		5B630BFA18C49F9E0010639F /* RForInLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RForInLoop.m; sourceTree = "<group>"; };
+		5B630BFD18C4B4720010639F /* RReturn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RReturn.h; sourceTree = "<group>"; };
+		5B630BFE18C4B4720010639F /* RReturn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RReturn.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +260,8 @@
 				5B57081118C3990000CAEA5E /* RFunction.m */,
 				5B57081318C39A1D00CAEA5E /* RArgument.h */,
 				5B57081418C39A1D00CAEA5E /* RArgument.m */,
+				5B630BFD18C4B4720010639F /* RReturn.h */,
+				5B630BFE18C4B4720010639F /* RReturn.m */,
 			);
 			path = Function;
 			sourceTree = "<group>";
@@ -320,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B630BF318C474F80010639F /* RStorage.h in Headers */,
+				5B630BFF18C4B4720010639F /* RReturn.h in Headers */,
 				5B630BF718C47B1F0010639F /* RStorageOperation.h in Headers */,
 				5B630BFB18C49F9E0010639F /* RForInLoop.h in Headers */,
 			);
@@ -419,6 +426,7 @@
 				5B57082618C3ABE600CAEA5E /* RFunction.m in Sources */,
 				5B57082518C3ABE600CAEA5E /* RWhileLoop.m in Sources */,
 				5B57081918C3ABCE00CAEA5E /* RExpression.m in Sources */,
+				5B630C0018C4B4720010639F /* RReturn.m in Sources */,
 				5B57082018C3ABCE00CAEA5E /* ROperators+NSObject.m in Sources */,
 				5B630BFC18C49F9E0010639F /* RForInLoop.m in Sources */,
 				5B57082918C3ABE600CAEA5E /* RVariable.m in Sources */,

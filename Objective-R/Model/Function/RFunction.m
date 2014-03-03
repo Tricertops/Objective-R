@@ -6,8 +6,9 @@
 //  Copyright (c) 2014 Triceratops Software, s.r.o. All rights reserved.
 //
 
-#import "RFunction.h"
 @import Foundation.NSKeyValueCoding;
+#import "RFunction.h"
+#import "RReturn.h"
 
 
 
@@ -34,6 +35,13 @@
     function.implementation = scope;
     
     return function;
+}
+
+
++ (RExpression *)return:(RExpression *)value {
+    RReturn *ret = [[RReturn alloc] init];
+    ret.value = value;
+    return ret;
 }
 
 

@@ -40,7 +40,7 @@
                     [RLoop for:RVar(i) from:R(@1) to:RVar(n) do:
                      [RVar(result) setTo:[RVar(result) multiply:RVar(i)]],
                      nil],
-                    RVar(result),
+                    [RFunction return:RVar(result)],
                     nil];
     NSLog(@"\n\n%@\n\n", [f code]);
     XCTAssertNotNil(f);
@@ -58,7 +58,7 @@
                      [RVar(previous) setTo:RVar(current)],
                      [RVar(current) setTo:RVar(next)],
                      nil],
-                    RVar(current),
+                    [RFunction return:RVar(current)],
                     nil];
     NSLog(@"\n\n%@\n\n", [f code]);
 }
@@ -80,7 +80,7 @@
                       nil],
                      [RBranch if:[RVar(i) isEqualTo:RVar(sum)] then:[RVar(result) setTo:RVar(i)]],
                      nil],
-                    RVar(current),
+                    [RFunction return:RVar(current)],
                     nil];
     NSLog(@"\n\n%@\n\n", [f code]);
 }
@@ -100,6 +100,7 @@
                      nil],
                     [RVar(GCD) create:RVar(a)],
                     [RVar(LCM) create:[[RVar(A) multiply:RVar(B)] divide:RVar(GCD)]],
+                    [RFunction return:RVar(LCM)],
                     nil];
     NSLog(@"\n\n%@\n\n", [f code]);
 }
