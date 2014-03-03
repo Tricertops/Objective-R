@@ -47,12 +47,12 @@
 
 
 - (RExpression *)incrementBy:(RExpression *)value {
-    return [self setTo:[self plus:value]];
+    return [ROperation storage:ROperatorStorageIncrementBy left:self right:value];
 }
 
 
 - (RExpression *)decrementBy:(RExpression *)value {
-    return [self setTo:[self minus:value]];
+    return [ROperation storage:ROperatorStorageDecrementBy left:self right:value];
 }
 
 

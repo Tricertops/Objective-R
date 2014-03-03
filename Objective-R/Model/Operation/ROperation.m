@@ -9,6 +9,7 @@
 #import "ROperation.h"
 #import "RUnaryOperation.h"
 #import "RBinaryOperation.h"
+#import "RStorageOperation.h"
 
 
 
@@ -20,6 +21,7 @@
 
 
 @implementation ROperation
+
 
 
 
@@ -41,6 +43,18 @@
 }
 
 
++ (ROperation *)storage:(RStorageOperator)operator left:(RStorage *)storage right:(RExpression *)operand {
+    RStorageOperation *operation = [[RStorageOperation alloc] init];
+    operation.operator = operator;
+    operation.storage = storage;
+    operation.operand = operand;
+    return operation;
+}
+
+
+
+
+
 + (NSArray *)stringsForOperator:(ROperator)operator {
     switch ((RBinaryOperator)operator) {
         case ROperatorNone: return @[ @"", @"none" ];
@@ -60,6 +74,16 @@
             
         case ROperatorAnd: return @[ @"∧", @"&", @"·", @"and", @"conjunction" ];
         case ROperatorOr:  return @[ @"∨", @"|", @"or", @"disjunction" ];
+    }
+    
+    switch ((RStorageOperator)operator) {
+        case ROperatorStorageNone: return @[ @"", @"none" ];
+            
+        case ROperatorStorageIncrementBy: return @[ @"+←", @"+=", @"increment by" ];
+        case ROperatorStorageDecrementBy: return @[ @"−←", @"-=", @"decrement by" ];
+            
+        case ROperatorStorageMultiplyBy:  return @[ @"×←", @"multiply by" ];
+        case ROperatorStorageDivideBy:    return @[ @"÷←", @"divide by" ];
     }
     
     switch ((RUnaryOperator)operator) {
