@@ -24,7 +24,7 @@
 @property (atomic, readonly, strong) NSOperationQueue *queue;
 
 
-- (void)execute;
+- (void)executeWithArguments:(NSDictionary *)arguments;
 
 
 @property (atomic, readonly, strong) id result;
@@ -33,6 +33,18 @@
 - (RCall *)pushCallForFunction:(RFunction *)function;
 - (BOOL)popCall:(RCall *)call;
 
+
+
+@end
+
+
+
+
+
+@interface RFunction (RProcess)
+
+
+- (id)invokeWithArguments:(NSDictionary *)arguments;
 
 
 @end

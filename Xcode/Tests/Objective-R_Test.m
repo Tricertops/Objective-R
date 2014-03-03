@@ -44,6 +44,9 @@
                     nil];
     NSLog(@"\n\n%@\n\n", [f code]);
     XCTAssertNotNil(f);
+    
+    id result = [f invokeWithArguments:@{ @"n": @5 }];
+    XCTAssertEqualObjects(result, @120);
 }
 
 
@@ -61,6 +64,10 @@
                     [RFunction return:RVar(current)],
                     nil];
     NSLog(@"\n\n%@\n\n", [f code]);
+    XCTAssertNotNil(f);
+    
+    id result = [f invokeWithArguments:@{ @"n": @10 }];
+    XCTAssertEqualObjects(result, @34);
 }
 
 
@@ -83,6 +90,10 @@
                     [RFunction return:RVar(current)],
                     nil];
     NSLog(@"\n\n%@\n\n", [f code]);
+    XCTAssertNotNil(f);
+    
+    id result = [f invokeWithArguments:@{ @"n": @400 }];
+    XCTAssertEqualObjects(result, @370);
 }
 
 
@@ -103,6 +114,10 @@
                     [RFunction return:RVar(LCM)],
                     nil];
     NSLog(@"\n\n%@\n\n", [f code]);
+    XCTAssertNotNil(f);
+    
+    id result = [f invokeWithArguments:@{ @"A": @12, @"B": @18 }];
+    XCTAssertEqualObjects(result, @36);
 }
 
 

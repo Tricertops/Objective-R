@@ -58,7 +58,7 @@
 
 
 
-- (void)execute {
+- (void)executeWithArguments:(NSDictionary *)arguments {
     
 }
 
@@ -87,6 +87,33 @@
     
     [self.callStack removeLastObject];
     return YES;
+}
+
+
+
+
+
+@end
+
+
+
+
+
+
+
+
+
+
+@implementation RFunction (RProcess)
+
+
+
+
+
+- (id)invokeWithArguments:(NSDictionary *)arguments {
+    RProcess *process = [[RProcess alloc] initWithFunction:self queue:[NSOperationQueue currentQueue]];
+    [process executeWithArguments:arguments];
+    return process.result;
 }
 
 
