@@ -79,11 +79,11 @@
     switch ((RStorageOperator)operator) {
         case ROperatorStorageNone: return @[ @"", @"none" ];
             
-        case ROperatorStorageIncrementBy: return @[ @"+←", @"+=", @"increment by" ];
-        case ROperatorStorageDecrementBy: return @[ @"−←", @"-=", @"decrement by" ];
+        case ROperatorStorageIncrementBy: return @[ @"+←", @"+=", @"set incremented by" ];
+        case ROperatorStorageDecrementBy: return @[ @"−←", @"-=", @"set decremented by" ];
             
-        case ROperatorStorageMultiplyBy:  return @[ @"×←", @"multiply by" ];
-        case ROperatorStorageDivideBy:    return @[ @"÷←", @"divide by" ];
+        case ROperatorStorageMultiplyBy:  return @[ @"×←", @"set multiplied by" ];
+        case ROperatorStorageDivideBy:    return @[ @"÷←", @"set divided by" ];
     }
     
     switch ((RUnaryOperator)operator) {
