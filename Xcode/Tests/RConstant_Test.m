@@ -52,7 +52,7 @@
 
 - (void)test_replaceConstantsInArray {
     NSArray *array = @[ @1, @2, R(@3), @4, R(@5) ];
-    NSArray *result = [RConstant replaceConstantsInArray:[array mutableCopy]];
+    NSArray *result = [RExpression arrayOfExpressionFrom:array];
     for (id object in result) {
         XCTAssertEqualObjects([object class], [RConstant class]);
     }

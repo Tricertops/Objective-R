@@ -8,6 +8,7 @@
 
 @import XCTest;
 #import "RBinaryOperation.h"
+#import "RProcess.h"
 
 
 
@@ -55,7 +56,7 @@
     {
         op.leftOperand = R(@5);
         op.rightOperand = R(@3);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @8);
     }
 }
@@ -67,7 +68,7 @@
     {
         op.leftOperand = R(@5);
         op.rightOperand = R(@3);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @2);
     }
 }
@@ -79,7 +80,7 @@
     {
         op.leftOperand = R(@5);
         op.rightOperand = R(@3);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @15);
     }
 }
@@ -91,12 +92,12 @@
     {
         op.leftOperand = R(@15);
         op.rightOperand = R(@4);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @3.75);
     }{
         op.leftOperand = R(@5);
         op.rightOperand = R(@0);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @(HUGE_VAL));
     }
 }
@@ -108,7 +109,7 @@
     {
         op.leftOperand = R(@50);
         op.rightOperand = R(@-3.5);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @1);
     }
 }
@@ -126,17 +127,17 @@
     {
         op.leftOperand = R(@"ABC");
         op.rightOperand = R(@"abc".uppercaseString);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @YES);
     }{
         op.leftOperand = R(NSDate.date);
         op.rightOperand = R(NSDate.date);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @NO);
     }{
         op.leftOperand = R(@4);
         op.rightOperand = R(@4);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @YES);
     }
 }
@@ -148,17 +149,17 @@
     {
         op.leftOperand = R(@"ABC");
         op.rightOperand = R(@"abc".uppercaseString);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @NO);
     }{
         op.leftOperand = R(NSDate.date);
         op.rightOperand = R(NSDate.date);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @YES);
     }{
         op.leftOperand = R(@4);
         op.rightOperand = R(@4);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @NO);
     }
 }
@@ -170,17 +171,17 @@
     {
         op.leftOperand = R(@"BBB");
         op.rightOperand = R(@"AAA");
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @NO);
     }{
         op.leftOperand = R(NSDate.date);
         op.rightOperand = R(NSDate.date);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @YES);
     }{
         op.leftOperand = R(@4);
         op.rightOperand = R(@4);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @NO);
     }
 }
@@ -192,17 +193,17 @@
     {
         op.leftOperand = R(@"BBB");
         op.rightOperand = R(@"AAA");
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @YES);
     }{
         op.leftOperand = R(NSDate.date);
         op.rightOperand = R(NSDate.date);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @NO);
     }{
         op.leftOperand = R(@4);
         op.rightOperand = R(@4);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @NO);
     }
 }
@@ -214,17 +215,17 @@
     {
         op.leftOperand = R(@"BBB");
         op.rightOperand = R(@"AAA");
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @NO);
     }{
         op.leftOperand = R(NSDate.date);
         op.rightOperand = R(NSDate.date);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @YES);
     }{
         op.leftOperand = R(@4);
         op.rightOperand = R(@4);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @YES);
     }
 }
@@ -236,17 +237,17 @@
     {
         op.leftOperand = R(@"BBB");
         op.rightOperand = R(@"AAA");
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @YES);
     }{
         op.leftOperand = R(NSDate.date);
         op.rightOperand = R(NSDate.date);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @NO);
     }{
         op.leftOperand = R(@4);
         op.rightOperand = R(@4);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @YES);
     }
 }
@@ -264,22 +265,22 @@
     {
         op.leftOperand = R(@NO);
         op.rightOperand = R(@NO);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @NO);
     }{
         op.leftOperand = R(@YES);
         op.rightOperand = R(@NO);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @NO);
     }{
         op.leftOperand = R(@NO);
         op.rightOperand = R(@YES);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @NO);
     }{
         op.leftOperand = R(@YES);
         op.rightOperand = R(@YES);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @YES);
     }
 }
@@ -291,22 +292,22 @@
     {
         op.leftOperand = R(@NO);
         op.rightOperand = R(@NO);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @NO);
     }{
         op.leftOperand = R(@YES);
         op.rightOperand = R(@NO);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @YES);
     }{
         op.leftOperand = R(@NO);
         op.rightOperand = R(@YES);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @YES);
     }{
         op.leftOperand = R(@YES);
         op.rightOperand = R(@YES);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @YES);
     }
 }
@@ -322,7 +323,7 @@
     ROperation *op =[ROperation binary:ROperatorEqualTo
                                   left:[ROperation binary:ROperatorPlus left:R(@5) right:R(@3)]
                                  right:[ROperation binary:ROperatorDivide left:R(@16) right:R(@2)]];
-    id result = [op evaluateInProcess:nil];
+    id result = [op evaluate];
     XCTAssertEqualObjects(result, @YES);
 }
 

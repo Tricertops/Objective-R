@@ -8,6 +8,7 @@
 
 @import XCTest;
 #import "RUnaryOperation.h"
+#import "RProcess.h"
 
 
 
@@ -49,11 +50,11 @@
     op.operator = ROperatorUnaryPlus;
     {
         op.operand = R(@5);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @5);
     }{
         op.operand = R(@-5);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @-5);
     }
 }
@@ -64,11 +65,11 @@
     op.operator = ROperatorUnaryMinus;
     {
         op.operand = R(@5);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @-5);
     }{
         op.operand = R(@-5);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @5);
     }
 }
@@ -79,19 +80,19 @@
     op.operator = ROperatorNot;
     {
         op.operand = R(@YES);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @NO);
     }{
         op.operand = R(@NO);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @YES);
     }{
         op.operand = R(@"ABC");
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @NO, @"Objects are negated to NO.");
     }{
         op.operand = R(NSNull.null);
-        id result = [op evaluateInProcess:nil];
+        id result = [op evaluate];
         XCTAssertEqualObjects(result, @YES, @"NSNull represents NO, so is negated to YES.");
     }
 }
