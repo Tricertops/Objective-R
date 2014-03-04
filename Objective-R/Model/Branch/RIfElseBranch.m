@@ -24,6 +24,20 @@
 
 
 
+#pragma mark - Build Time
+
+
+- (NSString *)code {
+    return [NSString stringWithFormat:@"if %@ then %@ else %@", [self.condition code], [self.thenExpression code], [self.elseExpression code]];
+}
+
+
+
+
+
+#pragma mark - Run Time
+
+
 - (id)evaluateInProcess:(RProcess *)process {
     if ( [[self.condition evaluateInProcess:process] R_booleanValue] ) {
         return [self.thenExpression evaluateInProcess:process];
@@ -31,18 +45,6 @@
     else {
         return [self.elseExpression evaluateInProcess:process];
     }
-}
-
-
-
-
-
-- (NSString *)code {
-    NSString *code = [NSString stringWithFormat:@"if (%@) %@", [self.condition code], [self.thenExpression code]];
-    if (self.elseExpression) {
-        code = [code stringByAppendingFormat:@" else %@", [self.elseExpression code]];
-    }
-    return code;
 }
 
 

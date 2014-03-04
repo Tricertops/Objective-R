@@ -16,8 +16,10 @@
 
 
 
+#pragma mark - Build Time
+
 + (RBranch *)if:(RExpression *)condition then:(RExpression *)expression;
-+ (RBranch *)if:(RExpression *)condition then:(RExpression *)expression else:(RExpression *)expression;
++ (RBranch *)if:(RExpression *)condition then:(id)expression else:(id)expression;
 
 
 

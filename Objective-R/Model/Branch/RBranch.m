@@ -8,6 +8,12 @@
 
 #import "RBranch.h"
 #import "RIfElseBranch.h"
+#import "RConstant.h"
+
+
+
+
+
 
 
 
@@ -19,16 +25,19 @@
 
 
 
+#pragma mark - Build Time
+
+
 + (RBranch *)if:(RExpression *)condition then:(RExpression *)thenExpression {
-    return [RBranch if:condition then:thenExpression else:nil];
+    return [RBranch if:condition then:thenExpression else:RNull];
 }
 
 
-+ (RBranch *)if:(RExpression *)condition then:(RExpression *)thenExpression else:(RExpression *)elseExpression {
++ (RBranch *)if:(RExpression *)condition then:(NSObject *)thenExpression else:(NSObject *)elseExpression {
     RIfElseBranch *branch = [[RIfElseBranch alloc] init];
     branch.condition = condition;
-    branch.thenExpression = thenExpression;
-    branch.elseExpression = elseExpression;
+    branch.thenExpression = [RExpression expressionFrom:thenExpression];
+    branch.elseExpression = [RExpression expressionFrom:elseExpression];
     return branch;
 }
 
