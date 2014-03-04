@@ -9,6 +9,7 @@
 @import Foundation.NSComparisonPredicate;
 @import Foundation.NSExpression;
 #import "RBinaryOperation.h"
+#import "RProcess.h"
 
 
 
@@ -25,12 +26,31 @@
 
 
 
+#pragma mark - Build Time
+
+
+- (NSString *)code {
+    return [NSString stringWithFormat:@"%@ %@ %@", [self.leftOperand code], [[ROperation stringsForOperator:self.operator] firstObject], [self.rightOperand code]];
+}
+
+
+
+
+
+#pragma mark - Run Time
+
+
 - (id)evaluateInProcess:(RProcess *)process {
-    id leftResult = [self.leftOperand evaluateInProcess:process];
-    //TODO: Incomplete evaluation with Logical operators.
-    id rightResult = [self.rightOperand evaluateInProcess:process];
+    id leftResult = [process resultOfExpression:self.leftOperand];
+    if ( ! leftResult) return nil;
     
-    if ( ! leftResult || ! rightResult) return nil;
+    BOOL leftBoolean = [leftResult R_booleanValue];
+    // Incomplete evaluation. Right operand is not even evaluated, because it would never change the result.
+    if (self.operator == ROperatorAnd && ! leftBoolean) return @NO;
+    if (self.operator == ROperatorOr  &&   leftBoolean) return @YES;
+    
+    id rightResult = [process resultOfExpression:self.rightOperand];
+    if ( ! rightResult) return nil;
     
     switch ((RBinaryOperator)self.operator) {
         case ROperatorNone:     return nil;
@@ -48,8 +68,8 @@
         case ROperatorLessThanOrEqualTo:    return [self compare:leftResult using:   NSLessThanOrEqualToPredicateOperatorType with:rightResult];
         case ROperatorGreaterThanOrEqualTo: return [self compare:leftResult using:NSGreaterThanOrEqualToPredicateOperatorType with:rightResult];
             
-        case ROperatorAnd: return @( [leftResult R_booleanValue] && [rightResult R_booleanValue] );
-        case ROperatorOr:  return @( [leftResult R_booleanValue] || [rightResult R_booleanValue] );
+        case ROperatorAnd: return @( leftBoolean && [rightResult R_booleanValue] );
+        case ROperatorOr:  return @( leftBoolean || [rightResult R_booleanValue] );
     }
 
     return nil;
@@ -63,14 +83,6 @@
                                                                            type:type
                                                                         options:kNilOptions];
     return @( [predicate evaluateWithObject:nil] );
-}
-
-
-
-
-
-- (NSString *)code {
-    return [NSString stringWithFormat:@"%@ %@ %@", [self.leftOperand code], [[ROperation stringsForOperator:self.operator] firstObject], [self.rightOperand code]];
 }
 
 

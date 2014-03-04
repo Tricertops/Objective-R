@@ -7,6 +7,7 @@
 //
 
 #import "RUnaryOperation.h"
+#import "RProcess.h"
 
 
 
@@ -23,26 +24,32 @@
 
 
 
-- (id)evaluateInProcess:(RProcess *)process {
-    id result = [self.operand evaluateInProcess:process];
-    
-    if ( ! result) return nil;
-    
-    switch ((RUnaryOperator)self.operator) {
-        case ROperatorUnaryPlus:    return result;
-        case ROperatorUnaryMinus:   return [result R_resultOfUnaryMinus];
-        case ROperatorNot:          return @( ! [result R_booleanValue] );
-    }
-    
-    return nil;
+#pragma mark - Build Time
+
+
+- (NSString *)code {
+    return [NSString stringWithFormat:@"%@%@", [[ROperation stringsForOperator:self.operator] firstObject], [self.operand code]];
 }
 
 
 
 
 
-- (NSString *)code {
-    return [NSString stringWithFormat:@"%@%@", [[ROperation stringsForOperator:self.operator] firstObject], [self.operand code]];
+#pragma mark - Run Time
+
+
+- (id)evaluateInProcess:(RProcess *)process {
+    id result = [process resultOfExpression:self.operand];
+    
+    if ( ! result) return nil;
+    
+    switch ((RUnaryOperator)self.operator) {
+        case ROperatorUnaryPlus:  return result;
+        case ROperatorUnaryMinus: return [result R_resultOfUnaryMinus];
+        case ROperatorNot:        return @( ! [result R_booleanValue] );
+    }
+    
+    return nil;
 }
 
 

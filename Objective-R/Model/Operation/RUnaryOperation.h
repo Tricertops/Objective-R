@@ -16,14 +16,18 @@
 
 
 
+#pragma mark - Build Time
+
 @property (atomic, readwrite, assign) RUnaryOperator operator;
 @property (atomic, readwrite, strong) RExpression *operand;
 
-- (id)evaluateInProcess:(RProcess *)process;
-
-
-
 - (NSString *)code;
+
+
+
+#pragma mark - Run Time
+
+- (id)evaluateInProcess:(RProcess *)process;
 
 
 
