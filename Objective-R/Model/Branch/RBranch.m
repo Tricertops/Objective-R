@@ -9,6 +9,7 @@
 #import "RBranch.h"
 #import "RIfElseBranch.h"
 #import "RConstant.h"
+#import "RScope.h"
 
 
 
@@ -28,8 +29,11 @@
 #pragma mark - Build Time
 
 
-+ (RBranch *)if:(RExpression *)condition then:(RExpression *)thenExpression {
-    return [RBranch if:condition then:thenExpression else:RNull];
++ (RBranch *)if:(RExpression *)condition then:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION {
+    RScope *scope = [[RScope alloc] init];
+    scope.expressions = RVariadicArray(expression);
+    
+    return [RBranch if:condition then:scope else:RNull];
 }
 
 

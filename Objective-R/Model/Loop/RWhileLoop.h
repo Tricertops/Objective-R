@@ -16,14 +16,17 @@
 
 
 
+#pragma mark - Build Time
+
 @property (atomic, readwrite, strong) RExpression *condition;
 @property (atomic, readwrite, strong) RExpression *expression;
 
-- (id)evaluateInProcess:(RProcess *)process;
-
-
-
 - (NSString *)code;
+
+
+#pragma mark - Run Time
+
+- (id)evaluateInProcess:(RProcess *)process;
 
 
 

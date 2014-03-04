@@ -28,6 +28,9 @@
 
 
 
+#pragma mark - Build Time
+
+
 + (RLoop *)while:(RExpression *)condition do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION {
     RWhileLoop *loop = [[RWhileLoop alloc] init];
     loop.condition = condition;
@@ -38,8 +41,6 @@
     
     return loop;
 }
-
-
 
 
 
@@ -69,8 +70,6 @@
     
     return loop;
 }
-
-
 
 
 

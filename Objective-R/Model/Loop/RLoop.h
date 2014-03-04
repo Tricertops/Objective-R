@@ -17,12 +17,14 @@
 
 
 
+#pragma mark - Build Time
+
 + (RLoop *)while:(RExpression *)condition do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION;
 
 + (RLoop *)for:(RExpression *)initializer condition:(RExpression *)condition step:(RExpression *)step do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION;
-+ (RLoop *)for:(RVariable *)iterator from:(RExpression *)fromValue to:(RExpression *)toValue do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION;
++ (RLoop *)for:(RVariable *)iterator from:(id)fromValue to:(id)toValue do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION;
 
-+ (RLoop *)for:(RVariable *)iterator in:(RExpression *)container do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION;
++ (RLoop *)for:(RVariable *)iterator in:(id)container do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION;
 
 
 

@@ -17,13 +17,19 @@
 
 
 
-@property (atomic, readwrite, strong) RStorage *storage;
+#pragma mark - Build Time
+
+@property (atomic, readwrite, strong) RVariable *variable;
 @property (atomic, readwrite, strong) RExpression *container;
 @property (atomic, readwrite, strong) RExpression *expression;
 
-
-
 - (NSString *)code;
+
+
+
+#pragma mark - Run Time
+
+- (id)evaluateInProcess:(RProcess *)process;
 
 
 

@@ -25,6 +25,20 @@
 
 
 
+#pragma mark - Build Time
+
+
+- (NSString *)code {
+    return [NSString stringWithFormat:@"for (%@, %@, %@) %@", [self.initializer code], [self.condition code], [self.step code], [self.expression code]];
+}
+
+
+
+
+
+#pragma mark - Run Time
+
+
 - (id)evaluateInProcess:(RProcess *)process {
     RFrame *frame = [process.currentCall pushFrameForScope:nil variables:nil];
     
@@ -38,14 +52,6 @@
     
     [process.currentCall popFrame:frame];
     return result;
-}
-
-
-
-
-
-- (NSString *)code {
-    return [NSString stringWithFormat:@"for (%@, %@, %@) %@", [self.initializer code], [self.condition code], [self.step code], [self.expression code]];
 }
 
 

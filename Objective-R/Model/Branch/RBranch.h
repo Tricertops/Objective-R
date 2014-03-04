@@ -18,7 +18,7 @@
 
 #pragma mark - Build Time
 
-+ (RBranch *)if:(RExpression *)condition then:(RExpression *)expression;
++ (RBranch *)if:(RExpression *)condition then:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION;
 + (RBranch *)if:(RExpression *)condition then:(id)expression else:(id)expression;
 
 
