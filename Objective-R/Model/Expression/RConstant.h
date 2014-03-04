@@ -17,19 +17,22 @@
 
 
 
+#pragma mark - Build Time
+
 #define R(VALUE)        [RConstant constant:VALUE]
 #define RVoid           [RConstant constant:nil]
 #define RNull           [RConstant constant:[NSNull null]]
 + (instancetype)constant:(id)value;
-+ (NSMutableArray *)replaceConstantsInArray:(NSMutableArray *)array;
 
 @property (atomic, readwrite, copy) id value;
 
-- (id)evaluateInProcess:(RProcess *)process;
-
-
-
 - (NSString *)code;
+
+
+
+#pragma mark - Run Time
+
+- (id)evaluateInProcess:(RProcess *)process;
 
 
 

@@ -8,7 +8,6 @@
 
 @import Foundation.NSString;
 #import "RThing.h"
-@class RScope;
 @class RProcess;
 
 
@@ -19,11 +18,18 @@
 
 
 
-- (id)evaluateInProcess:(RProcess *)process;
+#pragma mark - Build
 
-
++ (RExpression *)expressionFrom:(id)value;
++ (NSArray *)arrayOfExpressionFrom:(NSArray *)values;
 
 - (NSString *)code;
+
+
+
+#pragma mark - Run Time
+
+- (id)evaluateInProcess:(RProcess *)process;
 
 
 

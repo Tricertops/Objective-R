@@ -8,6 +8,7 @@
 
 @import Foundation.NSException;
 #import "RExpression.h"
+#import "RConstant.h"
 
 
 
@@ -24,17 +25,39 @@
 
 
 
-- (id)evaluateInProcess:(__unused RProcess *)process {
-    NSAssert(NO, @"Abstract imlpementation.");
-    return nil;
+#pragma mark - Build
+
+
++ (RExpression *)expressionFrom:(id)value {
+    if ([value isKindOfClass:[RExpression class]]) return value;
+    else return [RConstant constant:value];
+}
+
+
++ (NSArray *)arrayOfExpressionFrom:(NSArray *)values {
+    NSMutableArray *expressions = [[NSMutableArray alloc] init];
+    for (id value in values) {
+        [expressions addObject:[RExpression expressionFrom:value]];
+    }
+    return expressions;
+}
+
+
+
+- (NSString *)code {
+    return @"<?>";
 }
 
 
 
 
 
-- (NSString *)code {
-    return @"<?>";
+#pragma mark - Run Time
+
+
+- (id)evaluateInProcess:(__unused RProcess *)process {
+    NSAssert(NO, @"Abstract imlpementation.");
+    return nil;
 }
 
 

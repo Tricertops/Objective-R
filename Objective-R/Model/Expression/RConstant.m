@@ -12,10 +12,18 @@
 
 
 
+
+
+
+
+
 @implementation RConstant
 
 
 
+
+
+#pragma mark - Build
 
 
 + (instancetype)constant:(id)value {
@@ -25,29 +33,6 @@
 }
 
 
-+ (NSMutableArray *)replaceConstantsInArray:(NSMutableArray *)array {
-    NSUInteger count = array.count;
-    for (NSUInteger index = 0; index < count; index++) {
-        id object = [array objectAtIndex:index];
-        BOOL isExpression = [object isKindOfClass:[RExpression class]];
-        if ( ! isExpression) {
-            [array replaceObjectAtIndex:index withObject:[RConstant constant:object]];
-        }
-    }
-    return array;
-}
-
-
-
-
-
-- (id)evaluateInProcess:(__unused RProcess *)process {
-    return self.value;
-}
-
-
-
-
 
 - (NSString *)code {
     if (self.value == nil) return @"void";
@@ -55,6 +40,17 @@
     if ([self.value isKindOfClass:[NSNumber class]]) return [self.value description];
     if ([self.value isKindOfClass:[NSString class]]) return [NSString stringWithFormat:@"“%@”", self.value];
     return [NSString stringWithFormat:@"%@:%p", [self.value classForCoder], self.value];
+}
+
+
+
+
+
+#pragma mark - Run Time
+
+
+- (id)evaluateInProcess:(__unused RProcess *)process {
+    return self.value;
 }
 
 

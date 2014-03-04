@@ -35,7 +35,7 @@
 
 + (instancetype)scope:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION {
     RScope *scope = [[self alloc] init];
-    scope.expressions = [RConstant replaceConstantsInArray:RVariadicArray(expression)];
+    scope.expressions = [RExpression arrayOfExpressionFrom:RVariadicArray(expression)];
     return scope;
 }
 
