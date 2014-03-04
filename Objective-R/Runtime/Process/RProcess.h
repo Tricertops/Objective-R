@@ -28,6 +28,9 @@
 - (void)executeWithCompletion:(void(^)(id))handler;
 
 
+
+- (id)resultOfExpression:(RExpression *)expression;
+
 @property (atomic, readwrite, strong) id result;
 
 @property (atomic, readonly, strong) RCall *currentCall;
@@ -46,6 +49,18 @@
 
 
 - (id)invokeWithArguments:(NSDictionary *)arguments;
+
+
+@end
+
+
+
+
+
+@interface RExpression (RProcess)
+
+
+- (id)evaluate;
 
 
 @end

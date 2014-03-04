@@ -101,6 +101,11 @@
 
 
 
+- (id)resultOfExpression:(RExpression *)expression {
+    return [expression evaluateInProcess:self];
+}
+
+
 - (RCall *)currentCall {
     return self.callStack.lastObject;
 }
@@ -150,6 +155,34 @@
     [process pushCallForFunction:self arguments:arguments];
     [process execute];
     return process.result;
+}
+
+
+
+
+
+@end
+
+
+
+
+
+
+
+
+
+
+@implementation RExpression (RProcess)
+
+
+
+
+
+- (id)evaluate {
+    RFunction *f = [[RFunction alloc] init];
+    f.name = @"evaluation";
+    f.implementation = self;
+    return [f invokeWithArguments:nil];
 }
 
 

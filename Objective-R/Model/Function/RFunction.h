@@ -23,7 +23,7 @@
 
 @property (atomic, readwrite, copy) NSString *name;
 @property (atomic, readwrite, copy) NSArray *arguments;
-@property (atomic, readwrite, strong) RScope *implementation;
+@property (atomic, readwrite, strong) RExpression *implementation;
 
 
 
