@@ -7,6 +7,7 @@
 //
 
 @import Foundation.NSException;
+@import Foundation.NSDictionary;
 #import "RCall.h"
 
 
@@ -47,6 +48,13 @@
         self->_parent = parent;
         
         self->_frames = [[NSMutableArray alloc] init];
+        
+        NSMutableDictionary *variables = [[NSMutableDictionary alloc] initWithDictionary:arguments];
+        for (RArgument *argument in function.arguments) {
+            id realValue = [arguments objectForKey:argument.name];
+            
+            [variables setObject:(realValue ?: argument.defaultValue) forKey:argument.name];
+        }
         
         [self pushFrameForScope:nil variables:arguments];
     }

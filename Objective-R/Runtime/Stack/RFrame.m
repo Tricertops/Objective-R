@@ -66,6 +66,7 @@
 
 - (id)variableForName:(NSString *)name {
     id value = [self.variables objectForKey:name];
+    //TODO: Detect no parent, report using undefined variable.
     return value ?: [self.parent variableForName:name];
 }
 
