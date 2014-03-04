@@ -18,6 +18,15 @@
 
 
 
+- (id)evaluateInProcess:(RProcess *)process {
+    //TODO: Mark returning.
+    return [self.value evaluateInProcess:process];
+}
+
+
+
+
+
 - (NSString *)code {
     return [NSString stringWithFormat:@"⇦ %@", [self.value code]];
 }
