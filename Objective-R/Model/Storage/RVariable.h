@@ -21,6 +21,8 @@
 
 @property (atomic, readwrite, copy) NSString *name;
 
+- (RExpression *)create:(RExpression *)initialValue;
+
 
 
 - (NSString *)code;

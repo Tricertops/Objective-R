@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Triceratops Software, s.r.o. All rights reserved.
 //
 
+@import Foundation.NSException;
 #import "RStorage.h"
-#import "RSetStorage.h"
 #import "ROperation.h"
 
 
@@ -25,21 +25,9 @@
 
 
 
-- (RExpression *)create:(RExpression *)initialValue {
-    RSetStorage *creation = [[RSetStorage alloc] init];
-    creation.shouldCreate = YES;
-    creation.storage = self;
-    creation.value = initialValue;
-    return creation;
-}
-
-
-- (RExpression *)setTo:(RExpression *)value {
-    RSetStorage *setter = [[RSetStorage alloc] init];
-    setter.shouldCreate = NO;
-    setter.storage = self;
-    setter.value = value;
-    return setter;
+- (RExpression *)setTo:(__unused RExpression *)value {
+    NSAssert(NO, @"Abstract implementation.");
+    return RVoid;
 }
 
 

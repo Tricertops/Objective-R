@@ -7,6 +7,8 @@
 //
 
 #import "RVariable.h"
+#import "RSetVariable.h"
+#import "RProcess.h"
 
 
 
@@ -28,6 +30,34 @@
     variable.name = name;
     return variable;
 }
+
+
+- (RExpression *)create:(RExpression *)initialValue {
+    return [self setTo:initialValue create:YES];
+}
+
+
+- (RExpression *)setTo:(RExpression *)value {
+    return [self setTo:value create:NO];
+}
+
+
+- (RExpression *)setTo:(RExpression *)value create:(BOOL)create {
+    RSetVariable *creation = [[RSetVariable alloc] init];
+    creation.shouldCreate = create;
+    creation.storage = self;
+    creation.value = value;
+    return creation;
+}
+
+
+
+
+
+- (id)evaluateInProcess:(RProcess *)process {
+    return [process.currentCall.currentFrame variableForName:self.name];
+}
+
 
 
 

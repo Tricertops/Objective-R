@@ -57,7 +57,7 @@
 }
 
 
-+ (RLoop *)for:(RStorage *)iterator from:(RExpression *)fromValue to:(RExpression *)toValue do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION {
++ (RLoop *)for:(RVariable *)iterator from:(RExpression *)fromValue to:(RExpression *)toValue do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION {
     RForLoop *loop = [[RForLoop alloc] init];
     loop.initializer = [iterator create:fromValue];
     loop.condition = [iterator isLessThanOrEqualTo:toValue];
@@ -74,7 +74,7 @@
 
 
 
-+ (RLoop *)for:(RStorage *)iterator in:(RExpression *)container do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION {
++ (RLoop *)for:(RVariable *)iterator in:(RExpression *)container do:(RExpression *)expression, ... NS_REQUIRES_NIL_TERMINATION {
     RForInLoop *loop = [[RForInLoop alloc] init];
     loop.storage = iterator;
     loop.container = container;

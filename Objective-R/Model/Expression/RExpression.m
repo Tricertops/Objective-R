@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Triceratops Software, s.r.o. All rights reserved.
 //
 
+@import Foundation.NSException;
 #import "RExpression.h"
 
 
@@ -24,6 +25,7 @@
 
 
 - (id)evaluateInProcess:(__unused RProcess *)process {
+    NSAssert(NO, @"Abstract imlpementation.");
     return nil;
 }
 

@@ -16,7 +16,6 @@
 
 
 
-- (RExpression *)create:(RExpression *)initialValue;
 - (RExpression *)setTo:(RExpression *)value;
 
 - (RExpression *)incrementBy:(RExpression *)value;

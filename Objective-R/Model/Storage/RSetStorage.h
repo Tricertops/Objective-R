@@ -17,7 +17,6 @@
 
 
 
-@property (atomic, readwrite, assign) BOOL shouldCreate;
 @property (atomic, readwrite, strong) RStorage *storage;
 @property (atomic, readwrite, strong) RExpression *value;
 
