@@ -7,6 +7,8 @@
 //
 
 #import "RForLoop.h"
+#import "ROperation.h"
+#import "RProcess.h"
 
 
 
@@ -18,6 +20,25 @@
 
 
 @implementation RForLoop
+
+
+
+
+
+- (id)evaluateInProcess:(RProcess *)process {
+    RFrame *frame = [process.currentCall pushFrameForScope:nil variables:nil];
+    
+    id result = nil;
+    for ([self.initializer evaluateInProcess:process];
+         [[self.condition evaluateInProcess:process] R_booleanValue];
+         [self.step evaluateInProcess:process]) {
+        
+        result = [self.expression evaluateInProcess:process];
+    }
+    
+    [process.currentCall popFrame:frame];
+    return result;
+}
 
 
 
