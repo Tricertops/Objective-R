@@ -28,7 +28,9 @@
     RVariable *variable = self.storage;
     RFrame *frame = process.currentCall.currentFrame;
     
-    [frame createVariableWithName:variable.name];
+    if (self.shouldCreate) {
+        [frame createVariableWithName:variable.name];
+    }
     
     id result = [self.value evaluateInProcess:process];
     [frame setVariableForName:variable.name withValue:result];
@@ -41,7 +43,7 @@
 
 
 - (NSString *)code {
-    return [NSString stringWithFormat:@"%@%@", (self.shouldCreate? @"def " : @""), [super code]];
+    return [NSString stringWithFormat:@"%@%@", (self.shouldCreate? @"$" : @""), [super code]];
 }
 
 
