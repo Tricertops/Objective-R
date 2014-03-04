@@ -18,7 +18,6 @@
 typedef NSInteger ROperator;
 typedef enum RUnaryOperator : ROperator RUnaryOperator;
 typedef enum RBinaryOperator : ROperator RBinaryOperator;
-typedef enum RStorageOperator : ROperator RStorageOperator;
 
 
 
@@ -32,7 +31,6 @@ typedef enum RStorageOperator : ROperator RStorageOperator;
 
 + (ROperation *)unary:(RUnaryOperator)operator of:(id)operand;
 + (ROperation *)binary:(RBinaryOperator)operator left:(id)operand right:(id)operand;
-+ (ROperation *)storage:(RStorageOperator)operator left:(RStorage *)storage right:(id)operand;
 
 @property (atomic, readwrite, assign) ROperator operator;
 
@@ -71,16 +69,6 @@ enum RBinaryOperator : ROperator {
     
     ROperatorAnd = '&',
     ROperatorOr = '|',
-};
-
-enum RStorageOperator : ROperator {
-    ROperatorStorageNone = ROperatorNone,
-    
-    ROperatorStorageIncrementBy = ROperatorPlus + ROperatorEqualTo,
-    ROperatorStorageDecrementBy = ROperatorMinus + ROperatorEqualTo,
-    
-    ROperatorStorageMultiplyBy = ROperatorMultiply + ROperatorEqualTo,
-    ROperatorStorageDivideBy = ROperatorDivide + ROperatorEqualTo,
 };
 
 

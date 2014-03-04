@@ -9,7 +9,6 @@
 #import "ROperation.h"
 #import "RUnaryOperation.h"
 #import "RBinaryOperation.h"
-#import "RStorageOperation.h"
 
 
 
@@ -46,15 +45,6 @@
 }
 
 
-+ (ROperation *)storage:(RStorageOperator)operator left:(RStorage *)storage right:(NSObject *)operand {
-    RStorageOperation *operation = [[RStorageOperation alloc] init];
-    operation.operator = operator;
-    operation.storage = storage;
-    operation.operand = [RExpression expressionFrom:operand];
-    return operation;
-}
-
-
 
 + (NSArray *)stringsForOperator:(ROperator)operator {
     //TODO: ROperator class with metadata like this? Support for custom subclasses?
@@ -77,16 +67,6 @@
             
         case ROperatorAnd: return @[ @"∧", @"&", @"·", @"and", @"conjunction" ];
         case ROperatorOr:  return @[ @"∨", @"|", @"or", @"disjunction" ];
-    }
-    
-    switch ((RStorageOperator)operator) {
-        case ROperatorStorageNone: return @[ @"", @"none" ];
-            
-        case ROperatorStorageIncrementBy: return @[ @"+←", @"+=", @"set incremented by" ];
-        case ROperatorStorageDecrementBy: return @[ @"−←", @"-=", @"set decremented by" ];
-            
-        case ROperatorStorageMultiplyBy:  return @[ @"×←", @"set multiplied by" ];
-        case ROperatorStorageDivideBy:    return @[ @"÷←", @"set divided by" ];
     }
     
     switch ((RUnaryOperator)operator) {

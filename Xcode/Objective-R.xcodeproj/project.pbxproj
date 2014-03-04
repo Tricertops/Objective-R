@@ -37,8 +37,6 @@
 		5B57083518C3B59000CAEA5E /* RSetStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B57083418C3B59000CAEA5E /* RSetStorage.m */; };
 		5B630BF318C474F80010639F /* RStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B630BF118C474F80010639F /* RStorage.h */; };
 		5B630BF418C474F80010639F /* RStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B630BF218C474F80010639F /* RStorage.m */; };
-		5B630BF718C47B1F0010639F /* RStorageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B630BF518C47B1F0010639F /* RStorageOperation.h */; };
-		5B630BF818C47B1F0010639F /* RStorageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B630BF618C47B1F0010639F /* RStorageOperation.m */; };
 		5B630BFB18C49F9E0010639F /* RForInLoop.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B630BF918C49F9E0010639F /* RForInLoop.h */; };
 		5B630BFC18C49F9E0010639F /* RForInLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B630BFA18C49F9E0010639F /* RForInLoop.m */; };
 		5B630BFF18C4B4720010639F /* RReturn.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B630BFD18C4B4720010639F /* RReturn.h */; };
@@ -123,8 +121,6 @@
 		5B57083418C3B59000CAEA5E /* RSetStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSetStorage.m; sourceTree = "<group>"; };
 		5B630BF118C474F80010639F /* RStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RStorage.h; sourceTree = "<group>"; };
 		5B630BF218C474F80010639F /* RStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RStorage.m; sourceTree = "<group>"; };
-		5B630BF518C47B1F0010639F /* RStorageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RStorageOperation.h; sourceTree = "<group>"; };
-		5B630BF618C47B1F0010639F /* RStorageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RStorageOperation.m; sourceTree = "<group>"; };
 		5B630BF918C49F9E0010639F /* RForInLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RForInLoop.h; sourceTree = "<group>"; };
 		5B630BFA18C49F9E0010639F /* RForInLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RForInLoop.m; sourceTree = "<group>"; };
 		5B630BFD18C4B4720010639F /* RReturn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RReturn.h; sourceTree = "<group>"; };
@@ -256,8 +252,6 @@
 				5B5707E018C3964F00CAEA5E /* RUnaryOperation.m */,
 				5B5707D518C3964F00CAEA5E /* RBinaryOperation.h */,
 				5B5707D618C3964F00CAEA5E /* RBinaryOperation.m */,
-				5B630BF518C47B1F0010639F /* RStorageOperation.h */,
-				5B630BF618C47B1F0010639F /* RStorageOperation.m */,
 				5B5707D718C3964F00CAEA5E /* RExpression+ROperation.h */,
 				5B5707D818C3964F00CAEA5E /* RExpression+ROperation.m */,
 				5B5707DD18C3964F00CAEA5E /* ROperators+NSObject.h */,
@@ -368,7 +362,6 @@
 				5B630BF318C474F80010639F /* RStorage.h in Headers */,
 				5B630BFF18C4B4720010639F /* RReturn.h in Headers */,
 				5B630C1418C4C9A90010639F /* RScope.h in Headers */,
-				5B630BF718C47B1F0010639F /* RStorageOperation.h in Headers */,
 				5B630C0E18C4C9960010639F /* RConstant.h in Headers */,
 				5B630C1018C4C9960010639F /* RExpression.h in Headers */,
 				5B630BFB18C49F9E0010639F /* RForInLoop.h in Headers */,
@@ -486,7 +479,6 @@
 				5B57082718C3ABE600CAEA5E /* RArgument.m in Sources */,
 				5B57082418C3ABE600CAEA5E /* RLoop.m in Sources */,
 				5B630C0F18C4C9960010639F /* RConstant.m in Sources */,
-				5B630BF818C47B1F0010639F /* RStorageOperation.m in Sources */,
 				5B57081E18C3ABCE00CAEA5E /* RBinaryOperation.m in Sources */,
 				5B57082318C3ABE600CAEA5E /* RIfElseBranch.m in Sources */,
 				5B57082C18C3ABE600CAEA5E /* RFrame.m in Sources */,
