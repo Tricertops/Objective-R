@@ -27,14 +27,17 @@ typedef enum RStorageOperator : ROperator RStorageOperator;
 @interface ROperation : RExpression
 
 
-+ (ROperation *)unary:(RUnaryOperator)operator of:(RExpression *)operand;
-+ (ROperation *)binary:(RBinaryOperator)operator left:(RExpression *)operand right:(RExpression *)operand;
-+ (ROperation *)storage:(RStorageOperator)operator left:(RStorage *)storage right:(RExpression *)operand;
+
+#pragma mark - Build Time
+
++ (ROperation *)unary:(RUnaryOperator)operator of:(id)operand;
++ (ROperation *)binary:(RBinaryOperator)operator left:(id)operand right:(id)operand;
++ (ROperation *)storage:(RStorageOperator)operator left:(RStorage *)storage right:(id)operand;
 
 @property (atomic, readwrite, assign) ROperator operator;
 
-
 + (NSArray *)stringsForOperator:(ROperator)operator;
+
 
 
 @end

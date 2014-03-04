@@ -26,36 +26,39 @@
 
 
 
-+ (instancetype)unary:(RUnaryOperator)operator of:(RExpression *)operand {
+#pragma mark Build Time
+
+
++ (instancetype)unary:(RUnaryOperator)operator of:(NSObject *)operand {
     RUnaryOperation *operation = [[RUnaryOperation alloc] init];
     operation.operator = operator;
-    operation.operand = operand;
+    operation.operand = [RExpression expressionFrom:operand];
     return operation;
 }
 
 
-+ (instancetype)binary:(RBinaryOperator)operator left:(RExpression *)left right:(RExpression *)right {
++ (instancetype)binary:(RBinaryOperator)operator left:(NSObject *)left right:(NSObject *)right {
     RBinaryOperation *operation = [[RBinaryOperation alloc] init];
     operation.operator = operator;
-    operation.leftOperand = left;
-    operation.rightOperand = right;
+    operation.leftOperand = [RExpression expressionFrom:left];
+    operation.rightOperand = [RExpression expressionFrom:right];
     return operation;
 }
 
 
-+ (ROperation *)storage:(RStorageOperator)operator left:(RStorage *)storage right:(RExpression *)operand {
++ (ROperation *)storage:(RStorageOperator)operator left:(RStorage *)storage right:(NSObject *)operand {
     RStorageOperation *operation = [[RStorageOperation alloc] init];
     operation.operator = operator;
     operation.storage = storage;
-    operation.operand = operand;
+    operation.operand = [RExpression expressionFrom:operand];
     return operation;
 }
-
-
 
 
 
 + (NSArray *)stringsForOperator:(ROperator)operator {
+    //TODO: ROperator class with metadata like this? Support for custom subclasses?
+    
     switch ((RBinaryOperator)operator) {
         case ROperatorNone: return @[ @"", @"none" ];
             
