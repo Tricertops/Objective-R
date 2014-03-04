@@ -49,11 +49,11 @@
     op.operator = ROperatorUnaryPlus;
     {
         op.operand = R(@5);
-        id result = [op evaluateInScope:nil];
+        id result = [op evaluateInProcess:nil];
         XCTAssertEqualObjects(result, @5);
     }{
         op.operand = R(@-5);
-        id result = [op evaluateInScope:nil];
+        id result = [op evaluateInProcess:nil];
         XCTAssertEqualObjects(result, @-5);
     }
 }
@@ -64,11 +64,11 @@
     op.operator = ROperatorUnaryMinus;
     {
         op.operand = R(@5);
-        id result = [op evaluateInScope:nil];
+        id result = [op evaluateInProcess:nil];
         XCTAssertEqualObjects(result, @-5);
     }{
         op.operand = R(@-5);
-        id result = [op evaluateInScope:nil];
+        id result = [op evaluateInProcess:nil];
         XCTAssertEqualObjects(result, @5);
     }
 }
@@ -79,19 +79,19 @@
     op.operator = ROperatorNot;
     {
         op.operand = R(@YES);
-        id result = [op evaluateInScope:nil];
+        id result = [op evaluateInProcess:nil];
         XCTAssertEqualObjects(result, @NO);
     }{
         op.operand = R(@NO);
-        id result = [op evaluateInScope:nil];
+        id result = [op evaluateInProcess:nil];
         XCTAssertEqualObjects(result, @YES);
     }{
         op.operand = R(@"ABC");
-        id result = [op evaluateInScope:nil];
+        id result = [op evaluateInProcess:nil];
         XCTAssertEqualObjects(result, @NO, @"Objects are negated to NO.");
     }{
         op.operand = R(NSNull.null);
-        id result = [op evaluateInScope:nil];
+        id result = [op evaluateInProcess:nil];
         XCTAssertEqualObjects(result, @YES, @"NSNull represents NO, so is negated to YES.");
     }
 }
@@ -105,15 +105,15 @@
     op.operand = RVoid;
     {
         op.operator = ROperatorUnaryPlus;
-        id result = [op evaluateInScope:nil];
+        id result = [op evaluateInProcess:nil];
         XCTAssertNil(result);
     }{
         op.operator = ROperatorUnaryMinus;
-        id result = [op evaluateInScope:nil];
+        id result = [op evaluateInProcess:nil];
         XCTAssertNil(result);
     }{
         op.operator = ROperatorNot;
-        id result = [op evaluateInScope:nil];
+        id result = [op evaluateInProcess:nil];
         XCTAssertNil(result, @"Nil is not negated and stays nil.");
     }
 }

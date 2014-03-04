@@ -38,7 +38,7 @@
 - (void)test_creating {
     RScope *scope = [RScope scope:R(@"ABC"), R(@"DEF"), nil];
     XCTAssertEqual(scope.expressions.count, 2UL);
-    id result = [scope evaluateInScope:nil];
+    id result = [scope evaluateInProcess:nil];
     XCTAssertEqualObjects(result, @"DEF");
 }
 
@@ -49,7 +49,7 @@
                      [RLast minus:R(@14)],
                      [R(@3) divide:RLast],
                      nil];
-    id result = [scope evaluateInScope:nil];
+    id result = [scope evaluateInProcess:nil];
     XCTAssertEqualObjects(result, @0.3);
 }
 

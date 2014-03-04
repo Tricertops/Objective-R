@@ -52,15 +52,15 @@
     branch.elseExpression = R(@5);
     {
         branch.condition = R(@YES);
-        id result = [branch evaluateInScope:nil];
+        id result = [branch evaluateInProcess:nil];
         XCTAssertEqualObjects(result, @3);
     }{
         branch.condition = R(@NO);
-        id result = [branch evaluateInScope:nil];
+        id result = [branch evaluateInProcess:nil];
         XCTAssertEqualObjects(result, @5);
     }{
         branch.condition = nil;
-        id result = [branch evaluateInScope:nil];
+        id result = [branch evaluateInProcess:nil];
         XCTAssertEqualObjects(result, @5); //TODO: Maybe nil?
     }
 }

@@ -45,7 +45,7 @@
 
 
 - (void)test_evaluateInScope {
-    id result = [R(@5) evaluateInScope:nil];
+    id result = [R(@5) evaluateInProcess:nil];
     XCTAssertEqualObjects(result, @5);
 }
 
