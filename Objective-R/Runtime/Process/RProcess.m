@@ -60,7 +60,8 @@
 
 - (id)execute {
     NSAssert(self.callStack.count == 1, @"Call stack in invalid state: %@", self.callStack);
-    RFunction *rootFunction = self.callStack.firstObject;
+    RCall *rootCall = self.callStack.firstObject;
+    RFunction *rootFunction = rootCall.function;
     
     if (self.queue == [NSOperationQueue currentQueue]) {
         [self evaluateFunction:rootFunction];
@@ -77,7 +78,8 @@
 
 - (void)executeWithCompletion:(void(^)(id))handler {
     NSAssert(self.callStack.count == 1, @"Call stack in invalid state: %@", self.callStack);
-    RFunction *rootFunction = self.callStack.firstObject;
+    RCall *rootCall = self.callStack.firstObject;
+    RFunction *rootFunction = rootCall.function;
     
     NSOperationQueue *callerQueue = [NSOperationQueue currentQueue];
     [self.queue addOperationWithBlock:^{

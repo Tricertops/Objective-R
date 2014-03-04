@@ -43,8 +43,6 @@
 - (instancetype)initWithScope:(RScope *)scope variables:(NSDictionary *)variables parent:(RFrame *)parent {
     self = [super init];
     if (self) {
-        NSParameterAssert(scope);
-        
         self->_scope = scope;
         self->_parent = parent;
         
